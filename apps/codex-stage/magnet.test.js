@@ -22,6 +22,16 @@ test("magnet QA: a blocked driver backs out without changing game state", () => 
     if (Math.hypot(next.x - initial.x, next.y - initial.y) > 100) escaped = true;
   }
   assert.ok(escaped, "must not keep steering into the same blocked corner");
+  const rocking = structuredClone(s);
+  rocking.time = 0;
+  let backedOut = false;
+  for (let n = 0; n < 40; n++) {
+    rocking.time += 300;
+    rocking.player.x = 2064 + Math.sin(n / 3) * 60;
+    const next = magnetTarget(rocking);
+    if (next.x > rocking.player.x + 100) backedOut = true;
+  }
+  assert.ok(backedOut, "rocking against a corner is not delivery progress");
   g.destroy();
 });
 test("magnet: no autoplay, invalid input rejected, one movement gives physical collection", () => {

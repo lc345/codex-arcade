@@ -5,19 +5,26 @@ export function magnetTarget(s) {
   const p = s.player;
   let driver = drivers.get(s);
   if (!driver || s.time < driver.at) {
-    driver = { at: s.time, x: p.x, y: p.y, escapes: 0, escapeUntil: 0 };
+    driver = { at: s.time, x: p.x, y: p.y, escapes: 0, escapeUntil: 0, progressAt: s.time, best: Infinity };
     drivers.set(s, driver);
   }
   if (s.time < driver.escapeUntil) return driver.escape;
   const target = planTarget(s);
+  const remaining = Math.hypot(p.x - s.depot.x, p.y - s.depot.y);
+  if (s.mode !== "return" || remaining < driver.best - 30) {
+    driver.best = remaining;
+    driver.progressAt = s.time;
+  }
   if (s.time - driver.at >= 3000) {
     const moved = Math.hypot(p.x - driver.x, p.y - driver.y);
-    if (target && moved < 40 && Math.hypot(target.x - p.x, target.y - p.y) > 25) {
+    if (target && (moved < 40 || s.time - driver.progressAt > 5000) && (remaining > 170 || Math.hypot(target.x - p.x, target.y - p.y) > 25)) {
       // Reverse, then try another heading, as a human would when cargo catches a corner.
       const turns = [Math.PI, Math.PI / 2, -Math.PI / 2];
       const heading = Math.atan2(target.y - p.y, target.x - p.x) + turns[driver.escapes++ % turns.length];
-      driver.escape = { x: p.x + Math.cos(heading) * 240, y: p.y + Math.sin(heading) * 240 };
+      driver.escape = { x: Math.max(40, Math.min(s.city.width - 40, p.x + Math.cos(heading) * 240)), y: Math.max(40, Math.min(s.city.height - 40, p.y + Math.sin(heading) * 240)) };
       driver.escapeUntil = s.time + 2200;
+      driver.progressAt = driver.escapeUntil;
+      driver.best = remaining;
     }
     Object.assign(driver, { at: s.time, x: p.x, y: p.y });
   }
