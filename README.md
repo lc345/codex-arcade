@@ -1,89 +1,115 @@
 # Agent Stage
 
-**Agent 工作，你玩游戏。 / Your agent works. You play.**
+**Your agent works. You play.**
 
-Codex 开始任务时，右下角出现一个小游戏；任务结束或中断，游戏立即停止并收起。100 款本地小游戏，随机轮换，长任务可以随时换一款。
+English | [简体中文](README.zh-CN.md)
 
-这是社区项目，不是 OpenAI 官方产品。当前是 **macOS Beta**，不修改 Codex 安装包或主题，不需要调试端口。
+100 local mini-games for the time you spend waiting for Codex. A small game-only window appears at the bottom-right of Codex while a task runs, then stops and closes when the task finishes or is interrupted. Shuffle games whenever you like during a long task.
 
-## Mac：三步安装
+**Community project. Not an official OpenAI product. macOS Beta.** No Codex app patching, theme changes or debug port required.
 
-1. 先安装、打开并登录 Codex Desktop。
-2. 在本仓库右侧 **Releases** 下载 **Agent-Stage-for-Codex.zip**，双击解压。
-3. 打开解压后的文件夹，双击 **Install Agent Stage.command**。看到“安装完成”后，回到 Codex **发送一个新任务**。
+## Install on Mac
 
-安装器会打开一个终端窗口并自动完成四步检查和安装。**不用输入命令，不用执行 npm install，不用下载游戏引擎或配置 API Key。** 安装期间不要关闭窗口。安装后可以删除下载文件，已安装的游戏仍可使用。
+1. Install, open and sign into **Codex Desktop**.
+2. Open [Releases](https://github.com/lc345/codex-arcade/releases) and download **Agent-Stage-for-Codex.zip**. Double-click to extract it.
+3. Open the extracted folder and double-click **Install Agent Stage.command**. Wait for the installer to finish, then return to Codex and send a **new task**.
 
-完整 ZIP 内置 Apple Silicon 和 Intel 的 Node 运行库，安装时不另行下载依赖。不要下载 GitHub 自动生成的 **Source code (zip)** 或 **Code → Download ZIP** 来代替安装包。源码主要给开发者使用，不保证已有运行环境。
+That is the complete setup. **No terminal commands, npm install, game engine, Python or API key required.** The installer opens Terminal to run its four checks/install steps; leave that window open until it reports success.
 
-尚未创建公开 Release 时，本地 `dist/` 文件不等于已发布下载。维护者发布后，以上 Releases 入口才有安装包。
+The full ZIP includes official Node runtimes for both Apple Silicon and Intel. It downloads no dependencies during installation. You can delete the downloaded folder afterward. The DMG contains the same installer; choose ZIP or DMG, not both.
 
-**首次打开提示：**本 Beta 尚未进行开发者签名/公证，macOS 可能拦截首次打开。先确认来源和 Release 校验和；仅在信任该文件时，按 [Apple 官方说明](https://support.apple.com/zh-cn/102445)，在“系统设置 → 隐私与安全性”中确认“仍要打开”。不要关闭 Gatekeeper 或执行全局安全绕过命令；若提示恶意软件或文件损坏，先停止安装并反馈。
+**Download the named Release asset, not GitHub's “Source code (zip)” or “Code > Download ZIP.”** Source archives are for developers and do not include the bundled runtime.
 
-[中文安装与排障](docs/QUICK_START.zh-CN.md) · [English / 安装包说明](macos/README.md) · [Windows 实验教程](docs/WINDOWS_TESTING.zh-CN.md) · [文档目录](docs/README.md)
+### First-open security prompt
 
-## 装好后怎么玩
+This beta is **unsigned and unnotarized**. macOS may block the first launch. Verify the source and Release SHA-256 file; only if you trust the download, follow [Apple's instructions](https://support.apple.com/en-us/102445) to allow it in **System Settings > Privacy & Security**. Never disable Gatekeeper globally. Stop and report malware or damaged-file warnings instead of forcing the app to open.
 
-| 你做的事 | 游戏的行为 |
+[Installer guide, English and Chinese](macos/README.md) | [Detailed Chinese troubleshooting](docs/QUICK_START.zh-CN.md) | [Documentation index](docs/README.md)
+
+## What happens while you work?
+
+| Action | Companion behavior |
 | --- | --- |
-| 在 Codex 发送新任务 | 右下角出现宽约 400px 的游戏小窗 |
-| 模型思考或执行工具 | 都可以玩，不限某种工具 |
-| 鼠标移到小窗右上角 | 显示换游戏图标，可随时换一款 |
-| 长任务超过三分钟 | 当前局结束且停手五秒后，随机模式可自动换游戏 |
-| 切到其他 App / 最小化 Codex | 隐藏并暂停，回来继续 |
-| Codex 完成或中断 | 停止输入、动画和声音，收起小窗 |
-| 点击游戏后按 Esc | 只关闭本轮游戏，不停止 Codex |
+| Send a new Codex task | A roughly 400px-wide game appears at Codex's lower-right corner |
+| Codex thinks or calls tools | Keep playing; not limited to a particular tool |
+| Hover the game's upper-right corner | A shuffle control lets you change games |
+| A task runs longer than three minutes | Random mode can rotate at a safe ready/result state after five seconds without input |
+| Switch apps or minimize Codex | The companion hides and pauses; return to resume |
+| Codex finishes or is interrupted | Input, simulation, animation and sound stop; the companion closes |
+| Focus the game and press Escape | Dismiss the game for this turn without stopping Codex |
 
-小窗只显示游戏画面和必要 HUD，没有完整游戏库或多余工具栏。默认静音。全部游戏和声音设置可在安装后的 [本地游戏库](http://127.0.0.1:4173/codex-stage) 查看；游戏库的独立试玩不等于真实任务已触发。
+The popup contains the game and essential HUD, not the full library. **Audio is muted by default.** After installation, open the [local game library](http://127.0.0.1:4173/codex-stage) for browsing and sound settings. A standalone preview does not prove that real Codex task hooks are connected.
 
-100 款按唯一 ID 计数：95 个编译包和 5 个本地引擎页面。原来的 26 款已移除。默认轮换全部 100 款，一轮内不重复；其中 93 款仍标为 preview，7 款为精选 stable，**不宣称所有作品、所有设备都已验收**。[完整清单](docs/PLAYABLE_INVENTORY.zh-CN.md)
+## The games
 
-## 暂停、更新、卸载
+100 unique games: **95 compiled packs + 5 local engine pages**, spanning physics, timing, precision, puzzles, sports and other small arcade experiments. Levels and visual variants are not counted as separate games. The retired original 26 games are not included.
 
-- **Pause.command**：暂停游戏，不影响 Codex 工作。
-- **Resume.command**：恢复；回到 Codex 发送新任务。
-- **Check Agent Stage.command**：检查安装和服务。没有 CDP 调试端口是正常状态。
-- **更新**：下载新 Release，再运行一次安装器。不需要先卸载；保留本地进度和偏好。
-- **Uninstall Agent Stage.command**：移除本项目的服务、hooks 和运行目录，保留其他 hooks 与本地进度/媒体。
+Default shuffle includes all 100, without repeats within a cycle. **Seven entries are curated stable; 93 remain preview.** This is a beta collection, not a claim that every game or every device has passed release acceptance. Many game labels are currently Chinese.
 
-这些文件在完整安装包中。删除下载文件后，仍可从 `~/.codex/agent-stage` 找到 `Pause.command`、`Resume.command` 和 `macos/` 下的检查/卸载入口。
+[Full inventory](docs/PLAYABLE_INVENTORY.zh-CN.md) | [Contributing a game](CONTRIBUTING.md)
 
-## 隐私与兼容范围
+## Pause, update and uninstall
 
-游戏不接收对话、命令、文件内容或工具结果，不控制 Agent。事件接口使用本机回环地址和随机 token；不上传活动记录。安装器只合并自己的 hooks，不绕过 Codex 的信任机制。
+| File or action | Purpose |
+| --- | --- |
+| **Pause.command** | Stop showing games without affecting Codex |
+| **Resume.command** | Resume the companion, then send a new task |
+| **Check Agent Stage.command** | Diagnose the runtime, hooks and services; an unavailable CDP port is normal |
+| Run a newer Release installer | Update in place while retaining local progress and preferences |
+| **Uninstall Agent Stage.command** | Remove Agent Stage's runtime, service and hooks; retain unrelated hooks and local preferences/media |
 
-- 当前支持路径：本地 **macOS Codex Desktop**；远端任务和组织禁用 hooks 的环境不保证可用。
-- 小窗是跟随 Codex 的独立 WebKit 窗口，不是修改 Codex 内部 UI。
-- Apple Silicon 本机已验证；Intel 运行库已包含，Intel 实机及更多 macOS 版本仍待验证。
-- Windows 目前仅提供网页试玩实验步骤，**没有 Windows 一键安装器或自动小窗**。
-- 本 Beta 尚未签名/公证；不承诺没有系统安全提示。
+These commands are in the full download. After deleting that folder, the installed copy remains at `~/.codex/agent-stage`; check/uninstall commands are also under its `macos/` directory.
 
-## 开发者与社区
+## Privacy and compatibility
 
-下载源码后，已有 Node 22+ 的开发者可以在仓库根目录运行：
+- Games do not receive conversations, raw commands, file contents, tool output or credentials. Game input cannot control the Agent.
+- Event endpoints use authenticated loopback connections. Activity records are not uploaded.
+- The installer merges only its own hooks and respects Codex's hook trust mechanism.
+- The default display is an independent native WebKit window following Codex, not an alteration of Codex's internal UI.
+- The supported integration is **local macOS Codex Desktop**. Remote tasks and environments that disable hooks are not guaranteed.
+- Apple Silicon has been tested locally. Intel runtimes are included, but Intel hardware and additional macOS versions still need testing.
+- **Windows does not have a one-click installer or automatic companion yet.** The [Windows browser-only experiment](docs/WINDOWS_TESTING.zh-CN.md) is a separate, developer-oriented path.
+
+## Develop locally
+
+You need **Node 22+** for source development. From the repository root:
 
 ```sh
 node apps/press-lab/server.js
 ```
 
-打开 `http://127.0.0.1:4173/codex-stage`。不需要构建引擎；源码包含已审查的本地依赖和游戏资源。Mac 源码用户也可以双击根目录 `Install.command`，但需要可用的 Node 22+；普通用户应下载完整 Release。
+Open [localhost:4173/codex-stage](http://127.0.0.1:4173/codex-stage). Reviewed local libraries, game assets and the Godot web export are included; no engine build is needed just to play. Mac source users can also run the root `Install.command` with a suitable Node runtime. Non-developers should use the full Release ZIP.
 
-| 路径 | 内容 |
+For validation, use Node 24 and Python 3.12+:
+
+```sh
+npm test
+npm run verify
+npm run audit:public
+```
+
+| Directory | Contents |
 | --- | --- |
-| `apps/codex-stage` | 游戏、目录、资源和网页宿主 |
-| `packages/codex-stage` | 脱敏活动事件、hooks 和本地服务 |
-| `macos` | Mac 安装器、窗口、诊断和打包 |
-| `tools` | 游戏构建、回放、性能和安装包验收 |
-| `docs` | 玩法、贡献、安全和发布说明 |
-| `games` | Godot 游戏的可编辑源码 |
-| `skills` | 可复用的游戏创作指南 |
+| `apps/codex-stage` | Games, catalog, assets and browser host |
+| `packages/codex-stage` | Sanitized activity events, hooks and local daemon |
+| `macos` | Installer, native companion, diagnostics and packaging |
+| `tools` | Builds, replay tests, performance and release verification |
+| `docs` | Architecture, controls, support and contribution guides |
+| `games` | Editable Godot game source |
+| `skills` | Reusable game-authoring guides |
 
-`dist/`、`output/`、`.tools/`、用户配置、任务记录和依赖缓存不进入源码仓库；Node 二进制仅进入完整 Release。`npm run audit:public` 检查公开文件白名单、常见凭证格式、本机路径和超大文件，但不替代人工安全与素材许可审核。
+Caches, logs, task records, private configuration, `dist/`, `output/` and `.tools/` do not belong in Git. Node binaries are shipped only in Release assets. The publication audit checks the allowed file set, common credential patterns, personal paths and oversized Git blobs; it is not a substitute for a full security or asset-license review.
 
-欢迎贡献新游戏、关卡、音效和改进建议。代码通过 PR 审查后才进入发行包，不从互联网自动执行任意社区 JavaScript。素材必须明确来源和许可证。
+## Contribute
 
-[贡献指南](CONTRIBUTING.md) · [游戏创作 Skill](skills/agent-stage-microgame-director/SKILL.md) · [发布流程](docs/RELEASING_CODEX_STAGE.md) · [性能复现与修复](docs/COMPANION_PERFORMANCE.zh-CN.md) · [安全说明](SECURITY.md)
+Bring a distinctive game, a better level, original sound or a useful fix. Include legal-input tests, playable goals, failure/retry behavior, licensed local assets, and checks at the 400px popup size. Verify mute, pause and immediate task-end cleanup.
 
-FinalButton、ActionProof、Scene Pack 等历史模块保留兼容；它们不是安装或玩游戏的前置要求。[历史架构说明](TRUSTED_ACTIONS.md)
+Community gameplay code is reviewed before shipping. The app does not automatically execute arbitrary downloaded plugins.
 
-代码采用 [Apache-2.0](LICENSE)。[第三方库与素材许可索引](docs/ASSET_LICENSES.md)列出各自的许可证和来源。项目由 Speakon 发起，但不需要购买任何硬件。
+[Contribution guide](CONTRIBUTING.md) | [Game-authoring Skill](skills/agent-stage-microgame-director/SKILL.md) | [Release process](docs/RELEASING_CODEX_STAGE.md) | [Performance acceptance](docs/COMPANION_PERFORMANCE.zh-CN.md) | [Security policy](SECURITY.md)
+
+FinalButton, ActionProof and Scene Pack modules remain for compatibility. They are not prerequisites for installing or playing the arcade. See the [historical architecture](TRUSTED_ACTIONS.md).
+
+## License
+
+Original project code is [Apache-2.0](LICENSE). Third-party libraries and assets retain their own terms; see the [license and provenance index](docs/ASSET_LICENSES.md). Started by Speakon. No hardware purchase required.

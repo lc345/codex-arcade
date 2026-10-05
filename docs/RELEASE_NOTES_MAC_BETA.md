@@ -1,5 +1,19 @@
 # Agent Stage for Codex · macOS Beta
 
+## English
+
+100 local mini-games while Codex works. A small game-only window follows Codex, pauses when you switch apps, and stops when the task ends or is interrupted.
+
+**Download Agent-Stage-for-Codex.zip**, extract it, and double-click **Install Agent Stage.command**. Open and sign into Codex Desktop first; after installation, send a new task. The DMG contains the same files. Do not use GitHub's automatic source ZIP as an installer.
+
+No npm, game engine, API key or additional runtime download is required. Official Node runtimes for Apple Silicon and Intel are included. Use Check for diagnostics, Pause/Resume to control games, and Uninstall to remove this project's runtime/service/hooks while retaining unrelated hooks and preferences.
+
+**Unsigned, unnotarized community beta; not an OpenAI product.** Verify the SHA-256 file and follow macOS first-open guidance only if you trust the download. Never disable Gatekeeper globally. Apple Silicon has been tested locally; Intel and additional macOS versions still need hardware testing. The collection includes 93 preview games and seven curated stable entries. Windows has browser-only experiment documentation, not an automatic companion installer.
+
+[English README](https://github.com/lc345/codex-arcade#readme) | [中文 README](https://github.com/lc345/codex-arcade/blob/main/README.zh-CN.md)
+
+## 中文
+
 Codex 工作时，在右下角玩一局小游戏。任务完成或中断后自动停止，切到其他应用时隐藏暂停。
 
 ## 下载哪个文件

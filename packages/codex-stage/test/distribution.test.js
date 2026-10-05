@@ -24,12 +24,12 @@ test("distribution copies only project payload, rejects symlinks and never inclu
   const source = join(tmp, "source"), destination = join(tmp, "result");
   try {
     await mkdir(join(source, "apps"), { recursive: true });
-    for (const name of ["README.md", ".env", "apps/game.js", "apps/.env.local", "apps/.npmrc", "apps/hooks.json", "apps/daemon.json"]) await writeFile(join(source, name), name);
+    for (const name of ["README.md", "README.zh-CN.md", ".env", "apps/game.js", "apps/.env.local", "apps/.npmrc", "apps/hooks.json", "apps/daemon.json"]) await writeFile(join(source, name), name);
     for (const name of ["output", "outputs", "work", ".tools", "node_modules"]) {
       await mkdir(join(source, name)); await writeFile(join(source, name, "private.txt"), "private");
     }
     await copyDistribution(source, destination);
-    assert.deepEqual((await readdir(destination)).sort(), ["README.md", "apps"]);
+    assert.deepEqual((await readdir(destination)).sort(), ["README.md", "README.zh-CN.md", "apps"]);
     assert.deepEqual(await readdir(join(destination, "apps")), ["game.js"]);
     assert.equal(await readFile(join(destination, "apps/game.js"), "utf8"), "apps/game.js");
     await symlink(join(source, ".env"), join(source, "apps/leak"));
