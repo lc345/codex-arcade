@@ -2,64 +2,109 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Stage illustrated preview</title>
+<title>Agent Stage illustrated Codex session</title>
 <style>
 * { box-sizing: border-box; }
 html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
-body { background: #eef2f1; color: #f1f2f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
-.heading { height: 102px; padding: 29px 38px; display: flex; justify-content: space-between; align-items: center; color: #172421; }
-.heading strong { font-size: 30px; font-weight: 750; }
-.heading span { font-size: 17px; color: #52645e; }
-.window { position: relative; height: 628px; margin: 0 32px; border: 1px solid #393c3b; border-radius: 8px; background: #1c1d1d; overflow: hidden; box-shadow: 0 16px 32px #17242120; }
-.titlebar { height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 18px; background: #242626; border-bottom: 1px solid #343635; }
-.dot { width: 11px; height: 11px; border-radius: 50%; background: #fc655b; }
+body { background: #e7e9ec; color: #ededed; font: 13px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+.window { position: relative; width: 1248px; height: 756px; margin: 12px 16px 0; border: 1px solid #444; border-radius: 8px; background: #1c1c1c; overflow: hidden; box-shadow: 0 6px 16px #0002; }
+.titlebar { height: 48px; display: flex; align-items: center; padding: 0 16px; gap: 8px; border-bottom: 1px solid #303030; }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #fa6259; }
 .dot:nth-child(2) { background: #e8bd4f; } .dot:nth-child(3) { background: #57bd69; }
-.titlebar strong { margin-left: 18px; font-size: 14px; font-weight: 550; }
-.titlebar small { margin-left: auto; color: #a4b0aa; font-size: 11px; }
-.sidebar { position: absolute; top: 44px; bottom: 0; left: 0; width: 160px; padding: 26px 12px; background: #181919; border-right: 1px solid #303231; font-size: 12px; }
-.sidebar strong { display: block; padding: 0 10px 26px; font-size: 19px; }
-.nav { padding: 11px 10px; color: #b9c1bd; }
-.nav.active { background: #303431; color: #f2f5f2; border-radius: 5px; }
-.section { color: #7f8b84; font-size: 11px; margin: 28px 10px 9px; }
-.workspace { margin-left: 160px; width: 350px; padding: 24px 28px; }
-.crumb { font-size: 12px; color: #8f9b94; }
-h1 { font-size: 21px; font-weight: 600; margin: 18px 0 20px; }
-.prompt { width: 100%; padding: 13px 15px; border-radius: 6px; color: #e2e7e4; background: #303332; font-size: 13px; line-height: 1.5; }
-.reply { margin-top: 19px; font-size: 13px; line-height: 1.65; color: #c8d1cb; }
-.task { margin-top: 21px; display: flex; align-items: center; gap: 9px; font-size: 13px; color: #ade2c8; }
-.pulse { width: 7px; height: 7px; background: #85d6b0; border-radius: 50%; }
-.terminal { margin-top: 14px; width: 100%; padding: 14px 0; border-top: 1px solid #3c423e; font: 12px/2 ui-monospace, SFMono-Regular, Menlo, monospace; color: #9ca9a1; }
-.terminal b { color: #dce5df; font-weight: 400; }
-.composer { position: absolute; left: 188px; bottom: 25px; width: 294px; height: 66px; border: 1px solid #434b45; border-radius: 8px; padding: 14px; color: #7f8b83; font-size: 13px; }
-.composer small { display: block; margin-top: 12px; font-size: 10px; }
-.companion { position: absolute; width: 680px; height: 382.5px; right: 18px; bottom: 18px; border-radius: 8px; box-shadow: 0 0 0 1px #ffffff35, 0 8px 32px #0009; overflow: hidden; background: #b7dacf; }
-canvas { display: block; width: 680px; height: 382.5px; outline: none; }
-.caption { position: absolute; right: 18px; bottom: 427px; width: 680px; }
-.caption small { display: block; color: #a0b6aa; font-size: 11px; margin-bottom: 12px; }
-.caption strong { color: #b1efd0; font-size: 23px; }
-.caption div { margin-top: 8px; color: #c9d4cc; font-size: 14px; }
-.complete { position: absolute; right: 18px; bottom: 18px; width: 680px; height: 382.5px; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 13px; color: #b2c5b9; font-size: 16px; }
-.complete b { font-size: 28px; color: #f1f5f2; font-weight: 550; }
-body[data-phase="complete"] .companion { visibility: hidden; }
-body[data-phase="complete"] .complete { display: flex; }
-footer { height: 70px; display: flex; align-items: center; justify-content: space-between; margin: 0 38px; color: #52645e; font-size: 12px; }
-footer b { color: #243f33; font-size: 13px; font-weight: 600; }
+.titlebar strong { width: 102px; margin-left: 12px; font-size: 14px; font-weight: 550; }
+.titlebar .project { color: #aaa; margin-left: 12px; }
+.titlebar .title { color: #eee; margin-left: 12px; }
+.titlebar .actions { margin-left: auto; color: #aaa; word-spacing: 14px; }
+.sidebar { position: absolute; top: 48px; bottom: 0; width: 192px; padding: 19px 11px; background: #181818; border-right: 1px solid #2c2c2c; }
+.nav { padding: 8px 10px; color: #bbb; white-space: nowrap; }
+.nav.active { background: #303030; color: #f5f5f5; border-radius: 5px; }
+.section { margin: 25px 10px 7px; color: #7f7f7f; font-size: 11px; }
+.nav.task-link { padding-left: 20px; font-size: 12px; }
+.account { position: absolute; bottom: 18px; left: 21px; color: #aaa; }
+.workspace { position: absolute; left: 192px; top: 48px; bottom: 0; width: 516px; padding: 26px 27px 112px; }
+.prompt { margin: 0 0 22px 24px; padding: 13px 16px; background: #303030; border-radius: 8px; font-size: 14px; line-height: 1.55; }
+.reply { color: #ddd; line-height: 1.7; margin-bottom: 18px; }
+.tool { border-left: 1px solid #414141; padding: 0 0 17px 16px; margin-left: 5px; position: relative; }
+.tool::before { content: ""; position: absolute; width: 7px; height: 7px; border: 1px solid #8f8f8f; border-radius: 50%; background: #1c1c1c; left: -4px; top: 7px; }
+.tool strong { font-size: 12px; color: #c7c7c7; font-weight: 500; }
+.tool code { display: block; font: 11px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; color: #929292; margin-top: 3px; white-space: pre; }
+.tool .result { color: #969696; font-size: 11px; margin-top: 5px; }
+.tool.future { display: none; }
+body[data-phase="edit"] .tool.edit, body[data-phase="test"] .tool.edit, body[data-phase="complete"] .tool.edit,
+body[data-phase="test"] .tool.test, body[data-phase="complete"] .tool.test { display: block; }
+body[data-phase="read"] .tool.read::before, body[data-phase="edit"] .tool.edit::before, body[data-phase="test"] .tool.test::before { background: #c7c7c7; animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.task-status { color: #aaa; font-size: 12px; display: flex; align-items: center; gap: 9px; margin: 6px 0 16px; }
+.spinner { width: 12px; height: 12px; border: 1.5px solid #555; border-top-color: #ddd; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.answer { display: none; color: #dedede; line-height: 1.75; font-size: 13px; }
+.answer p { margin: 6px 0; }
+.answer code { color: #bfdbc7; font-size: 12px; }
+.composer { position: absolute; bottom: 20px; left: 24px; right: 24px; height: 87px; border: 1px solid #454545; border-radius: 8px; background: #242424; padding: 12px 14px; color: #868686; }
+.composer .options { position: absolute; bottom: 11px; left: 14px; font-size: 11px; }
+.stop { position: absolute; bottom: 10px; right: 12px; width: 24px; height: 24px; border-radius: 50%; background: #ddd; display: grid; place-items: center; }
+.stop::after { content: ""; width: 8px; height: 8px; background: #222; border-radius: 1px; }
+.code-panel { position: absolute; top: 48px; bottom: 0; left: 708px; right: 0; background: #202020; border-left: 1px solid #363636; }
+.tabs { height: 41px; border-bottom: 1px solid #343434; display: flex; gap: 20px; align-items: center; padding: 0 17px; color: #aaa; font-size: 12px; }
+.tabs b { height: 41px; display: flex; align-items: center; font-weight: 500; color: #eee; border-bottom: 2px solid #929292; }
+.file-path { padding: 14px 20px 11px; color: #999; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.diff { font: 12px/24px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre; }
+.line { display: block; padding-left: 15px; }
+.line i { display: inline-block; width: 35px; color: #686868; font-style: normal; }
+.kw { color: #cf9bde; } .str { color: #d3bb8b; } .fn { color: #86bce0; }
+.removed { background: #552e303d; color: #d5a1a4; }
+.added { background: #294c373d; color: #a9d4b7; display: none; }
+body[data-phase="edit"] .added, body[data-phase="test"] .added, body[data-phase="complete"] .added { display: block; }
+body[data-phase="edit"] .removed, body[data-phase="test"] .removed, body[data-phase="complete"] .removed { display: none; }
+.terminal { position: absolute; bottom: 0; left: 0; right: 0; height: 279px; border-top: 1px solid #373737; padding: 14px 19px; color: #929292; font: 11px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.terminal-label { color: #bbb; font: 11px -apple-system, BlinkMacSystemFont, sans-serif; margin-bottom: 15px; }
+.test-output { display: none; color: #aad3b8; white-space: pre; }
+body[data-phase="complete"] .test-output { display: block; }
+.companion { position: absolute; width: 520px; height: 292.5px; right: 16px; bottom: 16px; border-radius: 7px; box-shadow: 0 0 0 1px #ffffff30, 0 8px 30px #0009; overflow: hidden; background: #b7dacf; z-index: 2; }
+canvas { display: block; width: 520px; height: 292.5px; outline: none; }
+body[data-phase="idle"] .companion, body[data-phase="complete"] .companion { visibility: hidden; }
+body[data-phase="complete"] .answer { display: block; }
+body[data-phase="complete"] .spinner { animation: none; border: 0; background: #8fc5a2; width: 6px; height: 6px; margin: 3px; }
+body[data-phase="complete"] .stop { background: #555; }
+body[data-phase="complete"] .stop::after { background: #aaa; width: 2px; height: 10px; }
+footer { height: 32px; margin: 0 20px; display: flex; align-items: center; justify-content: space-between; color: #626771; font-size: 10px; }
+footer b { font-weight: 550; color: #454b55; font-size: 11px; }
 </style>
-<header class="heading"><strong>Your agent works. You play.</strong><span>Agent Stage for Codex</span></header>
+<body data-phase="idle">
 <main class="window">
-  <div class="titlebar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><strong>Codex</strong><small>ILLUSTRATED DEMO WORKSPACE</small></div>
-  <aside class="sidebar"><strong>Codex</strong><div class="nav">New task</div><div class="nav">Automations</div><div class="section">PROJECTS</div><div class="nav">Demo project</div><div class="nav active">Add library search</div><div class="nav">Polish navigation</div><div class="nav">Review changes</div></aside>
+  <header class="titlebar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><strong>Codex</strong><span class="project">arcade-library /</span><span class="title">Add library search</span><span class="actions">Open in ...</span></header>
+  <aside class="sidebar">
+    <div class="nav">+ New task</div><div class="nav">Pull requests</div><div class="nav">Automations</div><div class="nav">Plugins</div>
+    <div class="section">PINNED</div><div class="nav">Getting started</div>
+    <div class="section">PROJECTS</div><div class="nav">arcade-library</div><div class="nav task-link active">Add library search</div><div class="nav task-link">Polish navigation</div><div class="nav task-link">Review changes</div><div class="account">Local workspace</div>
+  </aside>
   <section class="workspace">
-    <div class="crumb">Demo project / Tasks</div><h1>Add search to the library</h1>
-    <div class="prompt">Add library search and test keyboard navigation.</div>
-    <div class="reply">I'll update the search flow and check the interactions.</div>
-    <div class="task"><i class="pulse"></i><span data-task-status>Working on your task</span></div>
-    <div class="terminal"><b data-tool-status>Updating search</b><br>Search filtering<br>Keyboard navigation<br>Empty-state behavior</div>
+    <div class="prompt">Add search to the game library. Match names and categories, and cover it with tests.</div>
+    <div class="reply">I'll check the catalog, add the filter, and run the search tests.</div>
+    <div class="tool read"><strong>Exploring the project</strong><code>rg -n "filter|query" src/library</code><div class="result" data-read-result>Reading catalog.ts and search.test.ts</div></div>
+    <div class="tool edit future"><strong>Edited src/library/catalog.ts</strong><code>+12 -2  Match names and categories</code><div class="result">Added case-insensitive search and empty-query handling.</div></div>
+    <div class="tool test future"><strong>Running the search tests</strong><code>npm test -- search.test.ts</code><div class="result" data-test-result>Checking matching and keyboard navigation...</div></div>
+    <div class="task-status"><span class="spinner"></span><span data-task-status>Working</span></div>
+    <div class="answer"><p>Search is ready. Names and categories both match, and an empty query shows the full library.</p><p><code>8 tests passed</code> &middot; 2 files changed</p></div>
+    <div class="composer"><span data-composer-text>Add a follow-up</span><span class="options">+ &nbsp; Local &nbsp; / &nbsp; Default permissions</span><span class="stop"></span></div>
   </section>
-  <div class="composer">Add a follow-up<small>Task in progress</small></div>
-  <div class="caption"><small data-step>01 / TASK STARTED</small><strong data-caption>Codex is working. Game on.</strong><div data-detail>Hold to charge. Release to jump.</div></div>
+  <section class="code-panel">
+    <div class="tabs"><b>catalog.ts</b><span>search.test.ts</span><span style="margin-left:auto">+</span></div>
+    <div class="file-path">src / library / catalog.ts</div>
+    <div class="diff"><span class="line"><i>21</i><span class="kw">export function</span> <span class="fn">searchGames</span>(games, query) {</span><span class="line removed"><i>22</i>- <span class="kw">return</span> games;</span><span class="line added"><i>22</i>+ <span class="kw">const</span> term = query.trim().toLowerCase();</span><span class="line added"><i>23</i>+ <span class="kw">if</span> (!term) <span class="kw">return</span> games;</span><span class="line added"><i>24</i>+</span><span class="line added"><i>25</i>+ <span class="kw">return</span> games.filter((game) =&gt; {</span><span class="line added"><i>26</i>+   <span class="kw">const</span> text = [game.name, ...game.tags]</span><span class="line added"><i>27</i>+     .join(<span class="str">" "</span>).toLowerCase();</span><span class="line added"><i>28</i>+   <span class="kw">return</span> text.includes(term);</span><span class="line added"><i>29</i>+ });</span><span class="line"><i>30</i>}</span></div>
+    <div class="terminal"><div class="terminal-label">Terminal &nbsp;&nbsp; Problems &nbsp;&nbsp; Output</div><div data-terminal-command>$ npm test -- search.test.ts</div><div class="test-output">PASS  search.test.ts
+  matches a game name
+  matches a category
+  ignores case
+  handles whitespace
+  keeps the full catalog for an empty query
+  supports keyboard selection
+
+Test Files  1 passed (1)
+     Tests  8 passed (8)</div></div>
+  </section>
   <div class="companion"><canvas tabindex="0" aria-label="Toast Don't Fall gameplay"></canvas></div>
-  <div class="complete"><b>Task complete.</b><span>Game stopped. Back to your work.</span></div>
 </main>
-<footer><b>100 local games / Real gameplay, enlarged for this preview</b><span>Illustrated workspace and task lifecycle. No private data.</span></footer>
+<footer><b>Agent Stage for Codex &nbsp; / &nbsp; 100 local games</b><span>Illustrated Codex session. Actual game engine and inputs. No private data.</span></footer>
+</body>
 </html>

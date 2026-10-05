@@ -39,7 +39,7 @@ try {
   });
   await page.clock.runFor(50);
   const canvas = page.locator("canvas");
-  assert.equal((await canvas.boundingBox()).width, 680);
+  assert.equal((await canvas.boundingBox()).width, 520);
   assert.equal(await page.evaluate(() => demo.painter.diagnostics.assetLoaded), true);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 1280);
   assert.ok(await canvas.evaluate(c => {
@@ -51,6 +51,8 @@ try {
   await mkdir(new URL("../docs/media/", import.meta.url), { recursive: true });
   const poster = new URL("../docs/media/readme-preview.png", import.meta.url).pathname;
   const gif = new URL("../docs/media/readme-preview.gif", import.meta.url).pathname;
+  const output = new URL("../output/readme-preview/", import.meta.url);
+  await mkdir(output, { recursive: true });
   const fps = 20, frameMs = 1000 / fps;
   let frame = 0;
   async function advance(duration) {
@@ -59,17 +61,23 @@ try {
       await page.screenshot({ path: join(frames, `${String(frame++).padStart(5, "0")}.png`) });
     }
   }
-  async function caption(step, title, detail) {
-    await page.evaluate(({ step, title, detail }) => {
-      document.querySelector("[data-step]").textContent = step;
-      document.querySelector("[data-caption]").textContent = title;
-      document.querySelector("[data-detail]").textContent = detail;
-    }, { step, title, detail });
+  async function phase(name, status) {
+    await page.evaluate(({ name, status }) => {
+      document.body.dataset.phase = name;
+      document.querySelector("[data-task-status]").textContent = status;
+      if (name !== "read") document.querySelector("[data-read-result]").textContent = "Read 2 files. Found the catalog filter.";
+    }, { name, status });
   }
-  await advance(850);
+  await page.evaluate(() => demo.runtime.stop());
+  assert.equal(await canvas.isVisible(), false);
+  await advance(900);
+  await phase("read", "Working: reading the project");
+  await page.evaluate(() => demo.runtime.start());
+  await advance(700);
   for (let jump = 0; jump < 3; jump++) {
     const choice = solveToastJump(await page.evaluate(() => demo.world.checkpoint()));
-    await caption("02 / PLAY WHILE CODEX WORKS", "Hold. Aim. Let it fly.", "Real keyboard input. Real game physics.");
+    if (jump === 1) await phase("edit", "Working: updating the search filter");
+    if (jump === 2) await phase("test", "Working: running the tests");
     await canvas.focus();
     await page.keyboard.down("Space");
     await advance(Math.round(choice.ticks * 1000 / 120));
@@ -79,22 +87,34 @@ try {
     if (jump === 1) await page.screenshot({ path: poster });
     await advance(850);
     assert.equal(await page.evaluate(() => demo.world.scene.index), jump + 1);
-    await caption("02 / PLAY WHILE CODEX WORKS", "One more jump?", "Your task keeps running in the background.");
     await advance(600);
   }
+  assert.equal(await page.locator(".tool.test").isVisible(), true);
+  assert.equal(await page.locator(".added").first().isVisible(), true);
+  const placement = await page.evaluate(() => {
+    const game = document.querySelector(".companion").getBoundingClientRect();
+    const composer = document.querySelector(".composer").getBoundingClientRect();
+    const win = document.querySelector(".window").getBoundingClientRect();
+    return { separate: game.left > composer.right, rightInset: win.right - game.right, bottomInset: win.bottom - game.bottom };
+  });
+  assert.equal(placement.separate, true, "The game must not cover the chat composer");
+  assert.ok(placement.rightInset >= 16 && placement.rightInset <= 18);
+  assert.ok(placement.bottomInset >= 16 && placement.bottomInset <= 18);
+  await page.screenshot({ path: new URL("working.png", output).pathname });
   await page.evaluate(() => {
     demo.runtime.stop();
-    document.body.dataset.phase = "complete";
-    document.querySelector("[data-task-status]").textContent = "Task complete";
-    document.querySelector("[data-tool-status]").textContent = "Checks passed";
-    document.querySelector(".composer small").textContent = "Ready for your next task";
+    document.querySelector("[data-test-result]").textContent = "8 tests passed. No failures.";
+    document.querySelector("[data-composer-text]").textContent = "Ask a follow-up";
   });
-  await caption("03 / TASK COMPLETED", "Done means done.", "The game stops and gets out of your way.");
+  await phase("complete", "Completed");
   const stopped = await page.evaluate(() => JSON.stringify(demo.world.snapshot()));
-  await advance(1600);
+  await advance(2300);
   await page.keyboard.press("Space");
   assert.equal(await page.evaluate(() => JSON.stringify(demo.world.snapshot())), stopped);
   assert.equal(await canvas.isVisible(), false);
+  assert.equal(await page.locator(".answer").isVisible(), true);
+  assert.ok(await page.evaluate(() => document.querySelector(".answer").getBoundingClientRect().bottom < document.querySelector(".composer").getBoundingClientRect().top));
+  await page.screenshot({ path: new URL("completed.png", output).pathname });
   assert.deepEqual(errors, []);
   await page.evaluate(() => demo.runtime.destroy());
   execFileSync(ffmpeg, ["-hide_banner", "-loglevel", "error", "-y", "-framerate", String(fps),
@@ -104,7 +124,8 @@ try {
   const bytes = (await stat(gif)).size;
   assert.ok(bytes < 8 * 1024 * 1024, "README GIF must remain below 8 MiB");
   const report = { image: "docs/media/readme-preview.gif", poster: "docs/media/readme-preview.png", width: 1280, height: 800,
-    gameWidth: 680, frames: frame, fps, duration: frame / fps, bytes, illustratedWorkspace: true, simulatedLifecycle: true,
+    gameWidth: 520, frames: frame, fps, duration: frame / fps, bytes, illustratedWorkspace: true, simulatedLifecycle: true,
+    phases: ["idle", "read", "edit", "test", "complete"], composerUnobscured: true,
     realGameplay: "toast-hop", successfulJumps: 3, stoppedAndHidden: true, privateData: false };
   await mkdir(new URL("../output/readme-preview/", import.meta.url), { recursive: true });
   await writeFile(new URL("../output/readme-preview/report.json", import.meta.url), JSON.stringify(report, null, 2) + "\n");

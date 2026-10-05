@@ -2,7 +2,7 @@
 
 ![Agent Stage animated demo: play a jumping game while a task runs, then the game stops and closes](docs/media/readme-preview.gif)
 
-*Real gameplay, enlarged for clarity. Illustrated workspace and task lifecycle; no private conversations. [Static preview](docs/media/readme-preview.png).*
+*An illustrated Codex session: project exploration, code changes and tests continue while the real game engine runs in a 520px companion. Not a Codex screen recording; no private conversations. [Static preview](docs/media/readme-preview.png).*
 
 **Your agent works. You play.**
 
@@ -13,6 +13,8 @@ English | [简体中文](README.zh-CN.md)
 **Community project. Not an official OpenAI product. macOS Beta.** No Codex app patching, theme changes or debug port required.
 
 ## Install on Mac
+
+**Source update:** `main` includes the larger 520px companion and updated Codex CLI discovery. The current `0.11.1-beta.2` download predates these changes. A new installer is pending a Desktop task-trigger retest; some existing sessions have not emitted start events despite healthy companion checks.
 
 1. Install, open and sign into **Codex Desktop**.
 2. Open [Releases](https://github.com/lc345/codex-arcade/releases) and download **Agent-Stage-for-Codex.zip**. Double-click to extract it.

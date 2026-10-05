@@ -2,7 +2,7 @@
 
 ![Agent Stage 动图：任务执行时蓄力、跳跃，任务完成后游戏停止并收起](docs/media/readme-preview.gif)
 
-*小游戏为真实操作回放，画面为便于观看已放大；工作区与任务流程为演示，不含私人对话。[查看静态图](docs/media/readme-preview.png)。*
+*演示工作区会依次查看项目、修改代码、执行测试，同时右下角 520px 小窗运行真实游戏。不是 Codex 实际录屏，不含私人对话。[查看静态图](docs/media/readme-preview.png)。*
 
 [English](README.md) | 简体中文
 
@@ -13,6 +13,8 @@ Codex 开始任务时，右下角出现一个小游戏；任务结束或中断�
 这是社区项目，不是 OpenAI 官方产品。当前是 **macOS Beta**，不修改 Codex 安装包或主题，不需要调试端口。
 
 ## Mac：三步安装
+
+**源码更新：** `main` 已包含 520px 小窗和新版 Codex CLI 路径兼容；当前 `0.11.1-beta.2` 下载包还不包含这两项。部分已有桌面会话在服务检查正常时仍未发送启动事件，新安装包会在桌面任务触发复测后发布。
 
 1. 先安装、打开并登录 Codex Desktop。
 2. 在 [GitHub Releases](https://github.com/lc345/codex-arcade/releases) 下载 **Agent-Stage-for-Codex.zip**，双击解压。
