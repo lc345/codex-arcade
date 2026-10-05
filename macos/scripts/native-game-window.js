@@ -82,7 +82,7 @@ function chooseGameWindowFrame(screens, pointer, ratio) {
   if (index < 0) index = 0;
   var screen = screens[index];
   if (typeof ratio !== "number" || !isFinite(ratio) || ratio < 0.5 || ratio > 3) ratio = 16 / 9;
-  var width = Math.min(400, screen.width - 40, (screen.height - 40) * ratio);
+  var width = Math.min(520, screen.width - 40, (screen.height - 40) * ratio);
   var height = Math.round(width / ratio);
   return { screenIndex: index, x: screen.x + screen.width - width - 20, y: screen.y + 20, width: width, height: height };
 }
@@ -99,7 +99,7 @@ function run(argv) {
   app.setActivationPolicy($.NSApplicationActivationPolicyAccessory);
   // Borderless panels need to opt in to keyboard input after a game click.
   ObjC.registerSubclass({ name: "AgentStageGamePanel", superclass: "NSPanel", methods: { canBecomeKeyWindow: { types: ["bool", []], implementation: function () { return true; } } } });
-  var rect = $.NSMakeRect(0, 0, 400, 225);
+  var rect = $.NSMakeRect(0, 0, 520, 293);
   var win = $.AgentStageGamePanel.alloc.initWithContentRectStyleMaskBackingDefer(rect, $.NSWindowStyleMaskBorderless | $.NSWindowStyleMaskNonactivatingPanel, $.NSBackingStoreBuffered, false);
   win.title = "Agent Stage";
   win.releasedWhenClosed = false;

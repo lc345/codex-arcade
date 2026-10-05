@@ -27,10 +27,10 @@ test("popup chooses the pointer's display, including negative coordinates", () =
   const screens = [{ x: 0, y: 24, width: 1512, height: 920 }, { x: -1920, y: 0, width: 1920, height: 1080 }];
   const frame = plain(ctx.chooseGameWindowFrame(screens, { x: -800, y: 450 }));
   assert.equal(frame.screenIndex, 1);
-  assert.equal(frame.x, -420);
+  assert.equal(frame.x, -540);
   assert.equal(frame.y, 20);
-  assert.equal(frame.width, 400);
-  assert.equal(frame.height, 225);
+  assert.equal(frame.width, 520);
+  assert.equal(frame.height, 293);
 });
 
 test("popup remains entirely inside a small usable display", () => {
@@ -45,7 +45,7 @@ test("compact popup preserves game aspect ratio, including short displays", () =
   for (const height of [200, 900]) {
     const screen = { x: 0, y: 0, width: 600, height };
     const frame = ctx.chooseGameWindowFrame([screen], { x: 100, y: 100 }, 1.5);
-    assert.ok(frame.width <= 400);
+    assert.ok(frame.width <= 520);
     assert.ok(Math.abs(frame.width / frame.height - 1.5) < 0.01);
     assert.ok(frame.y + frame.height <= height - 20);
   }
@@ -55,8 +55,8 @@ test("invalid game ratios cannot create oversized or nonfinite windows", () => {
   const screens = [{ x: 0, y: 0, width: 1512, height: 920 }];
   for (const ratio of [0, -1, NaN, Infinity, 999, "secret"]) {
     const frame = ctx.chooseGameWindowFrame(screens, { x: 100, y: 100 }, ratio);
-    assert.equal(frame.width, 400);
-    assert.equal(frame.height, 225);
+    assert.equal(frame.width, 520);
+    assert.equal(frame.height, 293);
   }
 });
 
@@ -88,16 +88,16 @@ test("game follows Codex window coordinates instead of the screen or mouse corne
   const screens = [{ x: 0, y: 24, width: 1512, height: 958 }];
   const anchor = ctx.toAppKitWindowBounds(hostWindow.bounds, 982);
   assert.deepEqual(plain(anchor), { x: 100, y: 222, width: 1000, height: 700 });
-  assert.deepEqual(plain(ctx.anchorGameWindowFrame(screens, anchor, 16 / 9)), { screenIndex: 0, x: 680, y: 242, width: 400, height: 225 });
+  assert.deepEqual(plain(ctx.anchorGameWindowFrame(screens, anchor, 16 / 9)), { screenIndex: 0, x: 560, y: 242, width: 520, height: 293 });
   const moved = ctx.anchorGameWindowFrame(screens, { ...anchor, x: 250, y: 100, width: 800, height: 500 }, 1.5);
-  assert.equal(moved.x, 630); assert.equal(moved.y, 120); assert.equal(moved.height, 267);
+  assert.equal(moved.x, 510); assert.equal(moved.y, 120); assert.equal(moved.height, 347);
 });
 
 test("multi-screen anchoring stays inside the visible host area and fails closed offscreen", () => {
   const screens = [{ x: 0, y: 24, width: 1512, height: 958 }, { x: -1920, y: -180, width: 1920, height: 1080 }];
   const host = { x: -1800, y: -100, width: 1200, height: 900 };
   const frame = ctx.anchorGameWindowFrame(screens, host, 16 / 9);
-  assert.equal(frame.screenIndex, 1); assert.equal(frame.x, -1020); assert.equal(frame.y, -80);
+  assert.equal(frame.screenIndex, 1); assert.equal(frame.x, -1140); assert.equal(frame.y, -80);
   assert.equal(ctx.anchorGameWindowFrame(screens, { x: 4000, y: 0, width: 800, height: 600 }, 16 / 9), null);
   const clipped = ctx.anchorGameWindowFrame(screens, { x: -2500, y: -400, width: 800, height: 800 }, 16 / 9);
   assert.ok(clipped.width > 0 && clipped.x >= -1920 && clipped.x + clipped.width <= -1700);

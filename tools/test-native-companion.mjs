@@ -67,7 +67,7 @@ try {
   assert.equal(windowDiagnostics.metadataReaderVerified, true, "public geometry API reads the test panel's own window");
   assert.equal(windowDiagnostics.hostAnchored, true);
   if (!profiling) await copyFile(join(dir, "window.json.png"), resolve(`output/native-${game}.png`));
-  assert.ok(windowDiagnostics.frame.width <= 400, "native window must stay compact");
+  assert.ok(windowDiagnostics.frame.width <= 520, "native window must stay compact");
   assert.equal(windowDiagnostics.titled, false, "native title bar must not be visible");
   assert.equal(canvas.chromeVisible, false, "only the game is visible");
   assert.ok(Math.abs(canvas.width - windowDiagnostics.frame.width) < 1);

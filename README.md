@@ -34,7 +34,7 @@ This beta is **unsigned and unnotarized**. macOS may block the first launch. Ver
 
 | Action | Companion behavior |
 | --- | --- |
-| Send a new Codex task | A roughly 400px-wide game appears at Codex's lower-right corner |
+| Send a new Codex task | A roughly 520px-wide game appears at Codex's lower-right corner |
 | Codex thinks or calls tools | Keep playing; not limited to a particular tool |
 | Hover the game's upper-right corner | A shuffle control lets you change games |
 | A task runs longer than three minutes | Random mode can rotate at a safe ready/result state after five seconds without input |
@@ -63,6 +63,8 @@ Default shuffle includes all 100, without repeats within a cycle. **Seven entrie
 | **Uninstall Agent Stage.command** | Remove Agent Stage's runtime, service and hooks; retain unrelated hooks and local preferences/media |
 
 These commands are in the full download. After deleting that folder, the installed copy remains at `~/.codex/agent-stage`; check/uninstall commands are also under its `macos/` directory.
+
+If checks pass but an existing chat never opens a game, finish your active work, quit and reopen Codex, then send a new task. A healthy companion and trusted hooks do not prove that an already-open session emitted a task-start event. Confirm both automatic appearance and task-end cleanup in a real task; the browser demo does not test that connection.
 
 ## Privacy and compatibility
 
@@ -106,7 +108,7 @@ Caches, logs, task records, private configuration, `dist/`, `output/` and `.tool
 
 ## Contribute
 
-Bring a distinctive game, a better level, original sound or a useful fix. Include legal-input tests, playable goals, failure/retry behavior, licensed local assets, and checks at the 400px popup size. Verify mute, pause and immediate task-end cleanup.
+Bring a distinctive game, a better level, original sound or a useful fix. Include legal-input tests, playable goals, failure/retry behavior, licensed local assets, and checks at the 520px popup size and smaller constrained windows. Verify mute, pause and immediate task-end cleanup.
 
 Community gameplay code is reviewed before shipping. The app does not automatically execute arbitrary downloaded plugins.
 

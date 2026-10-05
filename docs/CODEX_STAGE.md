@@ -8,7 +8,7 @@ Use the full Release ZIP and double-click **Install Agent Stage.command**. No de
 
 1. Codex `UserPromptSubmit` reaches the local hook collector and starts a run.
 2. The authenticated loopback daemon emits a privacy-filtered activity event.
-3. The native WebKit companion shows a roughly 400px game window at Codex's lower-right corner, only while Codex is foreground.
+3. The native WebKit companion shows a roughly 520px game window at Codex's lower-right corner, only while Codex is foreground. It shrinks to fit smaller host windows.
 4. Thinking and tool calls leave the game running. Manual shuffle is available; after three minutes, automatic rotation waits for a safe idle/result state and five seconds without input.
 5. `Stop` or `Interrupt` ends the matching run. The host cancels loading, simulation, input, animation and audio; the popup closes when no active run remains.
 

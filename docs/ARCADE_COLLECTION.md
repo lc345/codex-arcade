@@ -11,4 +11,4 @@ The current roster is [100 unique games](PLAYABLE_INVENTORY.zh-CN.md), not 100 l
 
 The default popup samples all 100 games without repetition within a shuffle cycle. Hover the upper-right corner to change games manually. Idle-safe rotation can change a game during long tasks without interrupting an active move. Task completion cancels the game, including pending loads and audio.
 
-For each contribution, test playable goals and failure/retry through legal input, the 400px popup, mouse/touch/keyboard where supported, mute, reduced effects, pause and immediate task-end cleanup. A passing simulation does not establish that a game is fun or works smoothly in the installed native window.
+For each contribution, test playable goals and failure/retry through legal input, the 520px popup and smaller constrained windows, mouse/touch/keyboard where supported, mute, reduced effects, pause and immediate task-end cleanup. A passing simulation does not establish that a game is fun or works smoothly in the installed native window.

@@ -44,6 +44,8 @@ resolve_agent_stage_codex() {
   local candidate
   if [[ -n "${AGENT_STAGE_CODEX_BIN:-}" && -x "$AGENT_STAGE_CODEX_BIN" ]]; then printf '%s\n' "$AGENT_STAGE_CODEX_BIN"; return; fi
   for candidate in \
+    "/Applications/Codex.app/Contents/Resources/codex-cli/bin/codex" \
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex" \
     "/Applications/Codex.app/Contents/Resources/codex" \
     "/Applications/ChatGPT.app/Contents/Resources/codex"; do
     if [[ -x "$candidate" ]]; then printf '%s\n' "$candidate"; return; fi

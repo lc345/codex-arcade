@@ -5,6 +5,14 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import test from "node:test";
 
+test("Codex CLI discovery supports both current app-bundle and legacy layouts", async () => {
+  const script = await readFile(resolve("macos/scripts/agent-stage-env.sh"), "utf8");
+  for (const app of ["Codex.app", "ChatGPT.app"]) {
+    assert.ok(script.includes(`/Applications/${app}/Contents/Resources/codex-cli/bin/codex`));
+    assert.ok(script.includes(`/Applications/${app}/Contents/Resources/codex`));
+  }
+});
+
 test("the installed UI receives interactive scheduling rather than background throttling", async () => {
   const dir = await mkdtemp(resolve(tmpdir(), "agent-stage-plist-"));
   try {
