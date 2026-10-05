@@ -52,7 +52,7 @@ test("magnet: checkpoints are bounded, do not resume movement, and reject arbitr
 });
 test("magnet: a legal city trip collects, returns and recycles the bus before winning", () => {
   const events = [], g = createMagnetWorld({ onEvent: e => events.push(e.type) });
-  assert.equal(sweepStreet(g).phase, "won");
+  assert.equal(sweepStreet(g).phase, "won", JSON.stringify({ mode: g.scene.mode, player: g.scene.player, radius: g.scene.radius, power: g.scene.power, hits: g.scene.hits, bus: g.scene.items.find(i => i.kind === "bus"), target: magnetTarget(g.scene) }));
   assert.ok(g.scene.items.find(i => i.kind === "bus").attached);
   assert.equal(g.scene.delivered, true);
   assert.ok(Math.hypot(g.scene.player.x - g.scene.depot.x, g.scene.player.y - g.scene.depot.y) < 170);
@@ -88,7 +88,7 @@ test("magnet city: every stage restores safely and task completion freezes the r
       assert.deepEqual(restored.scene.player, before); restored.destroy(); samples++;
     }
   }
-  for (const mode of ["collect", "find-bus", "return", "recycle"]) assert.ok(modes.has(mode), mode);
+  for (const mode of ["collect", "find-bus", "return", "recycle"]) assert.ok(modes.has(mode), JSON.stringify({ missing: mode, mode: g.scene.mode, player: g.scene.player, radius: g.scene.radius, power: g.scene.power, bus: g.scene.items.find(i => i.kind === "bus"), target: magnetTarget(g.scene) }));
   assert.ok(samples > 10); assert.equal(g.scene.phase, "playing");
   g.stop(); const frozen = JSON.stringify(g.scene), cp = g.checkpoint(); tick(g, 600);
   assert.equal(JSON.stringify(g.scene), frozen);
