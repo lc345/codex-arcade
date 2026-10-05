@@ -1,5 +1,9 @@
 # Agent Stage
 
+![Agent Stage 效果示意：Codex 工作时，右下角展示真实渲染的小游戏](docs/media/readme-preview.png)
+
+*工作区为效果示意，小游戏采用真实渲染；使用演示文案，不含私人对话。*
+
 [English](README.md) | 简体中文
 
 **Agent 工作，你玩游戏。 / Your agent works. You play.**

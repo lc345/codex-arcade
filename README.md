@@ -1,5 +1,9 @@
 # Agent Stage
 
+![Agent Stage: a real mini-game in the lower-right corner of an illustrated Codex workspace](docs/media/readme-preview.png)
+
+*Illustrated workspace with real gameplay rendering. Demo text only; no private conversations.*
+
 **Your agent works. You play.**
 
 English | [简体中文](README.zh-CN.md)

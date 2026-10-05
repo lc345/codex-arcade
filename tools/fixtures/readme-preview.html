@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Stage illustrated preview</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
+body { background: #eef2f1; color: #f1f2f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+.heading { height: 102px; padding: 29px 38px; display: flex; justify-content: space-between; align-items: center; color: #172421; }
+.heading strong { font-size: 30px; font-weight: 750; }
+.heading span { font-size: 17px; color: #52645e; }
+.window { position: relative; height: 628px; margin: 0 32px; border: 1px solid #393c3b; border-radius: 8px; background: #1c1d1d; overflow: hidden; box-shadow: 0 16px 32px #17242120; }
+.titlebar { height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 18px; background: #242626; border-bottom: 1px solid #343635; }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #fc655b; }
+.dot:nth-child(2) { background: #e8bd4f; } .dot:nth-child(3) { background: #57bd69; }
+.titlebar strong { margin-left: 18px; font-size: 14px; font-weight: 550; }
+.titlebar small { margin-left: auto; color: #a4b0aa; font-size: 11px; }
+.sidebar { position: absolute; top: 44px; bottom: 0; left: 0; width: 196px; padding: 26px 16px; background: #181919; border-right: 1px solid #303231; font-size: 13px; }
+.sidebar strong { display: block; padding: 0 10px 26px; font-size: 19px; }
+.nav { padding: 11px 10px; color: #b9c1bd; }
+.nav.active { background: #303431; color: #f2f5f2; border-radius: 5px; }
+.section { color: #7f8b84; font-size: 11px; margin: 28px 10px 9px; }
+.workspace { margin-left: 196px; padding: 26px 34px; }
+.crumb { font-size: 12px; color: #8f9b94; }
+h1 { font-size: 23px; font-weight: 600; margin: 21px 0 24px; }
+.prompt { width: 590px; margin-left: auto; padding: 15px 18px; border-radius: 6px; color: #e2e7e4; background: #303332; font-size: 14px; line-height: 1.5; }
+.reply { margin-top: 25px; font-size: 14px; line-height: 1.65; color: #c8d1cb; max-width: 620px; }
+.task { margin-top: 21px; display: flex; align-items: center; gap: 9px; font-size: 13px; color: #ade2c8; }
+.pulse { width: 7px; height: 7px; background: #85d6b0; border-radius: 50%; }
+.terminal { margin-top: 14px; width: 390px; padding: 14px 0; border-top: 1px solid #3c423e; font: 12px/2 ui-monospace, SFMono-Regular, Menlo, monospace; color: #9ca9a1; }
+.terminal b { color: #dce5df; font-weight: 400; }
+.composer { position: absolute; left: 230px; bottom: 25px; width: 490px; height: 72px; border: 1px solid #434b45; border-radius: 8px; padding: 18px; color: #7f8b83; font-size: 13px; }
+.composer small { display: block; margin-top: 12px; font-size: 10px; }
+.companion { position: absolute; width: 400px; height: 225px; right: 18px; bottom: 18px; border-radius: 8px; box-shadow: 0 0 0 1px #ffffff35, 0 8px 32px #0009; overflow: hidden; background: #b7dacf; }
+canvas { display: block; width: 400px; height: 225px; outline: none; }
+.caption { position: absolute; right: 18px; bottom: 265px; width: 400px; }
+.caption strong { color: #b1efd0; font-size: 16px; }
+.caption div { margin-top: 7px; color: #c9d4cc; font-size: 13px; }
+footer { height: 70px; display: flex; align-items: center; justify-content: space-between; margin: 0 38px; color: #52645e; font-size: 12px; }
+footer b { color: #243f33; font-size: 13px; font-weight: 600; }
+</style>
+<header class="heading"><strong>Your agent works. You play.</strong><span>Agent Stage for Codex</span></header>
+<main class="window">
+  <div class="titlebar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><strong>Codex</strong><small>ILLUSTRATED DEMO WORKSPACE</small></div>
+  <aside class="sidebar"><strong>Codex</strong><div class="nav">New task</div><div class="nav">Automations</div><div class="section">PROJECTS</div><div class="nav">Demo project</div><div class="nav active">Add library search</div><div class="nav">Polish navigation</div><div class="nav">Review changes</div></aside>
+  <section class="workspace">
+    <div class="crumb">Demo project / Tasks</div><h1>Add search to the library</h1>
+    <div class="prompt">Add a search bar to the game library, then test keyboard navigation and empty results.</div>
+    <div class="reply">I'll update the search flow and check that filtering and keyboard navigation work together.</div>
+    <div class="task"><i class="pulse"></i>Working on your task</div>
+    <div class="terminal"><b>Running checks</b><br>Search filtering<br>Keyboard navigation<br>Empty-state behavior</div>
+  </section>
+  <div class="composer">Add a follow-up<small>Task in progress</small></div>
+  <div class="caption"><strong>Meanwhile, take a jump.</strong><div>A little game. Right in the corner.</div></div>
+  <div class="companion"><canvas tabindex="0" aria-label="Toast Don't Fall gameplay"></canvas></div>
+</main>
+<footer><b>100 local games / Starts with your task / Stops when it ends</b><span>Illustrated workspace. Real game renderer. No private data.</span></footer>
+</html>
