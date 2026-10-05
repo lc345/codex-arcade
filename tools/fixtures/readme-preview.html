@@ -16,27 +16,32 @@ body { background: #eef2f1; color: #f1f2f0; font-family: -apple-system, BlinkMac
 .dot:nth-child(2) { background: #e8bd4f; } .dot:nth-child(3) { background: #57bd69; }
 .titlebar strong { margin-left: 18px; font-size: 14px; font-weight: 550; }
 .titlebar small { margin-left: auto; color: #a4b0aa; font-size: 11px; }
-.sidebar { position: absolute; top: 44px; bottom: 0; left: 0; width: 196px; padding: 26px 16px; background: #181919; border-right: 1px solid #303231; font-size: 13px; }
+.sidebar { position: absolute; top: 44px; bottom: 0; left: 0; width: 160px; padding: 26px 12px; background: #181919; border-right: 1px solid #303231; font-size: 12px; }
 .sidebar strong { display: block; padding: 0 10px 26px; font-size: 19px; }
 .nav { padding: 11px 10px; color: #b9c1bd; }
 .nav.active { background: #303431; color: #f2f5f2; border-radius: 5px; }
 .section { color: #7f8b84; font-size: 11px; margin: 28px 10px 9px; }
-.workspace { margin-left: 196px; padding: 26px 34px; }
+.workspace { margin-left: 160px; width: 350px; padding: 24px 28px; }
 .crumb { font-size: 12px; color: #8f9b94; }
-h1 { font-size: 23px; font-weight: 600; margin: 21px 0 24px; }
-.prompt { width: 590px; margin-left: auto; padding: 15px 18px; border-radius: 6px; color: #e2e7e4; background: #303332; font-size: 14px; line-height: 1.5; }
-.reply { margin-top: 25px; font-size: 14px; line-height: 1.65; color: #c8d1cb; max-width: 620px; }
+h1 { font-size: 21px; font-weight: 600; margin: 18px 0 20px; }
+.prompt { width: 100%; padding: 13px 15px; border-radius: 6px; color: #e2e7e4; background: #303332; font-size: 13px; line-height: 1.5; }
+.reply { margin-top: 19px; font-size: 13px; line-height: 1.65; color: #c8d1cb; }
 .task { margin-top: 21px; display: flex; align-items: center; gap: 9px; font-size: 13px; color: #ade2c8; }
 .pulse { width: 7px; height: 7px; background: #85d6b0; border-radius: 50%; }
-.terminal { margin-top: 14px; width: 390px; padding: 14px 0; border-top: 1px solid #3c423e; font: 12px/2 ui-monospace, SFMono-Regular, Menlo, monospace; color: #9ca9a1; }
+.terminal { margin-top: 14px; width: 100%; padding: 14px 0; border-top: 1px solid #3c423e; font: 12px/2 ui-monospace, SFMono-Regular, Menlo, monospace; color: #9ca9a1; }
 .terminal b { color: #dce5df; font-weight: 400; }
-.composer { position: absolute; left: 230px; bottom: 25px; width: 490px; height: 72px; border: 1px solid #434b45; border-radius: 8px; padding: 18px; color: #7f8b83; font-size: 13px; }
+.composer { position: absolute; left: 188px; bottom: 25px; width: 294px; height: 66px; border: 1px solid #434b45; border-radius: 8px; padding: 14px; color: #7f8b83; font-size: 13px; }
 .composer small { display: block; margin-top: 12px; font-size: 10px; }
-.companion { position: absolute; width: 400px; height: 225px; right: 18px; bottom: 18px; border-radius: 8px; box-shadow: 0 0 0 1px #ffffff35, 0 8px 32px #0009; overflow: hidden; background: #b7dacf; }
-canvas { display: block; width: 400px; height: 225px; outline: none; }
-.caption { position: absolute; right: 18px; bottom: 265px; width: 400px; }
-.caption strong { color: #b1efd0; font-size: 16px; }
-.caption div { margin-top: 7px; color: #c9d4cc; font-size: 13px; }
+.companion { position: absolute; width: 680px; height: 382.5px; right: 18px; bottom: 18px; border-radius: 8px; box-shadow: 0 0 0 1px #ffffff35, 0 8px 32px #0009; overflow: hidden; background: #b7dacf; }
+canvas { display: block; width: 680px; height: 382.5px; outline: none; }
+.caption { position: absolute; right: 18px; bottom: 427px; width: 680px; }
+.caption small { display: block; color: #a0b6aa; font-size: 11px; margin-bottom: 12px; }
+.caption strong { color: #b1efd0; font-size: 23px; }
+.caption div { margin-top: 8px; color: #c9d4cc; font-size: 14px; }
+.complete { position: absolute; right: 18px; bottom: 18px; width: 680px; height: 382.5px; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 13px; color: #b2c5b9; font-size: 16px; }
+.complete b { font-size: 28px; color: #f1f5f2; font-weight: 550; }
+body[data-phase="complete"] .companion { visibility: hidden; }
+body[data-phase="complete"] .complete { display: flex; }
 footer { height: 70px; display: flex; align-items: center; justify-content: space-between; margin: 0 38px; color: #52645e; font-size: 12px; }
 footer b { color: #243f33; font-size: 13px; font-weight: 600; }
 </style>
@@ -46,14 +51,15 @@ footer b { color: #243f33; font-size: 13px; font-weight: 600; }
   <aside class="sidebar"><strong>Codex</strong><div class="nav">New task</div><div class="nav">Automations</div><div class="section">PROJECTS</div><div class="nav">Demo project</div><div class="nav active">Add library search</div><div class="nav">Polish navigation</div><div class="nav">Review changes</div></aside>
   <section class="workspace">
     <div class="crumb">Demo project / Tasks</div><h1>Add search to the library</h1>
-    <div class="prompt">Add a search bar to the game library, then test keyboard navigation and empty results.</div>
-    <div class="reply">I'll update the search flow and check that filtering and keyboard navigation work together.</div>
-    <div class="task"><i class="pulse"></i>Working on your task</div>
-    <div class="terminal"><b>Running checks</b><br>Search filtering<br>Keyboard navigation<br>Empty-state behavior</div>
+    <div class="prompt">Add library search and test keyboard navigation.</div>
+    <div class="reply">I'll update the search flow and check the interactions.</div>
+    <div class="task"><i class="pulse"></i><span data-task-status>Working on your task</span></div>
+    <div class="terminal"><b data-tool-status>Updating search</b><br>Search filtering<br>Keyboard navigation<br>Empty-state behavior</div>
   </section>
   <div class="composer">Add a follow-up<small>Task in progress</small></div>
-  <div class="caption"><strong>Meanwhile, take a jump.</strong><div>A little game. Right in the corner.</div></div>
+  <div class="caption"><small data-step>01 / TASK STARTED</small><strong data-caption>Codex is working. Game on.</strong><div data-detail>Hold to charge. Release to jump.</div></div>
   <div class="companion"><canvas tabindex="0" aria-label="Toast Don't Fall gameplay"></canvas></div>
+  <div class="complete"><b>Task complete.</b><span>Game stopped. Back to your work.</span></div>
 </main>
-<footer><b>100 local games / Starts with your task / Stops when it ends</b><span>Illustrated workspace. Real game renderer. No private data.</span></footer>
+<footer><b>100 local games / Real gameplay, enlarged for this preview</b><span>Illustrated workspace and task lifecycle. No private data.</span></footer>
 </html>

@@ -1,8 +1,8 @@
 # Agent Stage
 
-![Agent Stage: a real mini-game in the lower-right corner of an illustrated Codex workspace](docs/media/readme-preview.png)
+![Agent Stage animated demo: play a jumping game while a task runs, then the game stops and closes](docs/media/readme-preview.gif)
 
-*Illustrated workspace with real gameplay rendering. Demo text only; no private conversations.*
+*Real gameplay, enlarged for clarity. Illustrated workspace and task lifecycle; no private conversations. [Static preview](docs/media/readme-preview.png).*
 
 **Your agent works. You play.**
 

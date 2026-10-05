@@ -1,8 +1,8 @@
 # Agent Stage
 
-![Agent Stage 效果示意：Codex 工作时，右下角展示真实渲染的小游戏](docs/media/readme-preview.png)
+![Agent Stage 动图：任务执行时蓄力、跳跃，任务完成后游戏停止并收起](docs/media/readme-preview.gif)
 
-*工作区为效果示意，小游戏采用真实渲染；使用演示文案，不含私人对话。*
+*小游戏为真实操作回放，画面为便于观看已放大；工作区与任务流程为演示，不含私人对话。[查看静态图](docs/media/readme-preview.png)。*
 
 [English](README.md) | 简体中文
 
