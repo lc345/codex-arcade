@@ -9,7 +9,25 @@ permissions:
   contents: write
 
 jobs:
+  verify-linux:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify cross-platform source before publishing
+        run: |
+          npm test
+          npm run verify
+          npm run audit:public
   release:
+    needs: verify-linux
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4

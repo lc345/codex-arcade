@@ -1,5 +1,12 @@
 # Changelog
 
+## Agent Stage for Codex 0.11.1-beta.2
+
+- Publish an English-first README with a separate Chinese edition and bilingual installation and release instructions.
+- Audit the public file set, preserve third-party asset provenance, and exclude local caches, credentials and task records.
+- Make the legal-input physics QA driver recover from blocked corners without changing gameplay or win conditions.
+- Require both Linux and macOS regression checks before publishing installer assets.
+
 ## Agent Stage for Codex 0.11.1-beta.1
 
 - macOS download/unzip/double-click installation with bundled arm64/x86_64 Node runtimes; no npm install or engine downloads for users.
