@@ -14,7 +14,7 @@ Agent 工作，你玩游戏。Your agent works. You play.
 
 ## 开始玩
 
-- 任务开始：Codex 窗口右下角出现约 400px 的游戏画面；思考和工具执行期间都可玩。
+- 任务开始：Codex 窗口右下角出现约 520px 的游戏画面，小窗口会自动缩小；思考和工具执行期间都可玩。
 - 任务完成/中断：立即停止并收起。切到其他 App 或最小化 Codex 会隐藏暂停。
 - 小窗右上角：鼠标悬停后可换游戏。长任务可在结算并停手后自动轮换。
 - 默认静音。点击游戏后按 Esc 只关闭本轮游戏，不停止 Codex。
@@ -37,6 +37,8 @@ Agent 工作，你玩游戏。Your agent works. You play.
 
 没弹窗时：先回到 Codex 前台发送**新**任务，再运行 Check。组织策略可能禁止 hooks，安装器不会绕过。端口 4173 / 4282 冲突时先确认占用者，不要强制关闭未知程序。
 
+如果检查正常但旧会话仍不弹窗，先结束手头任务，退出并重新打开 Codex，再发送新任务。安装器不会替你重启 Codex，也无法补发漏掉的开始事件。
+
 不修改 Codex 安装包或主题，不要求调试端口、录屏或辅助功能权限。只读取前台应用身份及窗口几何信息。游戏不接收任务文本、命令、输出或密钥。
 
 反馈可提供版本、系统、芯片、游戏名和已脱敏的 Check 输出。不要分享 `daemon.json`、`window.json`、hooks 备份或任务日志。
@@ -49,8 +51,10 @@ Agent 工作，你玩游戏。Your agent works. You play.
 
 No terminal commands, npm install, game engines or API keys are required. Official Node runtimes for Apple Silicon and Intel are included. Installation downloads no dependencies. This unsigned, unnotarized beta may require an explicit first-open security confirmation; only proceed if you trust and have verified the artifact. Never disable Gatekeeper globally.
 
-The game-only companion follows the foreground Codex window. It hides and pauses when you switch apps, and stops on task completion/interruption. Hover the upper-right corner to shuffle; press Escape after focusing the game to dismiss this turn. Audio is muted by default.
+The approximately 520px-wide game-only companion follows the foreground Codex window and shrinks to fit smaller windows. It hides and pauses when you switch apps, and stops on task completion/interruption. Hover the upper-right corner to shuffle; press Escape after focusing the game to dismiss this turn. Audio is muted by default.
 
 Use Check for diagnostics, Pause/Resume to control games, and Uninstall to remove only Agent Stage's runtime, service and hooks. Existing preferences/media remain. Re-run the new Release installer to upgrade. The installed runtime is independent of the downloaded folder.
+
+If Check passes but an existing chat never opens a game, finish your active work, quit and reopen Codex, then send a new task. The installer does not restart Codex or replay missed task-start events.
 
 This is a community project, not an OpenAI product. macOS only; remote tasks, organization-disabled hooks, all Intel machines and all macOS versions are not certified. The Windows browser experiment is documented in the source repository, not a Windows automatic companion release.

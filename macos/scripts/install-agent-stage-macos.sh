@@ -35,4 +35,4 @@ printf '\n[3/4] 接入 Codex / Connecting to Codex...\n'
 printf '\n[4/4] 启动并检查游戏小窗 / Starting and checking the companion...\n'
 AGENT_STAGE_NODE="$NODE_BIN" AGENT_STAGE_RUNTIME_ROOT="$RUNTIME_DIR" "$RUNTIME_DIR/macos/scripts/start-agent-stage-macos.sh"
 "$NODE_BIN" "$RUNTIME_DIR/macos/scripts/agent-stage-doctor.mjs" --runtime "$RUNTIME_DIR" --strict
-printf '\n安装完成。回到 Codex 发送一条新消息即可。\n任务开始：右下角独立游戏小窗；任务完成或中断：停止并收起。\n无需重启 Codex，不修改主题。试玩：http://127.0.0.1:4173/codex-stage\n'
+printf '\n安装完成。回到 Codex 发送一条新消息即可。\n任务开始：右下角独立游戏小窗；任务完成或中断：停止并收起。\n不修改主题，也不会自动重启 Codex。若检查正常但仍无小窗，请结束当前任务，退出并重新打开 Codex 后再发新任务。\n试玩：http://127.0.0.1:4173/codex-stage\n'

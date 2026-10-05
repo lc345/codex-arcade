@@ -1,5 +1,13 @@
 # Changelog
 
+## Agent Stage for Codex 0.11.1-beta.3
+
+- Enlarge the game-only companion from 400px to 520px, retaining responsive sizing and foreground-only placement inside the Codex window bounds.
+- Discover the current `codex-cli/bin/codex` layout in both Codex.app and ChatGPT.app while preserving legacy CLI paths.
+- Replace the README preview with a clearly labeled illustrated working session, real game input, and task-end cleanup.
+- Refresh bilingual installer guidance and explain recovery when an already-open Codex session does not emit task-start hooks.
+- Validate a fresh public-source reinstall on the maintainer's Apple Silicon Mac, preserve unrelated hooks/media, and confirm real Desktop task appearance/closure through the maintainer's playtest. This is not a clean-OS, Intel or Windows certification.
+
 ## Agent Stage for Codex 0.11.1-beta.2
 
 - Publish an English-first README with a separate Chinese edition and bilingual installation and release instructions.

@@ -64,7 +64,7 @@ Windows 用户请看 [Windows 网页试玩实验教程](WINDOWS_TESTING.zh-CN.md
 
 ## 推荐 GitHub 结构
 
-单仓库先发布，不急于拆成多个仓库。建议仓库名 `agent-stage`，首页突出“Agent 工作，你玩游戏”。
+公开仓库为 [lc345/codex-arcade](https://github.com/lc345/codex-arcade)，产品名为 Agent Stage。使用单仓库，首页突出“Agent 工作，你玩游戏”。
 
 | 目录 | 职责 |
 | --- | --- |

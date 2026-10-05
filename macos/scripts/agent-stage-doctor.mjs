@@ -52,7 +52,8 @@ if (args.has("--json")) {
   process.stdout.write(`${mark(Boolean(desktop))}  Verified Codex bundle: ${desktop?.path ?? "not found"}\n`);
   process.stdout.write(`${mark(report.popup.running && report.popup.eventLoopRunning)}  Native game window: ${report.popup.visible ? "visible at Codex window corner" : report.popup.mode === "hidden" ? "suspended: Codex is not foreground or has no visible window" : report.popup.mode === "dismissed" ? "dismissed for this task" : report.popup.ordered ? "opened but obscured / on another desktop" : "waiting for next task"}\n`);
   process.stdout.write(`${report.cdp.available ? "OK" : "OPTIONAL / OFF"}  Embedded Codex CDP: 127.0.0.1:${cdpPort}${report.cdp.browser ? ` (${report.cdp.browser})` : ""}\n`);
-  if (!report.cdp.available) process.stdout.write(`\nEmbedded Dock unavailable (${report.cdp.reason}). This does NOT block the default native game window. No Codex debug flag, restart or theme changes are needed.\nBrowser fallback: ${report.liveWindow.command}\n`);
+  if (!report.cdp.available) process.stdout.write(`\nEmbedded Dock unavailable (${report.cdp.reason}). This does NOT block the default native game window. No Codex debug flag or theme changes are needed.\nBrowser fallback: ${report.liveWindow.command}\n`);
+  process.stdout.write(`\nHealth checks do not prove an existing chat emitted task-start hooks. If no game appears, finish active work, quit and reopen Codex, then send a new task.\n`);
 }
 
 if (args.has("--strict") && (!report.runtime.installed || !report.hooks.installed || !report.companion.healthy || !report.popup.running || !report.popup.eventLoopRunning)) process.exitCode = 1;

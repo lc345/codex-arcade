@@ -14,10 +14,10 @@ Codex 开始任务时，右下角出现一个小游戏；任务结束或中断�
 
 ## Mac：三步安装
 
-**源码更新：** `main` 已包含 520px 小窗和新版 Codex CLI 路径兼容；当前 `0.11.1-beta.2` 下载包还不包含这两项。部分已有桌面会话在服务检查正常时仍未发送启动事件，新安装包会在桌面任务触发复测后发布。
+**[下载 macOS Beta 3](https://github.com/lc345/codex-arcade/releases/tag/agent-stage-v0.11.1-beta.3)**：包含 520px 小窗和新版 Codex CLI 路径兼容。维护者的 Apple Silicon Mac 已通过真实桌面任务的开始弹出、结束收起验证；其他设备仍需测试。
 
 1. 先安装、打开并登录 Codex Desktop。
-2. 在 [GitHub Releases](https://github.com/lc345/codex-arcade/releases) 下载 **Agent-Stage-for-Codex.zip**，双击解压。
+2. 下载 **[Agent-Stage-for-Codex.zip](https://github.com/lc345/codex-arcade/releases/download/agent-stage-v0.11.1-beta.3/Agent-Stage-for-Codex.zip)**，双击解压。
 3. 打开解压后的文件夹，双击 **Install Agent Stage.command**。看到“安装完成”后，回到 Codex **发送一个新任务**。
 
 安装器会打开一个终端窗口并自动完成四步检查和安装。**不用输入命令，不用执行 npm install，不用下载游戏引擎或配置 API Key。** 安装期间不要关闭窗口。安装后可以删除下载文件，已安装的游戏仍可使用。
@@ -55,6 +55,8 @@ Codex 开始任务时，右下角出现一个小游戏；任务结束或中断�
 - **Uninstall Agent Stage.command**：移除本项目的服务、hooks 和运行目录，保留其他 hooks 与本地进度/媒体。
 
 这些文件在完整安装包中。删除下载文件后，仍可从 `~/.codex/agent-stage` 找到 `Pause.command`、`Resume.command` 和 `macos/` 下的检查/卸载入口。
+
+检查正常但旧会话始终不弹窗时，先结束手头任务，退出并重新打开 Codex，再发送新任务。服务在线和 hooks 已配置不代表旧会话发出了开始事件；请用真实任务验证弹出和收起，不能用网页试玩代替。
 
 ## 隐私与兼容范围
 
