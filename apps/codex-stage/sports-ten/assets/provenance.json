@@ -1,0 +1,151 @@
+{
+  "id": "sports-ten",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Ten original built-in image_gen backgrounds, including two imagegen revisions. Covers captured from the running Canvas games. Sound synthesized locally with Web Audio; no sampled music.",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "ebccc35dbd014cfc88901cd99913e9900bed5e9442d71caa18c797fb397db465",
+  "licenseSha256": "dcf09a39e4a8d7914b3473ca185991d129df639be2a5238b7dd544d79052546f",
+  "files": [
+    {
+      "name": "pocket-six.png",
+      "bytes": 2244195,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "256711402ea43615f045824b9cb43e0cf04e10e8613fff49f1f00d852a32782e"
+    },
+    {
+      "name": "covers/pocket-six.png",
+      "bytes": 556451,
+      "width": 960,
+      "height": 640,
+      "sha256": "b91085c4f7757391ae36f50d0d9c6787da7751edda10f903da984dc2ff7ff8c6"
+    },
+    {
+      "name": "roof-hoops.png",
+      "bytes": 1677936,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1260f75b44cea4025b24b3a27049edc5c418d802b3c58779c282c9222ab75b56"
+    },
+    {
+      "name": "covers/roof-hoops.png",
+      "bytes": 580840,
+      "width": 960,
+      "height": 640,
+      "sha256": "a9ff46e3fcc6231258a31e8a89ef749a01973db985a673d585866aaae27dad33"
+    },
+    {
+      "name": "curve-kick.png",
+      "bytes": 3715192,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "71ba6c70dbb3f6c8b0680c3172ef49ddb62bb81d0ebcf0f74144bd20b77b5a1e"
+    },
+    {
+      "name": "covers/curve-kick.png",
+      "bytes": 1146299,
+      "width": 960,
+      "height": 640,
+      "sha256": "2ebd8801d2eef3d6dccd3087c1f645237bec328f65b66c7af85fbb2617f4c78e"
+    },
+    {
+      "name": "lawn-rally.png",
+      "bytes": 2859958,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b605e66d710c1eb555090e0292ad17396143aa97b1dbc73f238308d4528cf4b8"
+    },
+    {
+      "name": "covers/lawn-rally.png",
+      "bytes": 971278,
+      "width": 960,
+      "height": 640,
+      "sha256": "bad1545102f635cb824951b71e8a8bc0a64f477c9f34064a6a4a8720fb428756"
+    },
+    {
+      "name": "table-spin.png",
+      "bytes": 1905809,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6e765ead5e2c7a43791920efef260cce738d48ceca45c2f81e528489fcccd138"
+    },
+    {
+      "name": "covers/table-spin.png",
+      "bytes": 642244,
+      "width": 960,
+      "height": 640,
+      "sha256": "1538ac9b01fe7d1acafede982f51a548254aab1dc833e26766a78685846fed0d"
+    },
+    {
+      "name": "pin-strike.png",
+      "bytes": 2513198,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "56a1e8a1e33fd1e1d0163dca5163cd857dba28c294afa5309444169bb3078af4"
+    },
+    {
+      "name": "covers/pin-strike.png",
+      "bytes": 878163,
+      "width": 960,
+      "height": 640,
+      "sha256": "e5b996ef162f237bd3ee28a265809cc65bc6b2b746540ee2e9d97bdcb99cec64"
+    },
+    {
+      "name": "ice-stone.png",
+      "bytes": 2819270,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "240267c3db47db2b6389eaadf258c45397f8340d13d25f6ccc8a4054c74ed24b"
+    },
+    {
+      "name": "covers/ice-stone.png",
+      "bytes": 872583,
+      "width": 960,
+      "height": 640,
+      "sha256": "a2b223aaaffd5d2c5c3555bc266a55f78c0789523da09febc6b6af1db2a822c1"
+    },
+    {
+      "name": "domino-bridge.png",
+      "bytes": 2485178,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "edf3a80f045266ce4853a39c65b2de9b1436e78112eb9b249cc39ba19482da35"
+    },
+    {
+      "name": "covers/domino-bridge.png",
+      "bytes": 749294,
+      "width": 960,
+      "height": 640,
+      "sha256": "8f59776cb592416ed09c9ce209aea81a7d898d97e64cd97da0d77df09ce636d6"
+    },
+    {
+      "name": "plate-parade.png",
+      "bytes": 2542357,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a9db6c8a58a930d57d9cced3ca46bba73bdae6b4bdb9fd603fc6a9e6b0bb2737"
+    },
+    {
+      "name": "covers/plate-parade.png",
+      "bytes": 888856,
+      "width": 960,
+      "height": 640,
+      "sha256": "502bf2ae0e3d1e53f531d839ce68f84269651dd358c3559c5f20ecd450788269"
+    },
+    {
+      "name": "crush-hour.png",
+      "bytes": 2942496,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7b855f6423270b831963549b321786dda794d5e080365ee4322fdada845fd198"
+    },
+    {
+      "name": "covers/crush-hour.png",
+      "bytes": 915958,
+      "width": 960,
+      "height": 640,
+      "sha256": "cb7d9d9ed8e065638ae79f4af7c3d22e15f06112eedf9931be467319a7336105"
+    }
+  ]
+}

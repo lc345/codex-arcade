@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>购物车下坡王 · Agent Stage</title><link rel="icon" href="../assets/icons/sparkles.svg"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main>
+  <header><a href="/codex-stage">AGENT STAGE <span>/ PLAYGROUND</span></a><span id="task">本地试玩</span></header>
+  <section class="heading"><div><p>CAKE, BRAKES & CHAOS</p><h1>购物车下坡王</h1></div><span id="district">01 / 坡顶街区</span></section>
+  <section class="stage" id="stage" aria-label="购物车下坡王游戏">
+    <canvas id="game" tabindex="0" aria-label="鼠标移动转向，按住刹车，松开加速。方向键转向，空格刹车。" title="左右移动转向 · 按住刹车"></canvas>
+    <div class="hud" aria-hidden="true"><div><span>蛋糕完整度</span><strong id="cake">100<small>%</small></strong><meter id="health" value="100" max="100"></meter></div><div class="destination"><span>海边生日派对</span><strong id="distance">260<small>m</small></strong></div><div class="speed"><span>时速</span><strong id="speed">00<small>km/h</small></strong></div></div>
+    <div id="notice" role="status">正在布置街道</div>
+    <div class="result" id="result" hidden><p id="result-label">配送结果</p><h2 id="result-title"></h2><span id="result-detail"></span><button id="retry-result">再跑一趟</button></div>
+    <button id="drive" class="drive" hidden>出发</button>
+    <div class="route" aria-label="路线进度"><span id="progress"></span><i style="left:34%"></i><i style="left:68%"></i></div>
+  </section>
+  <section class="toolbar"><div class="tools">
+    <button id="mute" title="开关声音" aria-label="开关声音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button>
+    <button id="motion" title="减少角色附加动效" aria-label="减少动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button>
+    <button id="retry" title="从最近路段重试" aria-label="重试"><img src="../assets/icons/rotate-ccw.svg" alt=""></button>
+    <button id="expand" title="放大游戏" aria-label="放大游戏" aria-pressed="false"><img src="../assets/icons/maximize-2.svg" alt=""></button>
+  </div><div class="commands"><button id="brake" aria-label="按住刹车">刹车</button><button id="start">开始任务</button><button id="stop">结束任务</button></div></section>
+  <footer><span id="live" role="status" aria-live="polite">等待出发</span><span>SEASIDE DELIVERY / 01</span></footer>
+</main><script type="module" src="./app.js"></script>
+</body></html>

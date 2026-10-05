@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "airlock-queue",
+  "title": "气压急送",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "management-resources",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "airlock-queue.js",
+  "sha256": "d307480e08a9db8c7db209a9ffdc1acb2a3894825e4a6a1ebea775985faf9aad",
+  "bytes": 32785,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

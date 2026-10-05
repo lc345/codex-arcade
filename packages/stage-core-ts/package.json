@@ -1,0 +1,12 @@
+{
+  "name": "@agent-stage/core",
+  "version": "1.0.0",
+  "description": "Declarative, privacy-safe Scene Pack runtime for Agent Stage.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "bin": {
+    "agent-stage": "./src/cli.js"
+  },
+  "license": "Apache-2.0"
+}

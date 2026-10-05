@@ -1,0 +1,24 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm run test:ts
+      - run: npm run audit:public
+      - run: PYTHONPATH=packages/core-py python3 -m unittest discover -s packages/core-py/tests -v
+      - run: node packages/core-ts/src/cli.ts verify recipes
+      - run: node packages/core-ts/src/cli.ts verify scene-packs
+      - run: node packages/stage-core-ts/src/cli.js verify scene-packs
+      - run: node packages/stage-core-ts/src/cli.js gallery scene-packs apps/stage-gallery/packs.json

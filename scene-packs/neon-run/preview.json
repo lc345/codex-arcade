@@ -1,0 +1,8 @@
+{
+  "event": {
+    "category": "communication.send",
+    "status": "succeeded",
+    "privacyMode": "summary-only",
+    "locale": "zh-CN"
+  }
+}

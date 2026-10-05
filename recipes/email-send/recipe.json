@@ -1,0 +1,23 @@
+{
+  "id": "email-send",
+  "label": "Email send",
+  "category": "communication.send",
+  "risk": "medium",
+  "holdMs": 1200,
+  "tone": "communication",
+  "card": {
+    "title": "Send Q3 proposal",
+    "summary": "Email the Q3 proposal to Lina Zhang.",
+    "target": "Lina Zhang",
+    "impact": "One email will be delivered.",
+    "rollback": "The email cannot be recalled after delivery."
+  },
+  "stage": {
+    "actionKind": "email.send",
+    "channel": "email",
+    "actorLabel": "Youze",
+    "recipientLabel": "Lina Zhang",
+    "recipientCount": 1,
+    "actionSummary": "Send Q3 proposal"
+  }
+}

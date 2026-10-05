@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "swing-post",
+  "title": "松手邮局",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "swing-post.js",
+  "sha256": "2ec6a4d1ce3c6b050bfb443d9b11c45117c990226fda0f409eb4e5ccb0361a68",
+  "bytes": 132182,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

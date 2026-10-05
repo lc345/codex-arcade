@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "paper-glider",
+  "title": "折纸穿风",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "paper-glider.js",
+  "sha256": "f3dd39c0526e9bd2c227480532a9c1417bc102daed48f924393fc4628faceea2",
+  "bytes": 4127455,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

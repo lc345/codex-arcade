@@ -1,0 +1,1005 @@
+{
+  "schemaVersion": 1,
+  "counts": {
+    "catalog": 95,
+    "standalone": 5,
+    "total": 100,
+    "stableRandom": 7,
+    "previewCatalog": 88,
+    "curated": 7,
+    "taskRandom": 100
+  },
+  "scope": "Source inventory of distinct playable IDs, including experiments. Not a release approval, current installed-runtime inventory, or a count of stages.",
+  "games": [
+    {
+      "id": "rainline",
+      "title": "雨线快递",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "contrast",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=rainline"
+    },
+    {
+      "id": "ink-archive",
+      "title": "墨影档案",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "contrast",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=ink-archive"
+    },
+    {
+      "id": "last-lift",
+      "title": "末班电梯",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "contrast",
+      "category": "roguelite-exploration",
+      "curated": false,
+      "url": "/codex-stage?game=last-lift"
+    },
+    {
+      "id": "kitchen-defense",
+      "title": "厨房保卫战",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "kitchen",
+      "category": "tower-defense",
+      "curated": false,
+      "url": "/codex-stage?game=kitchen-defense"
+    },
+    {
+      "id": "yesterday-express",
+      "title": "昨天的快递员",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "yesterday",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=yesterday-express"
+    },
+    {
+      "id": "rule-smuggler",
+      "title": "规则走私者",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "rules",
+      "category": "tactics-turns",
+      "curated": false,
+      "url": "/codex-stage?game=rule-smuggler"
+    },
+    {
+      "id": "temp-stunt",
+      "title": "临时替身",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "stunt",
+      "category": "physics-demolition",
+      "curated": false,
+      "url": "/codex-stage?game=temp-stunt"
+    },
+    {
+      "id": "shadow-crew",
+      "title": "影子施工队",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "shadow",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=shadow-crew"
+    },
+    {
+      "id": "dice-foundry",
+      "title": "骰子改装厂",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "dice",
+      "category": "cards-dice",
+      "curated": false,
+      "url": "/codex-stage?game=dice-foundry"
+    },
+    {
+      "id": "appliance-escape",
+      "title": "电器成精了",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "appliance",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=appliance-escape"
+    },
+    {
+      "id": "toast-hop",
+      "title": "吐司别掉",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "toast",
+      "category": "platform-runner",
+      "curated": true,
+      "url": "/codex-stage?game=toast-hop"
+    },
+    {
+      "id": "sky-stack",
+      "title": "叠到天上",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "one-button",
+      "category": "building-balance",
+      "curated": true,
+      "url": "/codex-stage?game=sky-stack"
+    },
+    {
+      "id": "press-run",
+      "title": "别被夹扁",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "one-button",
+      "category": "platform-runner",
+      "curated": true,
+      "url": "/codex-stage?game=press-run"
+    },
+    {
+      "id": "swing-post",
+      "title": "松手邮局",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "one-button",
+      "category": "sports-precision",
+      "curated": true,
+      "url": "/codex-stage?game=swing-post"
+    },
+    {
+      "id": "bridge-span",
+      "title": "桥就这么长",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "one-button-2",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=bridge-span"
+    },
+    {
+      "id": "orbit-pins",
+      "title": "见缝插签",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "one-button-2",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=orbit-pins"
+    },
+    {
+      "id": "last-stop",
+      "title": "最后一厘米",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "one-button-2",
+      "category": "racing-driving",
+      "curated": false,
+      "url": "/codex-stage?game=last-stop"
+    },
+    {
+      "id": "gravity-shift",
+      "title": "地板辞职了",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "one-button-2",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=gravity-shift"
+    },
+    {
+      "id": "marble-demolition",
+      "title": "弹珠拆迁队",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "variety",
+      "category": "pinball-rebound",
+      "curated": true,
+      "url": "/codex-stage?game=marble-demolition"
+    },
+    {
+      "id": "pocket-town",
+      "title": "口袋小镇",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "variety",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=pocket-town"
+    },
+    {
+      "id": "clockout-clearout",
+      "title": "下班清场",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "variety",
+      "category": "physics-demolition",
+      "curated": false,
+      "url": "/codex-stage?game=clockout-clearout"
+    },
+    {
+      "id": "magnet-rampage",
+      "title": "磁力暴走",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": null,
+      "category": "physics-demolition",
+      "curated": true,
+      "url": "/codex-stage?game=magnet-rampage"
+    },
+    {
+      "id": "pan-flip",
+      "title": "翻锅大师",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-five",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=pan-flip"
+    },
+    {
+      "id": "bank-shot",
+      "title": "一杆清台",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-five",
+      "category": "pinball-rebound",
+      "curated": false,
+      "url": "/codex-stage?game=bank-shot"
+    },
+    {
+      "id": "paper-racer",
+      "title": "纸上狂飙",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-five",
+      "category": "racing-driving",
+      "curated": false,
+      "url": "/codex-stage?game=paper-racer"
+    },
+    {
+      "id": "cap-cup",
+      "title": "瓶盖入杯",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-five",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=cap-cup"
+    },
+    {
+      "id": "paper-glider",
+      "title": "折纸穿风",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-five",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=paper-glider"
+    },
+    {
+      "id": "pocket-six",
+      "title": "六袋台球",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=pocket-six"
+    },
+    {
+      "id": "roof-hoops",
+      "title": "楼顶投篮",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=roof-hoops"
+    },
+    {
+      "id": "curve-kick",
+      "title": "弧线任意球",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=curve-kick"
+    },
+    {
+      "id": "lawn-rally",
+      "title": "草地网球",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=lawn-rally"
+    },
+    {
+      "id": "table-spin",
+      "title": "乒乓接杀",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=table-spin"
+    },
+    {
+      "id": "pin-strike",
+      "title": "保龄球连锁",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "physics-demolition",
+      "curated": false,
+      "url": "/codex-stage?game=pin-strike"
+    },
+    {
+      "id": "ice-stone",
+      "title": "冰壶擦线",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=ice-stone"
+    },
+    {
+      "id": "domino-bridge",
+      "title": "多米诺过桥",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=domino-bridge"
+    },
+    {
+      "id": "plate-parade",
+      "title": "叠盘杂技",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=plate-parade"
+    },
+    {
+      "id": "crush-hour",
+      "title": "回收压压乐",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "sports-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=crush-hour"
+    },
+    {
+      "id": "velvet-vault",
+      "title": "咔哒金库",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=velvet-vault"
+    },
+    {
+      "id": "power-wash",
+      "title": "高压冲冲洗",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "experimental-sandbox",
+      "curated": false,
+      "url": "/codex-stage?game=power-wash"
+    },
+    {
+      "id": "zipper-run",
+      "title": "拉链别脱轨",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=zipper-run"
+    },
+    {
+      "id": "alarm-alley",
+      "title": "闹钟闭嘴",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=alarm-alley"
+    },
+    {
+      "id": "lunar-lease",
+      "title": "月面停车费",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "racing-driving",
+      "curated": false,
+      "url": "/codex-stage?game=lunar-lease"
+    },
+    {
+      "id": "jelly-shift",
+      "title": "果冻挤挤",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=jelly-shift"
+    },
+    {
+      "id": "baggage-boogie",
+      "title": "行李别乱飞",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "logistics-automation",
+      "curated": false,
+      "url": "/codex-stage?game=baggage-boogie"
+    },
+    {
+      "id": "fuse-salon",
+      "title": "引线理发师",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "combat-action",
+      "curated": false,
+      "url": "/codex-stage?game=fuse-salon"
+    },
+    {
+      "id": "tower-unplug",
+      "title": "抽薪不倒",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=tower-unplug"
+    },
+    {
+      "id": "sugar-snip",
+      "title": "剪一口甜",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "odd-ten",
+      "category": "physics-demolition",
+      "curated": false,
+      "url": "/codex-stage?game=sugar-snip"
+    },
+    {
+      "id": "crosswalk-zero",
+      "title": "零点过街",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=crosswalk-zero"
+    },
+    {
+      "id": "faultline-drill",
+      "title": "断层钻头",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "racing-driving",
+      "curated": false,
+      "url": "/codex-stage?game=faultline-drill"
+    },
+    {
+      "id": "laser-limbo",
+      "title": "激光借过",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=laser-limbo"
+    },
+    {
+      "id": "blackout-bridge",
+      "title": "熄灯之后",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=blackout-bridge"
+    },
+    {
+      "id": "glass-divide",
+      "title": "一刀两半",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=glass-divide"
+    },
+    {
+      "id": "neon-coil",
+      "title": "只准右转",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=neon-coil"
+    },
+    {
+      "id": "freeze-frame",
+      "title": "暂停键逃生",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=freeze-frame"
+    },
+    {
+      "id": "copper-balance",
+      "title": "偏心装货",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=copper-balance"
+    },
+    {
+      "id": "traffic-tangle",
+      "title": "路口别打结",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "management-resources",
+      "curated": false,
+      "url": "/codex-stage?game=traffic-tangle"
+    },
+    {
+      "id": "shield-waltz",
+      "title": "星环守卫",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "challenge-ten",
+      "category": "shooter-bullethell",
+      "curated": false,
+      "url": "/codex-stage?game=shield-waltz"
+    },
+    {
+      "id": "chromatic-lab",
+      "title": "色彩炼金",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=chromatic-lab"
+    },
+    {
+      "id": "loop-lock",
+      "title": "一圈打尽",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "experimental-sandbox",
+      "curated": false,
+      "url": "/codex-stage?game=loop-lock"
+    },
+    {
+      "id": "ink-rail",
+      "title": "一笔通车",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=ink-rail"
+    },
+    {
+      "id": "soda-strata",
+      "title": "汽水层层消",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "matching-assembly",
+      "curated": false,
+      "url": "/codex-stage?game=soda-strata"
+    },
+    {
+      "id": "leak-patrol",
+      "title": "漏水别慌",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "management-resources",
+      "curated": false,
+      "url": "/codex-stage?game=leak-patrol"
+    },
+    {
+      "id": "quarter-turn",
+      "title": "四分之一转",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=quarter-turn"
+    },
+    {
+      "id": "stamp-storm",
+      "title": "印章风暴",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=stamp-storm"
+    },
+    {
+      "id": "fridge-fit",
+      "title": "冰箱塞塞",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=fridge-fit"
+    },
+    {
+      "id": "knot-office",
+      "title": "解结事务所",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=knot-office"
+    },
+    {
+      "id": "shadow-tell",
+      "title": "影子露馅",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "century-ten",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=shadow-tell"
+    },
+    {
+      "id": "needle-rush",
+      "title": "针尖过山车",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=needle-rush"
+    },
+    {
+      "id": "tightrope-club",
+      "title": "楼顶钢丝社",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "building-balance",
+      "curated": false,
+      "url": "/codex-stage?game=tightrope-club"
+    },
+    {
+      "id": "mirror-vault",
+      "title": "偷一束月光",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=mirror-vault"
+    },
+    {
+      "id": "crate-escape",
+      "title": "死角搬运工",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=crate-escape"
+    },
+    {
+      "id": "twin-tide",
+      "title": "双生潜流",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "racing-driving",
+      "curated": false,
+      "url": "/codex-stage?game=twin-tide"
+    },
+    {
+      "id": "mine-surveyor",
+      "title": "雷区点灯人",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=mine-surveyor"
+    },
+    {
+      "id": "territory-cut",
+      "title": "别碰我的线",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "combat-action",
+      "curated": false,
+      "url": "/codex-stage?game=territory-cut"
+    },
+    {
+      "id": "paper-fold",
+      "title": "折到没脾气",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "matching-assembly",
+      "curated": false,
+      "url": "/codex-stage?game=paper-fold"
+    },
+    {
+      "id": "tempo-steps",
+      "title": "别抢拍",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=tempo-steps"
+    },
+    {
+      "id": "airlock-queue",
+      "title": "气压急送",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "gauntlet-ten",
+      "category": "management-resources",
+      "curated": false,
+      "url": "/codex-stage?game=airlock-queue"
+    },
+    {
+      "id": "ratchet-vault",
+      "title": "棘轮登塔",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=ratchet-vault"
+    },
+    {
+      "id": "hex-panic",
+      "title": "六角封锁",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "combat-action",
+      "curated": false,
+      "url": "/codex-stage?game=hex-panic"
+    },
+    {
+      "id": "downshaft",
+      "title": "倒悬矿井",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=downshaft"
+    },
+    {
+      "id": "magnet-suture",
+      "title": "磁针手术",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=magnet-suture"
+    },
+    {
+      "id": "flash-dojo",
+      "title": "刹那居合",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "combat-action",
+      "curated": false,
+      "url": "/codex-stage?game=flash-dojo"
+    },
+    {
+      "id": "rotor-courier",
+      "title": "转杆快递",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=rotor-courier"
+    },
+    {
+      "id": "knight-fall",
+      "title": "烧桥骑士",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=knight-fall"
+    },
+    {
+      "id": "polarity-lock",
+      "title": "反转熔炉",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "logic-rules",
+      "curated": false,
+      "url": "/codex-stage?game=polarity-lock"
+    },
+    {
+      "id": "disc-vault",
+      "title": "刀盘密室",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "shooter-bullethell",
+      "curated": false,
+      "url": "/codex-stage?game=disc-vault"
+    },
+    {
+      "id": "echo-rewind",
+      "title": "回声倒带",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "hardcore-ten",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=echo-rewind"
+    },
+    {
+      "id": "razor-wings",
+      "title": "刃隙飞行",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=razor-wings"
+    },
+    {
+      "id": "wall-rebound",
+      "title": "绝壁反蹬",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "platform-runner",
+      "curated": false,
+      "url": "/codex-stage?game=wall-rebound"
+    },
+    {
+      "id": "twin-helix",
+      "title": "双核穿刃",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "spatial-routing",
+      "curated": false,
+      "url": "/codex-stage?game=twin-helix"
+    },
+    {
+      "id": "dash-stitch",
+      "title": "断空连闪",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "combat-action",
+      "curated": false,
+      "url": "/codex-stage?game=dash-stitch"
+    },
+    {
+      "id": "cursor-overdrive",
+      "title": "准星过载",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "rhythm-timing",
+      "curated": false,
+      "url": "/codex-stage?game=cursor-overdrive"
+    },
+    {
+      "id": "recoil-pilot",
+      "title": "后坐力飞行",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "extreme-six",
+      "category": "sports-precision",
+      "curated": false,
+      "url": "/codex-stage?game=recoil-pilot"
+    },
+    {
+      "id": "return-fire",
+      "title": "借弹还弹",
+      "scope": "catalog",
+      "release": "stable",
+      "collection": "arcade-pilots",
+      "category": "shooter-bullethell",
+      "curated": true,
+      "url": "/codex-stage?game=return-fire"
+    },
+    {
+      "id": "statue-act",
+      "title": "假装是雕像",
+      "scope": "catalog",
+      "release": "preview",
+      "collection": "arcade-pilots",
+      "category": "stealth-observation",
+      "curated": false,
+      "url": "/codex-stage?game=statue-act"
+    },
+    {
+      "id": "godot-junk",
+      "title": "破烂拳王",
+      "scope": "standalone",
+      "release": "preview",
+      "taskEligible": true,
+      "url": "/apps/codex-stage/godot-junk/index.html"
+    },
+    {
+      "id": "cart-downhill",
+      "title": "购物车下坡王",
+      "scope": "standalone",
+      "release": "preview",
+      "taskEligible": true,
+      "url": "/apps/codex-stage/cart-downhill/index.html"
+    },
+    {
+      "id": "reel-break",
+      "title": "收线！别断",
+      "scope": "standalone",
+      "release": "preview",
+      "taskEligible": true,
+      "url": "/apps/codex-stage/reel-break/index.html"
+    },
+    {
+      "id": "last-beacon",
+      "title": "最后信标",
+      "scope": "standalone",
+      "release": "preview",
+      "taskEligible": true,
+      "url": "/apps/codex-stage/last-beacon/index.html"
+    },
+    {
+      "id": "grab-go",
+      "title": "抓到算你的",
+      "scope": "standalone",
+      "release": "preview",
+      "taskEligible": true,
+      "url": "/apps/codex-stage/grab-go/index.html"
+    }
+  ]
+}

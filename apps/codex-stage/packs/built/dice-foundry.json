@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dice-foundry",
+  "title": "骰子改装厂",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "cards-dice",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "dice-foundry.js",
+  "sha256": "a49c2bdac86fbfbc449ae13c5e6c92c4d300a51a15ab5d5fb76d14807b0284ff",
+  "bytes": 295220,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 6
+}

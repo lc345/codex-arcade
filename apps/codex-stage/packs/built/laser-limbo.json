@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "laser-limbo",
+  "title": "激光借过",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "laser-limbo.js",
+  "sha256": "086490af449d456d41967e8ba50e49ac32837990805b20b169e368acd289f8f0",
+  "bytes": 114009,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

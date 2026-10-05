@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "zipper-run",
+  "title": "拉链别脱轨",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "zipper-run.js",
+  "sha256": "698d5fea72f1fafca4f4f9ea0d8986b2fd5ca7166bc5151a670c56dcb8526f4d",
+  "bytes": 95992,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

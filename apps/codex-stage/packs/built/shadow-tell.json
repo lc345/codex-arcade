@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "shadow-tell",
+  "title": "影子露馅",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "shadow-tell.js",
+  "sha256": "9b0cb2b84c9f3a1eb602b2b3964f924eb417ed736914a05c8db5f2abac8cc5f6",
+  "bytes": 28688,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

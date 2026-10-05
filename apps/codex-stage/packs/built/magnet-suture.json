@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "magnet-suture",
+  "title": "磁针手术",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "magnet-suture.js",
+  "sha256": "a163b7553f4382f98c923f9025a8a4e7768cd57ba4cbf7ac6c8d4b77b0d8a18b",
+  "bytes": 124412,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "2",
+  "id": "mail-flight",
+  "version": "1.0.0",
+  "priority": 20,
+  "license": "Apache-2.0",
+  "locales": ["zh-CN", "en"],
+  "assets": [],
+  "assetDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "contentDigest": "e964c0a3f233a9b73510e6ef09613c55f31850d3c9e8dc4dfd4bdc9a940eabe9",
+  "preview": "preview.json",
+  "matches": {
+    "categories": ["communication.send"],
+    "states": ["waiting", "holding", "executing", "succeeded", "failed", "denied", "deferred", "expired", "stale"]
+  },
+  "variants": [
+    {
+      "id": "mail-ready",
+      "when": [{ "field": "status", "op": "eq", "value": "waiting" }],
+      "beats": [
+        { "phase": "cue", "commands": [{ "channel": "light", "token": "mail.ready", "durationMs": 800 }, { "channel": "audio", "cue": "mail.ready", "gain": "quiet" }] },
+        { "phase": "context", "commands": [{ "channel": "speech", "template": "{{actionSummary}} 已准备好。", "slots": ["actionSummary"] }] },
+        { "phase": "decision", "commands": [{ "channel": "screen", "template": "长按确认投递给 {{recipientLabel}}。", "slots": ["recipientLabel"] }] }
+      ],
+      "timeline": {
+        "durationMs": 1800,
+        "tracks": [
+          { "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" },
+          { "atMs": 80, "command": "text", "id": "caption", "slot": "actionSummary", "anchor": "actor" },
+          { "atMs": 260, "command": "particle", "id": "ready-glow", "anchor": "actor" },
+          { "atMs": 420, "command": "holdProgress", "id": "hold" }
+        ]
+      }
+    },
+    {
+      "id": "mail-sealed",
+      "when": [{ "field": "status", "op": "eq", "value": "holding" }],
+      "beats": [{ "phase": "decision", "commands": [{ "channel": "light", "token": "mail.hold", "durationMs": 700 }, { "channel": "audio", "cue": "mail.seal", "gain": "quiet" }] }],
+      "timeline": {
+        "durationMs": 1000,
+        "tracks": [
+          { "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" },
+          { "atMs": 180, "command": "scale", "id": "envelope", "to": 1.22 },
+          { "atMs": 360, "command": "particle", "id": "seal", "anchor": "actor" },
+          { "atMs": 420, "command": "holdProgress", "id": "hold" }
+        ]
+      }
+    },
+    {
+      "id": "mail-in-flight",
+      "when": [{ "field": "status", "op": "eq", "value": "executing" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "mail.route", "durationMs": 1600 }, { "channel": "audio", "cue": "mail.flight", "gain": "quiet" }] }],
+      "timeline": {
+        "durationMs": 1600,
+        "tracks": [
+          { "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" },
+          { "atMs": 130, "command": "path", "id": "envelope", "from": "actor", "to": "recipient", "arc": 0.24, "durationMs": 1240 },
+          { "atMs": 1180, "command": "text", "id": "destination", "slot": "recipientLabel", "anchor": "recipient" }
+        ]
+      }
+    },
+    {
+      "id": "mail-delivered",
+      "when": [{ "field": "status", "op": "eq", "value": "succeeded" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "mail.delivered", "durationMs": 1100 }, { "channel": "audio", "cue": "mail.delivered" }, { "channel": "speech", "template": "邮件已投递给 {{recipientLabel}}。", "slots": ["recipientLabel"] }] }],
+      "timeline": {
+        "durationMs": 1800,
+        "tracks": [
+          { "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" },
+          { "atMs": 0, "command": "path", "id": "envelope", "from": "actor", "to": "recipient", "arc": 0.24, "durationMs": 980 },
+          { "atMs": 1020, "command": "particle", "id": "delivered", "anchor": "recipient" },
+          { "atMs": 1080, "command": "text", "id": "recipient", "slot": "recipientLabel", "anchor": "recipient" }
+        ]
+      }
+    },
+    {
+      "id": "mail-returned",
+      "when": [{ "field": "status", "op": "eq", "value": "failed" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "mail.failed", "durationMs": 900 }, { "channel": "audio", "cue": "error.soft", "gain": "quiet" }, { "channel": "screen", "template": "邮件未送出。", "slots": [] }] }],
+      "timeline": {
+        "durationMs": 1500,
+        "tracks": [
+          { "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "recipient" },
+          { "atMs": 120, "command": "path", "id": "envelope", "from": "recipient", "to": "actor", "arc": -0.16, "durationMs": 880 },
+          { "atMs": 1080, "command": "text", "id": "return", "slot": "status", "anchor": "actor" }
+        ]
+      }
+    },
+    {
+      "id": "mail-declined",
+      "when": [{ "field": "status", "op": "eq", "value": "denied" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.denied", "durationMs": 520 }, { "channel": "screen", "template": "邮件没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 700, "tracks": [{ "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" }, { "atMs": 180, "command": "fade", "id": "envelope", "to": 0.22 }] }
+    },
+    {
+      "id": "mail-later",
+      "when": [{ "field": "status", "op": "eq", "value": "deferred" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.deferred", "durationMs": 520 }, { "channel": "screen", "template": "邮件留待稍后处理。", "slots": [] }] }],
+      "timeline": { "durationMs": 700, "tracks": [{ "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" }, { "atMs": 180, "command": "scale", "id": "envelope", "to": 0.74 }] }
+    },
+    {
+      "id": "mail-expired",
+      "when": [{ "field": "status", "op": "eq", "value": "expired" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "quiet.fade", "durationMs": 420 }, { "channel": "screen", "template": "确认已过期，邮件没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 700, "tracks": [{ "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" }, { "atMs": 200, "command": "fade", "id": "envelope", "to": 0.12 }] }
+    },
+    {
+      "id": "mail-stale",
+      "when": [{ "field": "status", "op": "eq", "value": "stale" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "warning.stale", "durationMs": 700 }, { "channel": "screen", "template": "邮件内容已变化，请重新确认。", "slots": [] }] }],
+      "timeline": { "durationMs": 1100, "tracks": [{ "atMs": 0, "command": "spawn", "id": "envelope", "kind": "envelope", "anchor": "actor" }, { "atMs": 260, "command": "particle", "id": "stale", "anchor": "actor" }, { "atMs": 380, "command": "fade", "id": "envelope", "to": 0.28 }] }
+    }
+  ]
+}

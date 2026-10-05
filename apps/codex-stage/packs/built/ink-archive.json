@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "ink-archive",
+  "title": "墨影档案",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "ink-archive.js",
+  "sha256": "940c20a9cf491c895d638d08ac988cc2dae41bcb6db13071566fec61229ba7f6",
+  "bytes": 945570,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 1
+}

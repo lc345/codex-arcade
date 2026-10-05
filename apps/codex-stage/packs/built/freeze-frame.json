@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "freeze-frame",
+  "title": "暂停键逃生",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "freeze-frame.js",
+  "sha256": "7999e2e475c6b7389a23f7fe9e39d3cdeb0599f32910e811b293ca496fb4883a",
+  "bytes": 3595749,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

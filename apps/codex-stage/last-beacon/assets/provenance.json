@@ -1,0 +1,48 @@
+{
+  "id": "last-beacon",
+  "date": "2026-10-01",
+  "license": "Apache-2.0",
+  "tool": "Blender 4.5.14 LTS",
+  "source": "tools/art/build-beacon-assets.py",
+  "sourceSha256": "6ba1aafe910ec7c540102f2c9e635c799066d2fe5d95c8fbd3d60c9f46932fc7",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "d128acdb70a61e149caeedb46f5dd5251e95cb207b179dc539c553fce763f589",
+  "files": [
+    {
+      "name": "survivor.glb",
+      "bytes": 444516,
+      "sha256": "6341fc5d1e86ad3fe7f4d4f1b111c1a3fc2bed63f155354b581a36e898b8dd5e",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "survivor.blend",
+      "bytes": 1234761,
+      "sha256": "01d8a18d6f683b54786b0cbc635538e3815eb77357aaa2b0d65511c247d22f55",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "ground.png",
+      "bytes": 3895327,
+      "sha256": "9910bc802c3b01635ad796edf316d9fe598c3e7f40e5e9335680348f44c332de",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "crosshair.svg",
+      "bytes": 412,
+      "sha256": "ae9ed8583286ea03bffae85bb69aee5227540e588b0370cf185f2141ebe25e8d",
+      "license": "ISC"
+    },
+    {
+      "name": "heart-pulse.svg",
+      "bytes": 416,
+      "sha256": "8afcf858f2866f523f562622e82dc94b58717559639a922e734864e4e2ea6e09",
+      "license": "ISC"
+    },
+    {
+      "name": "package-open.svg",
+      "bytes": 648,
+      "sha256": "261a0676ee3db3e5c64a528ac7f81a4893ddb3dfebd0549562f4ef5033757920",
+      "license": "ISC"
+    }
+  ]
+}

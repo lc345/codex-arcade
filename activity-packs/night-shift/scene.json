@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "3",
+  "id": "night-shift",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "priority": -20,
+  "matches": { "families": ["*"] },
+  "chapters": [
+    { "id": "quiet-work", "on": ["tool.started"], "timeline": { "durationMs": 2200, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "orb", "kind": "orb", "anchor": "center" }, { "atMs": 120, "command": "spawn", "id": "clock", "kind": "clock", "anchor": "top" }, { "atMs": 280, "command": "orbit", "id": "orb", "anchor": "center", "radius": 0.16, "turns": 1, "durationMs": 1600 }, { "atMs": 420, "command": "rotate", "id": "clock", "turns": 1, "durationMs": 1500 }] } },
+    { "id": "quiet-wait", "on": ["tool.slow"], "timeline": { "durationMs": 1800, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "orb", "kind": "orb", "anchor": "center" }, { "atMs": 220, "command": "pulse", "id": "orb", "to": 1.24, "count": 3, "durationMs": 1160 }] } },
+    { "id": "quiet-land", "on": ["tool.completed", "turn.completed"], "timeline": { "durationMs": 1050, "tracks": [{ "atMs": 0, "command": "spawn", "id": "orb", "kind": "orb", "anchor": "center" }, { "atMs": 280, "command": "fade", "id": "orb", "to": 0.3 }, { "atMs": 520, "command": "particle", "id": "rest", "anchor": "center" }] } },
+    { "id": "quiet-retry", "on": ["tool.failed"], "timeline": { "durationMs": 980, "tracks": [{ "atMs": 0, "command": "spawn", "id": "orb", "kind": "orb", "anchor": "center" }, { "atMs": 170, "command": "shake", "id": "orb", "amplitude": 8, "durationMs": 460 }, { "atMs": 700, "command": "fade", "id": "orb", "to": 0.2 }] } }
+  ]
+}

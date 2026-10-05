@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cap-cup",
+  "title": "瓶盖入杯",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "cap-cup.js",
+  "sha256": "89ffd39b3522600de39fab571797b18dcf5c6095a5d2e2ab0f5248dce993ca31",
+  "bytes": 2481966,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

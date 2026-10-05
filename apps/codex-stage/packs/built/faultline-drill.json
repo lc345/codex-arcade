@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "faultline-drill",
+  "title": "断层钻头",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "racing-driving",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "faultline-drill.js",
+  "sha256": "821c53004b73826ff32d3b5c3f5d109b03ce2228afcef0256b8dfd5445b54bcb",
+  "bytes": 4680331,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "id": "ink-archive",
+      "path": "assets/studio/ink-archive-art.jpg",
+      "sha256": "e8f07c7b8a6b5d5050a8b319c31d9d9c6354a65c0c1165185a3fa25ce293bbdd",
+      "bytes": 677057,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "kitchen-defense",
+      "path": "assets/studio/kitchen-defense-art.jpg",
+      "sha256": "d02b08f35ce158d4997cceaa2bf5707b7d8409c30908d38fa7dcfc39c46fe8d6",
+      "bytes": 479308,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "yesterday-express",
+      "path": "assets/studio/yesterday-express-art.jpg",
+      "sha256": "5eaabf86ea76600c4868656d1bfc06aca48fe3f3f55d68279cbc742786513a48",
+      "bytes": 166489,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "rule-smuggler",
+      "path": "assets/studio/rule-smuggler-art.webp",
+      "sha256": "30fa0f6b298d5b6be029ff6f62da3eecd7dffde036f7634cd08c38a80c0ddf4c",
+      "bytes": 237902,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "temp-stunt",
+      "path": "assets/studio/temp-stunt-art.webp",
+      "sha256": "25c5398e70aec0896b4b257ed5d4c1b72e688b5ac1dc925b364f8c149640ae04",
+      "bytes": 98548,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "shadow-crew",
+      "path": "assets/studio/shadow-crew-art.webp",
+      "sha256": "6e0c2c69dba1924c86e660d6438149539b073f79d9402f52ba0a53b041660d5f",
+      "bytes": 94044,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "dice-foundry",
+      "path": "assets/studio/dice-foundry-art.webp",
+      "sha256": "273bf7f7a75b85d72602188505bce662326141aa093e47e3fd23df85efb3423a",
+      "bytes": 166316,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    },
+    {
+      "id": "toast-hop",
+      "path": "assets/studio/toast-hop-art.jpg",
+      "sha256": "929865bcf2de848f37efed4301c0cacaadbd6d8257cb7cbdb2fa5f348139388a",
+      "bytes": 174716,
+      "source": "OpenAI built-in imagegen",
+      "license": "Apache-2.0 project asset grant; generated asset, no claim of exclusivity"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "loop-lock",
+  "title": "一圈打尽",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "experimental-sandbox",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "loop-lock.js",
+  "sha256": "928c6dabe2a11168e0293ae279d020415c3c229c50cd35c320c6c1789f95fc86",
+  "bytes": 48508,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

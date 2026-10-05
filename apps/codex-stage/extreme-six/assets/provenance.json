@@ -1,0 +1,89 @@
+{
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "razor-wings.svg",
+      "sha256": "258011a7f5a09a05025393b95688ae5df53c00465fdb15ff7c6bbe6f8166d50b",
+      "bytes": 2240,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "razor-wings.png",
+      "sha256": "5b8cd63c9435af2f13827cf3234ff4c99a47569223067f5ae4ec459f9f4cb3a3",
+      "bytes": 16370,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "wall-rebound.svg",
+      "sha256": "b911eadd4410671f93cfb7dabb2e3c327db226053fe8d966b92e5c5a375871a5",
+      "bytes": 5150,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "wall-rebound.png",
+      "sha256": "29a2376403addde09fa068980b4115cd81b31a3086e5d7d173a6fb382d71e0fe",
+      "bytes": 4491,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "twin-helix.svg",
+      "sha256": "e11274bfcb4e3cd174d30435963b0afada913cd2adb92123c3486b605a0c7914",
+      "bytes": 1723,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "twin-helix.png",
+      "sha256": "86393ab59c5f13433c97362c9243509619730a0233a89179d7ca83d8ffd78d17",
+      "bytes": 16569,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "dash-stitch.svg",
+      "sha256": "166a8998c55de15e023a47d1d5594be33787eda4029156dd1e5b49777d976453",
+      "bytes": 1613,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "dash-stitch.png",
+      "sha256": "31410d5c4fd24329cf5494e28770835b12c6f7c97cb4e081ae0c694f1ae74aa8",
+      "bytes": 12724,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "cursor-overdrive.svg",
+      "sha256": "b1897ea460a927590076db92b477539a6394c3415048557e8298f5b302966036",
+      "bytes": 1776,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "cursor-overdrive.png",
+      "sha256": "8ed5c8a73c4d34d6139d0b6b970affe17c90915238c92438c765c42ee806064e",
+      "bytes": 5641,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "recoil-pilot.svg",
+      "sha256": "30c02d0c8e68ed992af52e3156dc28274709329410f5543dcea31bdb9274bf8f",
+      "bytes": 2916,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "recoil-pilot.png",
+      "sha256": "916366a1620efa202cf91db0c634020c00b6928514d0481b43d272370d8879d1",
+      "bytes": 3480,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    }
+  ]
+}

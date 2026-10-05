@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finalbutton"
+version = "0.2.0"
+description = "The open ActionProof protocol for agent actions."
+readme = "../../README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "FinalButton contributors" }]
+
+[tool.setuptools]
+packages = ["finalbutton"]

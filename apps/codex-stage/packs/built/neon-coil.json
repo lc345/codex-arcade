@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "neon-coil",
+  "title": "只准右转",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "neon-coil.js",
+  "sha256": "dfa390a01cb89a07180ba9abd18cf9ee5de9293073a19db3b64ab437ab53c697",
+  "bytes": 34757,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "3",
+  "id": "signal-observatory",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "matches": { "families": ["mcp.call"] },
+  "chapters": [
+    { "id": "array-listens", "on": ["tool.started"], "timeline": { "durationMs": 2000, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "array", "kind": "wave", "anchor": "center" }, { "atMs": 100, "command": "spawn", "id": "signal", "kind": "beacon", "anchor": "top" }, { "atMs": 160, "command": "spawn", "id": "orbit", "kind": "orbit", "anchor": "center" }, { "atMs": 260, "command": "orbit", "id": "signal", "anchor": "center", "radius": 0.24, "turns": 1.25, "durationMs": 1350 }] } },
+    { "id": "array-waits", "on": ["tool.slow"], "timeline": { "durationMs": 1750, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "array", "kind": "wave", "anchor": "center" }, { "atMs": 120, "command": "spawn", "id": "signal", "kind": "beacon", "anchor": "top" }, { "atMs": 240, "command": "pulse", "id": "signal", "to": 1.5, "count": 3, "durationMs": 1180 }] } },
+    { "id": "array-receives", "on": ["tool.completed", "turn.completed"], "timeline": { "durationMs": 1280, "tracks": [{ "atMs": 0, "command": "spawn", "id": "array", "kind": "wave", "anchor": "center" }, { "atMs": 180, "command": "spawn", "id": "signal", "kind": "beacon", "anchor": "center" }, { "atMs": 420, "command": "particle", "id": "echo", "anchor": "center" }, { "atMs": 640, "command": "pulse", "id": "signal", "to": 1.55, "count": 2, "durationMs": 520 }] } },
+    { "id": "array-loses", "on": ["tool.failed"], "timeline": { "durationMs": 1080, "tracks": [{ "atMs": 0, "command": "spawn", "id": "array", "kind": "wave", "anchor": "center" }, { "atMs": 160, "command": "fade", "id": "array", "to": 0.18 }, { "atMs": 420, "command": "particle", "id": "quiet", "anchor": "center" }] } }
+  ]
+}

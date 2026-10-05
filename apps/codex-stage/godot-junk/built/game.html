@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Junk Champion</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#0a191d;overflow:hidden}canvas{display:block;width:100%;height:100%;outline:none;touch-action:none}</style>
+</head><body><canvas id="canvas" tabindex="0" aria-label="破烂拳王。按住防御，松开出拳。空格也可操作。" title="按住防御，松开出拳"></canvas><script src="game.js"></script><script>
+const canvas=document.getElementById('canvas');
+let callback=null, frozen=false, live=null;
+const send=(type,value)=>parent.postMessage({source:'agent-stage-junk',type,value},location.origin);
+window.stageBridge={
+  register(fn){callback=fn;send('ready');},
+  publish(json){try{live=JSON.parse(json);if(!frozen)send('snapshot',live);}catch{}},
+  command(type,value){if(callback)callback(type,JSON.stringify(value??null));},
+};
+window.agentStageCommand=(type,value)=>{
+  if(!['start','stop','pause','settings','restore','down','up','cancel','retry','next'].includes(type))return false;
+  window.stageBridge.command(type,value);return true;
+};
+window.agentStageSnapshot=()=>live;
+window.addEventListener('blur',()=>window.stageBridge.command('cancel'));
+canvas.addEventListener('pointercancel',()=>window.stageBridge.command('cancel'));
+canvas.addEventListener('keydown',e=>{if(e.key===' ')e.preventDefault();});
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"game","experimentalVK":false,"fileSizes":{"game.pck":3533256,"game.wasm":38047590},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+config.canvas=canvas;config.onProgress=(loaded,total)=>send('progress',total>0?Math.round(loaded/total*100):null);
+config.onPrintError=(...v)=>{console.error(...v);send('engine-error',v.join(' '));};
+const engine=new Engine(config);
+window.agentStageQuit=()=>{window.stageBridge.command('stop');frozen=true;engine.requestQuit();};
+engine.startGame().catch(e=>send('failed',String(e)));
+</script></body></html>
+

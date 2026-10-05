@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "kitchen-defense",
+  "title": "厨房保卫战",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "tower-defense",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "kitchen-defense.js",
+  "sha256": "8dcf6ea509909036bb4e1a6dfccd5356dffcbf6e0fc5d66865b9a7f5b34e9888",
+  "bytes": 711125,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 1
+}

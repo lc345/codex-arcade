@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "jelly-shift",
+  "title": "果冻挤挤",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "jelly-shift.js",
+  "sha256": "b7da18a771866b9f13457c0e640145539600d9d16a1051b215fdf3596d5f9097",
+  "bytes": 37634,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

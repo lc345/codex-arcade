@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "mirror-vault",
+  "title": "偷一束月光",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "mirror-vault.js",
+  "sha256": "9a150385f0d658043364be4b13d2fdb1a4a0a99a25692c7144223c1bea59ab1a",
+  "bytes": 43372,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

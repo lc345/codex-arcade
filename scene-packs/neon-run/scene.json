@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "2",
+  "id": "neon-run",
+  "version": "1.0.0",
+  "priority": 18,
+  "license": "Apache-2.0",
+  "locales": ["zh-CN", "en"],
+  "assets": [],
+  "assetDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "contentDigest": "2133b6dd5b777f95397b152a1425fce4abacc30fe8a1e9b7ae49537cc60e80ae",
+  "preview": "preview.json",
+  "matches": {
+    "categories": ["communication.send", "file.share"],
+    "states": ["waiting", "holding", "executing", "succeeded", "failed", "denied", "deferred", "expired", "stale"]
+  },
+  "variants": [
+    {
+      "id": "neon-scanning",
+      "when": [{ "field": "status", "op": "eq", "value": "waiting" }],
+      "beats": [{ "phase": "cue", "commands": [{ "channel": "light", "token": "neon.scan", "durationMs": 950 }, { "channel": "audio", "cue": "neon.scan", "gain": "quiet" }, { "channel": "screen", "template": "信号跑道已亮起，派送器正在待命。", "slots": [] }] }],
+      "timeline": { "durationMs": 2200, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 180, "command": "spawn", "id": "lane", "kind": "beam", "anchor": "center" }, { "atMs": 420, "command": "text", "id": "summary", "slot": "actionSummary", "anchor": "center" }, { "atMs": 680, "command": "particle", "id": "scan-spark", "anchor": "actor" }] }
+    },
+    {
+      "id": "neon-locking",
+      "when": [{ "field": "status", "op": "eq", "value": "holding" }],
+      "beats": [{ "phase": "decision", "commands": [{ "channel": "light", "token": "neon.lock", "durationMs": 900 }, { "channel": "audio", "cue": "neon.lock", "gain": "quiet" }, { "channel": "screen", "template": "跑道正在锁定这一次确认。", "slots": [] }] }],
+      "timeline": { "durationMs": 1600, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 0, "command": "spawn", "id": "key", "kind": "shard", "anchor": "center" }, { "atMs": 100, "command": "holdProgress", "id": "hold" }, { "atMs": 460, "command": "scale", "id": "key", "to": 1.38 }, { "atMs": 720, "command": "particle", "id": "lock-spark", "anchor": "center" }] }
+    },
+    {
+      "id": "neon-transit",
+      "when": [{ "field": "status", "op": "eq", "value": "executing" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "neon.run", "durationMs": 1800 }, { "channel": "audio", "cue": "neon.run", "gain": "quiet" }, { "channel": "screen", "template": "派送器正在穿过城市信号跑道。", "slots": [] }] }],
+      "timeline": { "durationMs": 2350, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 0, "command": "spawn", "id": "lane", "kind": "beam", "anchor": "center" }, { "atMs": 120, "command": "path", "id": "courier", "from": "actor", "to": "recipient", "arc": -0.3, "durationMs": 1450 }, { "atMs": 760, "command": "particle", "id": "midway-spark", "anchor": "center" }, { "atMs": 1600, "command": "particle", "id": "gate-spark", "anchor": "recipient" }] }
+    },
+    {
+      "id": "neon-arrived",
+      "when": [{ "field": "status", "op": "eq", "value": "succeeded" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "neon.arrive", "durationMs": 1500 }, { "channel": "audio", "cue": "neon.arrive" }, { "channel": "speech", "template": "信号已投递给 {{recipientLabel}}。", "slots": ["recipientLabel"] }] }],
+      "timeline": { "durationMs": 2200, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 100, "command": "path", "id": "courier", "from": "actor", "to": "recipient", "arc": -0.3, "durationMs": 1150 }, { "atMs": 1290, "command": "spawn", "id": "arrival-shard", "kind": "shard", "anchor": "recipient" }, { "atMs": 1320, "command": "particle", "id": "arrival-spark", "anchor": "recipient" }, { "atMs": 1450, "command": "text", "id": "recipient", "slot": "recipientLabel", "anchor": "recipient" }] }
+    },
+    {
+      "id": "neon-returned",
+      "when": [{ "field": "status", "op": "eq", "value": "failed" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "neon.abort", "durationMs": 900 }, { "channel": "audio", "cue": "neon.abort", "gain": "quiet" }, { "channel": "screen", "template": "跑道已中止，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 1350, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 140, "command": "path", "id": "courier", "from": "center", "to": "actor", "arc": 0.24, "durationMs": 700 }, { "atMs": 760, "command": "particle", "id": "return-spark", "anchor": "center" }, { "atMs": 950, "command": "fade", "id": "gateway", "to": 0.2 }] }
+    },
+    {
+      "id": "neon-denied",
+      "when": [{ "field": "status", "op": "eq", "value": "denied" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.denied", "durationMs": 520 }, { "channel": "screen", "template": "跑道没有被点亮，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 850, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 180, "command": "fade", "id": "courier", "to": 0.15 }, { "atMs": 240, "command": "fade", "id": "gateway", "to": 0.18 }] }
+    },
+    {
+      "id": "neon-queued",
+      "when": [{ "field": "status", "op": "eq", "value": "deferred" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.deferred", "durationMs": 520 }, { "channel": "screen", "template": "派送器已泊入稍后处理队列。", "slots": [] }] }],
+      "timeline": { "durationMs": 1050, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "actor" }, { "atMs": 100, "command": "spawn", "id": "key", "kind": "shard", "anchor": "center" }, { "atMs": 160, "command": "move", "id": "courier", "from": "actor", "to": "center", "durationMs": 480 }, { "atMs": 700, "command": "scale", "id": "courier", "to": 0.56 }, { "atMs": 760, "command": "particle", "id": "queue-spark", "anchor": "center" }] }
+    },
+    {
+      "id": "neon-expired",
+      "when": [{ "field": "status", "op": "eq", "value": "expired" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "quiet.fade", "durationMs": 430 }, { "channel": "screen", "template": "信号窗口已关闭，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 820, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gateway", "kind": "vault", "anchor": "recipient" }, { "atMs": 160, "command": "fade", "id": "gateway", "to": 0.06 }, { "atMs": 390, "command": "text", "id": "status", "slot": "status", "anchor": "center" }] }
+    },
+    {
+      "id": "neon-stale",
+      "when": [{ "field": "status", "op": "eq", "value": "stale" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "warning.stale", "durationMs": 700 }, { "channel": "screen", "template": "目标状态已变化，跑道已经解除锁定。", "slots": [] }] }],
+      "timeline": { "durationMs": 1100, "tracks": [{ "atMs": 0, "command": "spawn", "id": "courier", "kind": "drone", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "key", "kind": "shard", "anchor": "center" }, { "atMs": 160, "command": "path", "id": "courier", "from": "center", "to": "actor", "arc": 0.22, "durationMs": 540 }, { "atMs": 720, "command": "particle", "id": "stale-spark", "anchor": "center" }, { "atMs": 800, "command": "fade", "id": "key", "to": 0.14 }] }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "territory-cut",
+  "title": "别碰我的线",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "combat-action",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "territory-cut.js",
+  "sha256": "944c35fa3f5d460942c65d67914cf459bcf52a2e7c18321f70352737b33909f9",
+  "bytes": 36466,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

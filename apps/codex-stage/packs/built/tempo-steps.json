@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "tempo-steps",
+  "title": "别抢拍",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "rhythm-timing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "tempo-steps.js",
+  "sha256": "66fe64bf619fec4c8c404c63f3eed2267b666f2379cdfb067f7c95be5970c3cb",
+  "bytes": 53858,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

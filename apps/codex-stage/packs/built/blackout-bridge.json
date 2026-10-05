@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "blackout-bridge",
+  "title": "熄灯之后",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "blackout-bridge.js",
+  "sha256": "e3adeefd163614a45eb3807b2a65cbbd9f41cc10d1e511956c3cc8ff2258fe93",
+  "bytes": 5146475,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

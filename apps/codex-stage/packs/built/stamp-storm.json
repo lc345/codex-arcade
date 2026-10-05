@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "stamp-storm",
+  "title": "印章风暴",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "stamp-storm.js",
+  "sha256": "e6085c5ff28d1d803836ac87423c175a3b396f3a4c7155798b76fc090ddc3e61",
+  "bytes": 42306,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

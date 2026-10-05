@@ -1,0 +1,145 @@
+{
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "ratchet-vault.svg",
+      "sha256": "c63280a1a7d2f6f33a261deeb789a57cbc6edfd4fe7666ebb656534c5ad9e371",
+      "bytes": 16122,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "ratchet-vault.png",
+      "sha256": "1e283e2002bcb8f0b42b643988bdd4947ceb83ab350506d7a0030cf130835576",
+      "bytes": 9483,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "hex-panic.svg",
+      "sha256": "dc4b4d7fe47bc8be9f6e9507884b7e33134266b717a8e348a14dc4c611304e9e",
+      "bytes": 2126,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "hex-panic.png",
+      "sha256": "d88cc6882094cfb6a0ab544d0fb9c8b73cec67d319f2838bb252c066fe453131",
+      "bytes": 14745,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "downshaft.svg",
+      "sha256": "b23507b9647e662d66783d8b986575d6cc7dc43ae9c3d233deddda20d6ff0d22",
+      "bytes": 32818,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "downshaft.png",
+      "sha256": "4be0e03bfc3111a398680dbe41fe871629b86493d9f64f390a79f038035114f9",
+      "bytes": 4799,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "magnet-suture.svg",
+      "sha256": "e26347f8f8d38c302f4de94b1d85c5918bcdeeb13419b64419f7e3f385c5d746",
+      "bytes": 1760,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "magnet-suture.png",
+      "sha256": "c5032a0a0e22a98bdbf1d7485a417d3f0b000d715a30ad847ca1ad1324191489",
+      "bytes": 11267,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "flash-dojo.svg",
+      "sha256": "f7fa71d5adaa6b3c38fa18641cd11cb1dc9eefc1fef32175d774c3e11041c467",
+      "bytes": 2468,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "flash-dojo.png",
+      "sha256": "461a598c03c8bcfdb53e6c7477668f35e6b82e810fdb512d65d1e6c9d86ad753",
+      "bytes": 19318,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "rotor-courier.svg",
+      "sha256": "59af4d69ee2db2daa6da04da652ae1ce77e11835e5a821623aba7965cdb22e1c",
+      "bytes": 6351,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "rotor-courier.png",
+      "sha256": "6bdeccca90d8c9f9587a6e71f42215810932cebfb4ec98456ee9eacd06c15479",
+      "bytes": 6829,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "knight-fall.svg",
+      "sha256": "0012b83534c92b89bc68300debe40a893f513c5d87bdc7ceba36d6985b52a91c",
+      "bytes": 3474,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "knight-fall.png",
+      "sha256": "35d4362fcb9a84cc0a9f59ba204ab13cbb1a16483a235d41e13d165970b75652",
+      "bytes": 26587,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "polarity-lock.svg",
+      "sha256": "b29082576b5804d3d23af0996587dfaace32f94562ae4a8bdb902ad88bf7e17a",
+      "bytes": 2194,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "polarity-lock.png",
+      "sha256": "089ff65a05ee26091a00c15f6774f6a35e26576405fbe3b8cffec136b90503b9",
+      "bytes": 22601,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "disc-vault.svg",
+      "sha256": "f086dcc8dfae455ded5b2a4603a3e213e716acfbb5ae2f901e8d6b3d2095b781",
+      "bytes": 2037,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "disc-vault.png",
+      "sha256": "9e407629d54a02173195459eac42642ac1028668a661cd5a100c78f440dd2f29",
+      "bytes": 10632,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "echo-rewind.svg",
+      "sha256": "a79cc342a2fc0200879aa949d8055f9c4f0e5802d14c641fffe86e18c96ebb76",
+      "bytes": 14927,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "echo-rewind.png",
+      "sha256": "52310057e29ba798a0a4b64a3034e3d118657c5aa851753135c07b0a318aa09d",
+      "bytes": 4801,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    }
+  ]
+}

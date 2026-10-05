@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "echo-rewind",
+  "title": "回声倒带",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "echo-rewind.js",
+  "sha256": "a598425bfe39fe50b25b5476829a031b0067fdd09edf15ef25d6c56f629fe0d3",
+  "bytes": 31208,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

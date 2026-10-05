@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "baggage-boogie",
+  "title": "行李别乱飞",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logistics-automation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "baggage-boogie.js",
+  "sha256": "911e2b108107a4aeb566603e7d7dd71b1ef8245cfdadb62bd3637bed28b4294d",
+  "bytes": 45353,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

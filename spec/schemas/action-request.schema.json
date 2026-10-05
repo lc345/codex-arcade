@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finalbutton.dev/schemas/0.2/action-request.json",
+  "title": "FinalButton ActionRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocolVersion", "id", "createdAt", "expiresAt", "origin", "action", "commit", "card", "actionDigest"],
+  "properties": {
+    "protocolVersion": { "const": "0.2" },
+    "id": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agentId", "runId"],
+      "properties": {
+        "agentId": { "type": "string" },
+        "runId": { "type": "string" },
+        "model": { "type": "string" }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "arguments", "risk", "reversible", "idempotencyKey"],
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "arguments": { "type": "object" },
+        "risk": { "enum": ["low", "medium", "high", "critical"] },
+        "reversible": { "type": "boolean" },
+        "idempotencyKey": { "type": "string" }
+      }
+    },
+    "commit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "target", "payloadDigest"],
+      "properties": {
+        "operation": { "type": "string", "minLength": 1 },
+        "target": { "type": "string", "minLength": 1 },
+        "payloadDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "stateWitness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["subject", "version", "observedAt"],
+          "properties": {
+            "subject": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "minLength": 1 },
+            "observedAt": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "summary", "target", "impact"],
+      "properties": {
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "target": { "type": "string" },
+        "impact": { "type": "string" },
+        "disclosure": { "type": "string" },
+        "rollback": { "type": "string" }
+      }
+    },
+    "actionDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}

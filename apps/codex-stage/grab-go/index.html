@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>抓到算你的 · Grab & Go</title><link rel="icon" href="../assets/icons/sparkles.svg"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main id="stage">
+  <header><div class="brand"><span>GRAB & GO</span><h1>抓到算你的</h1></div><span id="task">寻宝仓加载中</span><a href="/codex-stage?collection=curated" title="返回游戏库">AGENT STAGE</a></header>
+  <section class="scoreboard" aria-label="本关目标与倒计时"><div class="round"><div class="lamps" aria-label="关卡进度"><i id="lamp-0"></i><i id="lamp-1"></i><i id="lamp-2"></i></div><span id="round-name">街角初开张</span><small id="round">01 / 03</small></div><div class="earnings"><small>本柜收益</small><strong id="score">0</strong><span>/ <b id="goal">600</b></span><progress id="progress" max="600" value="0" aria-label="本柜收益进度"></progress></div><div class="timer"><small>剩余时间</small><strong id="time">42<small>s</small></strong></div></section>
+  <div id="arena"><canvas id="game" tabindex="0" aria-label="抓到算你的。点击画面或按空格下钩，自动回收。限时抓取物品达到本关目标。"></canvas><div id="banner" role="status" hidden></div><div id="result"><div class="result-content"><p id="result-tag">ROUND 01</p><h2 id="result-title">街角初开张</h2><p id="result-detail">目标 600 · 42 秒</p><button id="continue" disabled>准备中</button></div></div></div>
+  <footer><div class="tools"><button id="mute" aria-label="静音" title="开关声音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button><button id="motion" aria-label="减少动效" title="减少动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button><button id="expand" aria-label="放大舞台" title="放大舞台" aria-pressed="false"><img src="../assets/icons/maximize-2.svg" alt=""></button><button id="retry" aria-label="重试本关" title="重试本关"><img src="../assets/icons/rotate-ccw.svg" alt=""></button></div><div class="action"><button id="hook" title="下钩 · 空格" disabled>下钩</button><span id="status">就位</span></div><div class="task-tools"><button id="start" disabled>开始任务</button><button id="stop">结束任务</button></div></footer>
+  <p id="live" class="sr" aria-live="polite"></p>
+</main>
+<script type="module" src="./app.js"></script>
+</body></html>

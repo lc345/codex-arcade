@@ -1,0 +1,145 @@
+{
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "needle-rush.svg",
+      "sha256": "94e3099d00f397b9661c6d5b0c76570f9220b6281ae52b2185a2df07247f7601",
+      "bytes": 7573,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "needle-rush.png",
+      "sha256": "4e0d9b5e0eaea0ba443c58bad2c692d62de0e6d890ce0256807e6f13f39d444d",
+      "bytes": 13862,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tightrope-club.svg",
+      "sha256": "53753dbc736bbc50ce1a0740a37786a3f2cef855b029b6a559576ee93294569f",
+      "bytes": 41375,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tightrope-club.png",
+      "sha256": "fd628b5fca1b06da3dc1d4e5f8442c80118be5ecfeef6a8fb27dead7a8baeec8",
+      "bytes": 7364,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "mirror-vault.svg",
+      "sha256": "20b5894eb5230251ada177630da7065d6bb82ebd68c1a2fc60b93e31cfc45a5f",
+      "bytes": 991,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "mirror-vault.png",
+      "sha256": "f1ea876309b18047acc8fed3c3d054a62488199289af893edbdc6fe4cf775bb4",
+      "bytes": 14525,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "crate-escape.svg",
+      "sha256": "4b6a37346e87be26da8e8d939290bfbbe2fdedc79ccaad90d175170652795c3e",
+      "bytes": 14986,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "crate-escape.png",
+      "sha256": "8623654646248aa7c72a4c8580654dcca99dfc0bd0692f16a9bbd075940556a4",
+      "bytes": 3891,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "twin-tide.svg",
+      "sha256": "94277343d966e9bac95a818a716cec0a8c96a3730bf714ef1461258287d63209",
+      "bytes": 4406,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "twin-tide.png",
+      "sha256": "8a87c7eb7f4b56c243d6adf66450b43a921ef61999070b8e877b256bd89c13a6",
+      "bytes": 20040,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "mine-surveyor.svg",
+      "sha256": "e0379c8ebae6766a5f460abee028b01495e49322e8134a0c0e3054344a31b5e2",
+      "bytes": 3834,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "mine-surveyor.png",
+      "sha256": "628264900bc3968453e2a066168aea7769770b034bc144f9ffce187e0697ba04",
+      "bytes": 6662,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "territory-cut.svg",
+      "sha256": "6d04f5579782be4d70d42210e37ae5bd06f42390840e07818d2164ac961c0510",
+      "bytes": 3051,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "territory-cut.png",
+      "sha256": "ad7ae65e8a05feea2a1ffd84dfa0bdd4eb74c39b1437ed0d577fe2f617fb818e",
+      "bytes": 8603,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "paper-fold.svg",
+      "sha256": "54e9af5ee94805c3532e2a259aec5b7ab94751fa223d3ad17362755c233810c4",
+      "bytes": 680,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "paper-fold.png",
+      "sha256": "f0784e8d965c448700fdfce9e497767066be420a38cc525496f2e60e555cc32b",
+      "bytes": 17648,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tempo-steps.svg",
+      "sha256": "7a5f66f885a82bbb02bd209956a55659c7115d7927612a7801324e2f84bc4aff",
+      "bytes": 1378,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tempo-steps.png",
+      "sha256": "4ef06ec12a2fbf9edfec7533760663f1a90b3c7c269b7f5e24b29096a38111ed",
+      "bytes": 22343,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "airlock-queue.svg",
+      "sha256": "b84bcf9f4d46e57ea6c4b57c5a312d8f3934ceff7a6e61cd6399439c3f2534f4",
+      "bytes": 2460,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "airlock-queue.png",
+      "sha256": "a6f6514c01b3d377cb8fdab7b817d0a813aa4bb97b259518b05dad44b6b67243",
+      "bytes": 6182,
+      "source": "Original project-authored SVG, rasterized locally with Chromium",
+      "license": "Apache-2.0"
+    }
+  ]
+}

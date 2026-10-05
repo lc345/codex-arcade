@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dash-stitch",
+  "title": "断空连闪",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "combat-action",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "dash-stitch.js",
+  "sha256": "521d4c7858bc36d1935951735f9696e5996abad85a1775ff564367d8305e300c",
+  "bytes": 41035,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

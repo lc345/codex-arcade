@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "temp-stunt",
+  "title": "临时替身",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "physics-demolition",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "temp-stunt.js",
+  "sha256": "7c747aa909a1fa88c3d345282d173876f28195f78041d0bf8ed835ca3ca285cc",
+  "bytes": 281856,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

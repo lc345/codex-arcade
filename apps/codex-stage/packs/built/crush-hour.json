@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "crush-hour",
+  "title": "回收压压乐",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "rhythm-timing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "crush-hour.js",
+  "sha256": "bb125e92a6c9347ac08cf83c2c86f46850f82c0e4679e6799cf3fcaffdfd0755",
+  "bytes": 4031799,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "tightrope-club",
+  "title": "楼顶钢丝社",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "tightrope-club.js",
+  "sha256": "2a08fe3d23ba6ac040bf810a40a4ed14f652e03553db54f9abca95c357191d76",
+  "bytes": 33677,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

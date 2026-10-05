@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "bridge-span",
+  "title": "桥就这么长",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "bridge-span.js",
+  "sha256": "d1ee2e464cabf885c91f20697e9ebaec9d2f0b362027b36024cb5ea7e6a0a387",
+  "bytes": 46704,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 1
+}

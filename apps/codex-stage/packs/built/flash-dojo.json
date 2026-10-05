@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "flash-dojo",
+  "title": "刹那居合",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "combat-action",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "flash-dojo.js",
+  "sha256": "d4a52a4cade3bf52873f742cf51eb500b4c25f51633f0174cd8217e492e7ba6a",
+  "bytes": 50752,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "paper-racer",
+  "title": "纸上狂飙",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "racing-driving",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "paper-racer.js",
+  "sha256": "d051bfdc299867acb7248adef35cd850dc37f6eee91450ca105062f1b6dbcc68",
+  "bytes": 3054376,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

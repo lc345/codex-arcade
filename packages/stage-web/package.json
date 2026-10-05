@@ -1,0 +1,9 @@
+{
+  "name": "@agent-stage/web",
+  "version": "1.0.0",
+  "description": "Canvas renderer for declarative Agent Stage timelines.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "license": "Apache-2.0"
+}

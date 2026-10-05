@@ -1,0 +1,6 @@
+export const ENCORE_CATALOG = Object.freeze([
+  { id: "bridge-span", title: "桥就这么长", english: "MEASURE ONCE", category: "spatial-routing", artStyle: "field-survey-cutout", color: "#eb684e", genre: "按住 · 估长度", hint: "按住伸长桥，松手放下。桥头必须落在下一座桥墩上，多一点少一点都不行。", replayLabel: "再过一次河", levels: ["十段刚好"] },
+  { id: "orbit-pins", title: "见缝插签", english: "ORBIT PRESS", category: "rhythm-timing", artStyle: "vinyl-print-lab", color: "#e35b70", genre: "单击 · 找空隙", hint: "点击向转盘插签，不能碰到旧签。每插六根改变转向，十八根过关。", replayLabel: "再插一盘", levels: ["十八根空隙"] },
+  { id: "last-stop", title: "最后一厘米", english: "LAST STOP", category: "racing-driving", artStyle: "ice-rink-valet", physics: "matter", color: "#518bba", genre: "松手 · 提前刹车", hint: "按住加速，松手刹车。车还会继续滑，必须整个停进绿色车位；不同路面滑行距离不同。", replayLabel: "再停一轮", levels: ["八次入库"] },
+  { id: "gravity-shift", title: "地板辞职了", english: "GRAVITY SHIFT", category: "platform-runner", artStyle: "retro-magnetic-corridor", physics: "matter", color: "#6ed4b5", genre: "单击 · 切换重力", hint: "点击开始并翻转重力，在地板与天花板之间穿过十道障碍。连续同侧的障碍不用重复翻转。", replayLabel: "再下一次班", levels: ["上下颠倒"] },
+].map(p => ({ ...p, kind: "game", edition: "studio", release: "preview", collection: "one-button-2", presentation: "panorama", soundPalette: "one-button", pointerMode: "click-nav", persistentCheckpoint: true, hideLevels: true, cover: `/apps/codex-stage/assets/studio/${p.id}.png` })));

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "crosswalk-zero",
+  "title": "零点过街",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "rhythm-timing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "crosswalk-zero.js",
+  "sha256": "5dc94f8331dd773f5add129acddedc14b5e68cb0fed717b4c6ed97b5f620bf0d",
+  "bytes": 116105,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

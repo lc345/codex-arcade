@@ -1,0 +1,15 @@
+{
+  "id": "slack-send",
+  "label": "Slack message",
+  "category": "communication.send",
+  "risk": "medium",
+  "holdMs": 1200,
+  "tone": "communication",
+  "card": {
+    "title": "Post in #launch-room",
+    "summary": "Share today's demo status with the product team.",
+    "target": "Slack channel #launch-room",
+    "impact": "A message will become visible to 12 teammates.",
+    "rollback": "The message can be edited or deleted afterward."
+  }
+}

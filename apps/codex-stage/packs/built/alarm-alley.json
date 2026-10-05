@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "alarm-alley",
+  "title": "闹钟闭嘴",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "alarm-alley.js",
+  "sha256": "f07bf0263a91faf524cc22e943d1d0097b2375691109bf6d3fd19aab95bfa365",
+  "bytes": 29817,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

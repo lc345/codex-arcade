@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "marble-demolition",
+  "title": "弹珠拆迁队",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "pinball-rebound",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "marble-demolition.js",
+  "sha256": "c604e6cbdf84358f13343bcd7f90b51c5c219789e64f0aea64dfd7141f7166cd",
+  "bytes": 133694,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

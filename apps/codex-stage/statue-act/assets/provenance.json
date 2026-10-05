@@ -1,0 +1,24 @@
+{
+  "id": "statue-act",
+  "date": "2026-10-01",
+  "tool": "Built-in image_gen",
+  "license": "Apache-2.0",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "a69a8e969ac68c7b5d08952b3d9e424271e595fb910902fb44f0e43bc6550ff3",
+  "files": [
+    {
+      "name": "museum.png",
+      "bytes": 3018753,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c843fe4ec6a5c2634562cf1211aa936d976ec41fce38eb0b96184df6c4b0138a"
+    },
+    {
+      "name": "puppets.png",
+      "bytes": 2354009,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f633d391960999f56af43585f2d31f49d317caff3ca41af781dc153fdbece3a5"
+    }
+  ]
+}

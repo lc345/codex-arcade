@@ -1,0 +1,192 @@
+{
+  "id": "century-ten",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Three original imagegen backgrounds, seven original SVG backgrounds rasterized locally, Canvas game objects, actual gameplay covers, locally synthesized sound.",
+  "generated": [
+    "ink-rail",
+    "leak-patrol",
+    "fridge-fit"
+  ],
+  "source": "../art.js",
+  "sourceSha256": "5fe1014862b0db7dfa9df2d021401b0400954c9ade6e2c16c867bf395653402d",
+  "documentationSha256": "7bcb0b6378df9d29a6305cf649bfbfe0f24ce5625c09b5d0d2860cdd6a427047",
+  "licenseSha256": "dcf09a39e4a8d7914b3473ca185991d129df639be2a5238b7dd544d79052546f",
+  "files": [
+    {
+      "name": "chromatic-lab.svg",
+      "bytes": 2966,
+      "sha256": "e827f50716107b968336f763dab9257a49be360ee1148678f762e424fe664343"
+    },
+    {
+      "name": "chromatic-lab.png",
+      "bytes": 4486,
+      "sha256": "9eea16498332cb74743a1cf21d25f8e049891ba743acfad46de47d3d2808be47",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/chromatic-lab.png",
+      "bytes": 26955,
+      "sha256": "d9d7c3e04c2e01d907839eb2ddffede9f0266354afa1fad3000d677e776dbce8",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "loop-lock.svg",
+      "bytes": 3334,
+      "sha256": "d925261b4f3eeaec506cde7040c72ad8eda0ab48d98d46d1e0398526a1303130"
+    },
+    {
+      "name": "loop-lock.png",
+      "bytes": 17378,
+      "sha256": "2038688cd73f75fd7ddbc4a98651a517fb6e00b868c2938036cc6a80df1f619f",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/loop-lock.png",
+      "bytes": 34792,
+      "sha256": "51830dda934e2a6e5bbf72efcc5286670b9d19b647f8603caad69d8b18fa06b1",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "ink-rail.png",
+      "bytes": 2897252,
+      "sha256": "bce652a743a1f4b000db4b766d4e157266d6f4f167df347e77115f234be1e54a",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/ink-rail.png",
+      "bytes": 912835,
+      "sha256": "704c655baa90761add45aa403bf854e1a3b32b25eec38fea7ed116b8f719e6fa",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "soda-strata.svg",
+      "bytes": 2138,
+      "sha256": "684d02d1925f73500b480eae1b949bb8f545df7749434becadcd7864f2a242b8"
+    },
+    {
+      "name": "soda-strata.png",
+      "bytes": 27055,
+      "sha256": "983cdf762b3e7cb6e3a4fe609281312564b84f812bc4f34529741669ccb987b6",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/soda-strata.png",
+      "bytes": 94889,
+      "sha256": "59d573e6c94cfba6d413fd274e1757536ab1c528bbd02ea1786542920a916e33",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "leak-patrol.png",
+      "bytes": 2687755,
+      "sha256": "cfe9bbf571aaa35861409b90f06f1835c417fc096a0f4ddf0540cbbe31323c49",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/leak-patrol.png",
+      "bytes": 902605,
+      "sha256": "4b2d27ee92553d0f58401ed8a87d3e535a77f97b35443438726ea1d567f80b2d",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "quarter-turn.svg",
+      "bytes": 1429,
+      "sha256": "fe028b7b3a9ab168d28307c3057c300d6b2f657dbb415fa31cca6853f44b46f3"
+    },
+    {
+      "name": "quarter-turn.png",
+      "bytes": 8972,
+      "sha256": "f845505c5bc816e31a919c9225633e47801e95c30658bb84b3fd4bb875aa98e9",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/quarter-turn.png",
+      "bytes": 32988,
+      "sha256": "e1d3cff3724725f1c952bd44f325dfa0b9a3648c65b7cd9d6578ef19898d38eb",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "stamp-storm.svg",
+      "bytes": 6122,
+      "sha256": "7c59aba105eef4ec17a11b1205c18edcc8571ff897e65ebd4480a30b4ad14f5b"
+    },
+    {
+      "name": "stamp-storm.png",
+      "bytes": 12992,
+      "sha256": "043de8c9cd05409e18c04f8700226b8f7983d8339d741270dfd5b84b3abc4f48",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/stamp-storm.png",
+      "bytes": 31965,
+      "sha256": "eaf88cd058b91c91dc7eb7f29caf0b23b6218aa49c77c0d22533d2df8c5171f7",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "fridge-fit.png",
+      "bytes": 2767608,
+      "sha256": "12e6ba81c84612df14fdd692ce809406fba82d446f8221464c971f6f00dc5024",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/fridge-fit.png",
+      "bytes": 723154,
+      "sha256": "c1403fa961f9e1292e437a69e0d312bed11ddfafc11eea96ff9276faf9305911",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "knot-office.svg",
+      "bytes": 33833,
+      "sha256": "2dbcecd5fe932348ad8d3d7e9394d5c90a57423e945b961672ad1045a45b7667"
+    },
+    {
+      "name": "knot-office.png",
+      "bytes": 7922,
+      "sha256": "a3208e96d5554d631764974907aa9d47367fc5481f18d9787b7d263dcd74be48",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/knot-office.png",
+      "bytes": 48524,
+      "sha256": "13881581705e1a36cb533f4c4aa84e805c1096b9f2f02f2f0bd3749a9154b63f",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "shadow-tell.svg",
+      "bytes": 2779,
+      "sha256": "086213d575f3dabad22d262647a76ea5869bad6a3093f13864bcde4e88af8c47"
+    },
+    {
+      "name": "shadow-tell.png",
+      "bytes": 3330,
+      "sha256": "507f0d26d8924ecc72ed31e034b8ebd787dbf35770b5db77539f0e61b457a3a2",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/shadow-tell.png",
+      "bytes": 23737,
+      "sha256": "5b3132995d40b50b3962ed5f0c28b6141aec8089c8043a473d9f09c3d6ce7d74",
+      "width": 960,
+      "height": 640
+    }
+  ]
+}

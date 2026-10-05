@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "soda-strata",
+  "title": "汽水层层消",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "matching-assembly",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "soda-strata.js",
+  "sha256": "dc7e7d9da97b12cf98ac91483a2bf64d0d8ee1e722a139d4b551daaa8492f1a3",
+  "bytes": 60841,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

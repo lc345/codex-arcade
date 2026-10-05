@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "fridge-fit",
+  "title": "冰箱塞塞",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "fridge-fit.js",
+  "sha256": "ffc40a325227f1b01bce10398e666b2c39255e03415329f63546d5161967dc59",
+  "bytes": 3716370,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

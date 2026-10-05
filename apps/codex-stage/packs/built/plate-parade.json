@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "plate-parade",
+  "title": "叠盘杂技",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "plate-parade.js",
+  "sha256": "4be15487b490429bcfd4a43111851ada70499431e50f7a395a44f07b8c677197",
+  "bytes": 3497174,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

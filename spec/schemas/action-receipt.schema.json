@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finalbutton.dev/schemas/0.2/action-receipt.json",
+  "title": "FinalButton ActionReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "request", "decision", "status", "createdAt", "proof"],
+  "properties": {
+    "id": { "type": "string" },
+    "request": { "$ref": "action-request.schema.json" },
+    "decision": { "$ref": "action-decision.schema.json" },
+    "policy": { "$ref": "policy-decision.schema.json" },
+    "status": { "enum": ["succeeded", "failed", "denied", "deferred", "expired", "blocked", "stale"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "result": {},
+    "error": { "type": "string" },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["digest", "signature"],
+      "properties": {
+        "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "signature": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Stage InputEvent",
+  "type": "object",
+  "required": ["protocolVersion", "type", "deviceId", "sequence", "mode", "emittedAt"],
+  "properties": {
+    "protocolVersion": { "const": "0.1" },
+    "type": { "enum": ["button.down", "button.up", "tap", "doubleTap", "longPress", "idle.started", "idle.ended"] },
+    "deviceId": { "type": "string" },
+    "sequence": { "type": "integer", "minimum": 1 },
+    "mode": { "enum": ["idle", "play"] },
+    "emittedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

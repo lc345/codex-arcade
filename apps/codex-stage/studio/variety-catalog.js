@@ -1,0 +1,5 @@
+export const VARIETY_CATALOG=Object.freeze([
+  {id:"marble-demolition",title:"弹珠拆迁队",english:"RICOCHET RENOVATION",category:"pinball-rebound",artStyle:"pixel-demolition",physics:"matter",color:"#ed856b",genre:"弹珠 · 模块连锁",hint:"拖动瞄准，松手发射。清空街区后选一个模块，组合分裂、导电或重击。方向键瞄准，空格发射。",replayLabel:"再拆三个街区"},
+  {id:"pocket-town",title:"口袋小镇",english:"POCKET TOWN",category:"building-balance",artStyle:"miniature-paper-town",renderer:"three",color:"#69a9a0",genre:"建造 · 邻接组合",hint:"点击空地放置下一块。住宅邻花园亮灯，商店邻两户住宅开门，三块铁道连回车站。可随时撤销。",replayLabel:"另建一座"},
+  {id:"clockout-clearout",title:"下班清场",english:"THE LAST LOAD",category:"physics-demolition",artStyle:"clay-warehouse",renderer:"three",physics:"matter",color:"#b483a8",genre:"物理喜剧 · 抽掉支撑",hint:"点选并松开一根支撑，让家具沿斜坡装进货车。左右键选支撑，空格抽掉。装稳才算成功。",replayLabel:"再装三车"},
+].map(p=>({...p,kind:"game",edition:"studio",release:"preview",collection:"variety",presentation:"panorama",soundPalette:"variety",pointerMode:"click-nav",persistentCheckpoint:true,hideLevels:true,levels:["完整小样"],cover:`/apps/codex-stage/assets/studio/${p.id}.png`})));

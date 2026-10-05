@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ratchet-vault",
+  "title": "棘轮登塔",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "ratchet-vault.js",
+  "sha256": "7476413d5d561f2f8b0f6659215237902d89043080ed6af0140e9eb668774eed",
+  "bytes": 122693,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

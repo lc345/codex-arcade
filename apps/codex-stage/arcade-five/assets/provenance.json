@@ -1,0 +1,81 @@
+{
+  "id": "arcade-five",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Five original built-in image_gen backgrounds, unchanged. Covers captured from the running Canvas games. Sound synthesized locally with Web Audio; no sampled music.",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "25f1e70e24f67c8b5f128f2826ceb8b65328cfda3e54f8a10e4efbec52d8b603",
+  "licenseSha256": "dcf09a39e4a8d7914b3473ca185991d129df639be2a5238b7dd544d79052546f",
+  "files": [
+    {
+      "name": "pan-flip.png",
+      "bytes": 1982734,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9bdea0c0620971fd841148c342bfbf119383f8876e34c2352476567c0ab491d8"
+    },
+    {
+      "name": "covers/pan-flip.png",
+      "bytes": 710396,
+      "width": 960,
+      "height": 640,
+      "sha256": "94f29f5e89207d6f65b17e54eb9b8c602646145cc81a60654e1486eecc971c74"
+    },
+    {
+      "name": "bank-shot.png",
+      "bytes": 2606652,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "fc3c0be63a089572bf0de43e2c7db00324c532e64411e3f8693e76512018cffd"
+    },
+    {
+      "name": "covers/bank-shot.png",
+      "bytes": 364263,
+      "width": 960,
+      "height": 640,
+      "sha256": "a152dea5e0ece8ad7746ca940ab618cb983eb3f7deb98d30821e9663338d118b"
+    },
+    {
+      "name": "paper-racer.png",
+      "bytes": 2211703,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7024cdb4cf18220ca69f2c3d6e1390e74c46b0cbfc6f7484fd167dd6419aa4a8"
+    },
+    {
+      "name": "covers/paper-racer.png",
+      "bytes": 662854,
+      "width": 960,
+      "height": 640,
+      "sha256": "cf7b83603764c6a7cb9e09016c4a96aaf29fe219a9053070f4ca01f9f162a94c"
+    },
+    {
+      "name": "cap-cup.png",
+      "bytes": 1782733,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "bedc667dc09e850f814f79be2ba7e9091139593717c72ec0cd0e8db7f3ebfe67"
+    },
+    {
+      "name": "covers/cap-cup.png",
+      "bytes": 661239,
+      "width": 960,
+      "height": 640,
+      "sha256": "a5310a51ab70b5a9bd51bb8c75322800c53bf8764195e8607ea66b8da899f455"
+    },
+    {
+      "name": "paper-glider.png",
+      "bytes": 3016946,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ed58044261fb8aed889f1318c7dd412e6b23fd7f7d6041a353b06d509c7d3e6b"
+    },
+    {
+      "name": "covers/paper-glider.png",
+      "bytes": 934951,
+      "width": 960,
+      "height": 640,
+      "sha256": "84e1e24bb627ef9e10044eb698790fa254aed02cb12453bcb2a6806d0be93b31"
+    }
+  ]
+}

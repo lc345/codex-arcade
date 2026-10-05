@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "traffic-tangle",
+  "title": "路口别打结",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "management-resources",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "traffic-tangle.js",
+  "sha256": "0584cd85565ebf9a404c6f16f5f1f53dd2cc85bbf4c74e76362f9ddbdce157e3",
+  "bytes": 117068,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

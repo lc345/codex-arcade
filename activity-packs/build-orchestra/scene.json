@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "3",
+  "id": "build-orchestra",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "matches": { "families": ["shell.build", "shell.test"] },
+  "chapters": [
+    { "id": "sections-enter", "on": ["tool.started"], "timeline": { "durationMs": 2100, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "voices", "kind": "chorus", "anchor": "center" }, { "atMs": 80, "command": "spawn", "id": "clock", "kind": "clock", "anchor": "top" }, { "atMs": 160, "command": "spawn", "id": "tone", "kind": "beacon", "anchor": "bottom" }, { "atMs": 240, "command": "rotate", "id": "clock", "turns": 1.4, "durationMs": 1420 }, { "atMs": 420, "command": "pulse", "id": "voices", "to": 1.24, "count": 4, "durationMs": 1300 }] } },
+    { "id": "sections-sustain", "on": ["tool.slow"], "timeline": { "durationMs": 1800, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "voices", "kind": "chorus", "anchor": "center" }, { "atMs": 80, "command": "spawn", "id": "tone", "kind": "beacon", "anchor": "bottom" }, { "atMs": 160, "command": "pulse", "id": "tone", "to": 1.7, "count": 4, "durationMs": 1280 }] } },
+    { "id": "sections-land", "on": ["tool.completed", "turn.completed"], "timeline": { "durationMs": 1250, "tracks": [{ "atMs": 0, "command": "spawn", "id": "voices", "kind": "chorus", "anchor": "center" }, { "atMs": 180, "command": "pulse", "id": "voices", "to": 1.38, "count": 2, "durationMs": 740 }, { "atMs": 700, "command": "particle", "id": "chord", "anchor": "center" }] } },
+    { "id": "sections-reset", "on": ["tool.failed"], "timeline": { "durationMs": 1100, "tracks": [{ "atMs": 0, "command": "spawn", "id": "clock", "kind": "clock", "anchor": "center" }, { "atMs": 160, "command": "shake", "id": "clock", "amplitude": 10, "durationMs": 560 }, { "atMs": 760, "command": "fade", "id": "clock", "to": 0.22 }] } }
+  ]
+}

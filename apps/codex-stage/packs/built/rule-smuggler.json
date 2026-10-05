@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "rule-smuggler",
+  "title": "规则走私者",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "tactics-turns",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "rule-smuggler.js",
+  "sha256": "b6d7c1df957a968634a8403f2b26204d2afb3d8cfbfbc18eb5863125169092df",
+  "bytes": 390037,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

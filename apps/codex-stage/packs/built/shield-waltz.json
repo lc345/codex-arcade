@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "shield-waltz",
+  "title": "星环守卫",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "shooter-bullethell",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "shield-waltz.js",
+  "sha256": "ce73f8f43d11a0e475f6c5c80ac77c37be11dd081cc3e22fcbebcf5d897302b3",
+  "bytes": 37214,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "quarter-turn",
+  "title": "四分之一转",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "quarter-turn.js",
+  "sha256": "583dcb8ed71016e05601f326a46c987f423d85904a3d18d3435a4fdce10b2376",
+  "bytes": 36862,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.17.3",
+  "source": "https://registry.npmjs.org/@dimforge/rapier3d-compat/-/rapier3d-compat-0.17.3.tgz",
+  "integrity": "sha512-hxtaaqtfUWQvYbA/vstSEMZupObTMdM1u+5vTQlXNdWueRRhJ+toxREhaplok5W1/4ErxO6qdezbRM2eqEQsqw==",
+  "upstreamCommit": "1a9d5225fbaa7dc320e43011c56bbf0fbafe6b91",
+  "licenseURL": "https://raw.githubusercontent.com/dimforge/rapier.js/1a9d5225fbaa7dc320e43011c56bbf0fbafe6b91/LICENSE",
+  "license": "Apache-2.0",
+  "bundler": {
+    "version": "0.25.12",
+    "integrity": "sha512-N3zl+lxHCifgIlcMUP5016ESkeQjLj/959RxxNYIthIg+CQHInujFuXeWbWMgnTo4cp5XVHqFPmpyu9J65C1Yg=="
+  },
+  "adaptation": "esbuild defines the optional fetch fallback as a throwing local function; embedded WASM initialization is unchanged",
+  "bytes": 2404556,
+  "sha256": "185353c77330af201f69620e7080fc79e32b4d52ba462997553e6ce7e59268fd"
+}

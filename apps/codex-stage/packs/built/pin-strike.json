@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pin-strike",
+  "title": "保龄球连锁",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "physics-demolition",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "pin-strike.js",
+  "sha256": "1eab220185049c54c70df25b24356a778b4acd415bcd3f22bc4013777e91c82b",
+  "bytes": 3458338,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

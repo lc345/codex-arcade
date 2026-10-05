@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "chromatic-lab",
+  "title": "色彩炼金",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "chromatic-lab.js",
+  "sha256": "b28e0ad6603aa817ff554ba4315fb6735713d5d2028dd45edc07f55d8fe68b52",
+  "bytes": 30946,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

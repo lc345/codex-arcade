@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "2",
+  "id": "prism-relay",
+  "version": "1.0.0",
+  "priority": 16,
+  "license": "Apache-2.0",
+  "locales": ["zh-CN", "en"],
+  "assets": [],
+  "assetDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "contentDigest": "d7caf5956372db8aba35d620c9112fbcf81857b1050662a3aead64cb8c2d50ff",
+  "preview": "preview.json",
+  "matches": {
+    "categories": ["communication.send", "file.share"],
+    "states": ["waiting", "holding", "executing", "succeeded", "failed", "denied", "deferred", "expired", "stale"]
+  },
+  "variants": [
+    {
+      "id": "prism-charged",
+      "when": [{ "field": "status", "op": "eq", "value": "waiting" }],
+      "beats": [{ "phase": "cue", "commands": [{ "channel": "light", "token": "prism.idle", "durationMs": 900 }, { "channel": "audio", "cue": "prism.charge", "gain": "quiet" }, { "channel": "screen", "template": "一颗信息光子正在等待放行。", "slots": [] }] }],
+      "timeline": { "durationMs": 2100, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 80, "command": "spawn", "id": "packet", "kind": "comet", "anchor": "actor" }, { "atMs": 300, "command": "particle", "id": "charge", "anchor": "center" }, { "atMs": 520, "command": "text", "id": "summary", "slot": "actionSummary", "anchor": "center" }, { "atMs": 760, "command": "holdProgress", "id": "hold" }] }
+    },
+    {
+      "id": "prism-locking",
+      "when": [{ "field": "status", "op": "eq", "value": "holding" }],
+      "beats": [{ "phase": "decision", "commands": [{ "channel": "light", "token": "prism.lock", "durationMs": 900 }, { "channel": "audio", "cue": "prism.lock", "gain": "quiet" }, { "channel": "screen", "template": "棱镜正在锁定这次确认。", "slots": [] }] }],
+      "timeline": { "durationMs": 1500, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "orb", "anchor": "actor" }, { "atMs": 40, "command": "holdProgress", "id": "hold" }, { "atMs": 420, "command": "scale", "id": "gate", "to": 1.28 }, { "atMs": 740, "command": "particle", "id": "lock", "anchor": "center" }] }
+    },
+    {
+      "id": "prism-transit",
+      "when": [{ "field": "status", "op": "eq", "value": "executing" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "prism.transit", "durationMs": 1800 }, { "channel": "audio", "cue": "prism.flight", "gain": "quiet" }, { "channel": "screen", "template": "信息正在穿过棱镜通道。", "slots": [] }] }],
+      "timeline": { "durationMs": 2300, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "comet", "anchor": "actor" }, { "atMs": 120, "command": "path", "id": "packet", "from": "actor", "to": "recipient", "arc": -0.36, "durationMs": 1640 }, { "atMs": 880, "command": "particle", "id": "split", "anchor": "center" }, { "atMs": 1680, "command": "text", "id": "destination", "slot": "recipientLabel", "anchor": "recipient" }] }
+    },
+    {
+      "id": "prism-bloom",
+      "when": [{ "field": "status", "op": "eq", "value": "succeeded" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "prism.bloom", "durationMs": 1500 }, { "channel": "audio", "cue": "prism.arrive" }, { "channel": "speech", "template": "信息已穿过棱镜，交给 {{recipientLabel}}。", "slots": ["recipientLabel"] }] }],
+      "timeline": { "durationMs": 2200, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "comet", "anchor": "actor" }, { "atMs": 0, "command": "path", "id": "packet", "from": "actor", "to": "recipient", "arc": -0.36, "durationMs": 1280 }, { "atMs": 1320, "command": "spawn", "id": "arrival", "kind": "orb", "anchor": "recipient" }, { "atMs": 1380, "command": "particle", "id": "bloom", "anchor": "recipient" }, { "atMs": 1460, "command": "text", "id": "recipient", "slot": "recipientLabel", "anchor": "recipient" }] }
+    },
+    {
+      "id": "prism-return",
+      "when": [{ "field": "status", "op": "eq", "value": "failed" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "prism.return", "durationMs": 1100 }, { "channel": "audio", "cue": "error.soft", "gain": "quiet" }, { "channel": "screen", "template": "光子已回收，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 1500, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "comet", "anchor": "center" }, { "atMs": 160, "command": "path", "id": "packet", "from": "center", "to": "actor", "arc": 0.26, "durationMs": 880 }, { "atMs": 1080, "command": "fade", "id": "gate", "to": 0.18 }, { "atMs": 1120, "command": "text", "id": "status", "slot": "status", "anchor": "actor" }] }
+    },
+    {
+      "id": "prism-denied",
+      "when": [{ "field": "status", "op": "eq", "value": "denied" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.denied", "durationMs": 520 }, { "channel": "screen", "template": "棱镜没有点亮，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 900, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "orb", "anchor": "actor" }, { "atMs": 180, "command": "fade", "id": "packet", "to": 0.12 }, { "atMs": 280, "command": "fade", "id": "gate", "to": 0.2 }] }
+    },
+    {
+      "id": "prism-deferred",
+      "when": [{ "field": "status", "op": "eq", "value": "deferred" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.deferred", "durationMs": 520 }, { "channel": "screen", "template": "光子已存入稍后处理队列。", "slots": [] }] }],
+      "timeline": { "durationMs": 1000, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "orb", "anchor": "actor" }, { "atMs": 180, "command": "move", "id": "packet", "from": "actor", "to": "center", "durationMs": 480 }, { "atMs": 700, "command": "fade", "id": "packet", "to": 0.42 }] }
+    },
+    {
+      "id": "prism-expired",
+      "when": [{ "field": "status", "op": "eq", "value": "expired" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "quiet.fade", "durationMs": 450 }, { "channel": "screen", "template": "通道已关闭，信息没有送出。", "slots": [] }] }],
+      "timeline": { "durationMs": 850, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 160, "command": "fade", "id": "gate", "to": 0.06 }, { "atMs": 400, "command": "text", "id": "status", "slot": "status", "anchor": "center" }] }
+    },
+    {
+      "id": "prism-stale",
+      "when": [{ "field": "status", "op": "eq", "value": "stale" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "warning.stale", "durationMs": 700 }, { "channel": "screen", "template": "目标状态变化，棱镜已解除锁定。", "slots": [] }] }],
+      "timeline": { "durationMs": 1150, "tracks": [{ "atMs": 0, "command": "spawn", "id": "gate", "kind": "portal", "anchor": "center" }, { "atMs": 0, "command": "spawn", "id": "packet", "kind": "orb", "anchor": "center" }, { "atMs": 160, "command": "path", "id": "packet", "from": "center", "to": "actor", "arc": 0.24, "durationMs": 520 }, { "atMs": 760, "command": "particle", "id": "unlock", "anchor": "center" }, { "atMs": 820, "command": "fade", "id": "gate", "to": 0.18 }] }
+    }
+  ]
+}

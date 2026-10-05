@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "downshaft",
+  "title": "倒悬矿井",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "downshaft.js",
+  "sha256": "c717f0dd2f3637b5932ccd28bab8be33812e292f0c18cd1d8d9f357ef39e09f8",
+  "bytes": 116178,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

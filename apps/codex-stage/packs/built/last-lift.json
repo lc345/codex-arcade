@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "last-lift",
+  "title": "末班电梯",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "roguelite-exploration",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "last-lift.js",
+  "sha256": "521b5120c44581592bc5021ec85fc1e984d03f5270b3d4e0bb7af9ce5f0e798a",
+  "bytes": 3066091,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "three",
+      "version": "0.180.0",
+      "license": "MIT"
+    },
+    {
+      "id": "@dimforge/rapier3d-compat",
+      "version": "0.17.3",
+      "license": "Apache-2.0"
+    }
+  ],
+  "levels": 1
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gravity-shift",
+  "title": "地板辞职了",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "gravity-shift.js",
+  "sha256": "0d70ef81a1e111ae7eeddf8df013a58a710bef0e24ac867fd5ac6fc01d2b02ca",
+  "bytes": 129820,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

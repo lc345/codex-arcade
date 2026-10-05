@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentstage.dev/schemas/1/stage-pack.json",
+  "title": "Agent Stage Scene Pack",
+  "description": "A declarative Scene Pack. It can describe sensory output and a bounded Canvas timeline; it cannot define approval controls or executable code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "matches", "variants"],
+  "properties": {
+    "schemaVersion": { "enum": ["1", "2"] },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "version": { "type": "string", "minLength": 1 },
+    "priority": { "type": "integer", "minimum": -1000, "maximum": 1000, "default": 0 },
+    "license": { "type": "string", "minLength": 1 },
+    "locales": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "assets": { "type": "array", "items": { "$ref": "#/$defs/asset" } },
+    "assetDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "contentDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "preview": { "type": "string", "const": "preview.json" },
+    "matches": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["categories", "states"],
+      "properties": {
+        "categories": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "states": { "type": "array", "minItems": 1, "items": { "enum": ["waiting", "holding", "executing", "succeeded", "failed", "denied", "deferred", "expired", "stale"] } }
+      }
+    },
+    "variants": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/variant" } }
+  },
+  "allOf": [{
+    "if": { "properties": { "schemaVersion": { "const": "2" } } },
+    "then": { "required": ["license", "locales", "assets", "assetDigest", "contentDigest"] }
+  }],
+  "$defs": {
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "beats"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+        "when": { "type": "array", "items": { "$ref": "#/$defs/condition" } },
+        "beats": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/beat" } },
+        "timeline": { "$ref": "#/$defs/timeline" }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "op", "value"],
+      "properties": {
+        "field": { "enum": ["timeOfDay", "privacyMode", "recipientCount", "risk", "status"] },
+        "op": { "enum": ["eq", "gt", "gte", "lt", "lte"] },
+        "value": { "type": ["string", "number"] }
+      }
+    },
+    "beat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phase", "commands"],
+      "properties": {
+        "phase": { "enum": ["cue", "context", "preview", "decision", "resolution"] },
+        "commands": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/command" } }
+      }
+    },
+    "command": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["channel", "token", "durationMs"], "properties": { "channel": { "const": "light" }, "token": { "type": "string", "minLength": 1 }, "durationMs": { "type": "integer", "minimum": 0, "maximum": 10000 } } },
+        { "type": "object", "additionalProperties": false, "required": ["channel", "cue"], "properties": { "channel": { "const": "audio" }, "cue": { "type": "string", "minLength": 1 }, "gain": { "enum": ["quiet", "normal"] } } },
+        { "type": "object", "additionalProperties": false, "required": ["channel", "template", "slots"], "properties": { "channel": { "enum": ["speech", "screen"] }, "template": { "type": "string", "minLength": 1 }, "slots": { "type": "array", "items": { "type": "string" } } } }
+      ]
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "type"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "pattern": "^assets/(?!.*\\.\\.)[^/].*\\.(png|webp|svg|wav|mp3)$" },
+        "type": { "enum": ["image", "vector", "audio"] },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["durationMs", "tracks"],
+      "properties": {
+        "durationMs": { "type": "integer", "minimum": 0, "maximum": 8000 },
+        "tracks": { "type": "array", "minItems": 1, "maxItems": 64, "items": { "$ref": "#/$defs/timelineTrack" } }
+      }
+    },
+    "timelineTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["atMs", "command"],
+      "properties": {
+        "atMs": { "type": "integer", "minimum": 0 },
+        "command": { "enum": ["spawn", "move", "path", "fade", "scale", "text", "particle", "holdProgress", "orbit", "pulse", "rotate", "shake"] },
+        "id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "anchor": { "enum": ["actor", "recipient", "center", "top", "bottom", "left", "right"] },
+        "from": { "enum": ["actor", "recipient", "center", "top", "bottom", "left", "right"] },
+        "to": { "oneOf": [{ "enum": ["actor", "recipient", "center", "top", "bottom", "left", "right"] }, { "type": "number" }] },
+        "arc": { "type": "number", "minimum": -1, "maximum": 1 },
+        "durationMs": { "type": "integer", "minimum": 0 },
+        "radius": { "type": "number", "minimum": 0, "maximum": 1 },
+        "turns": { "type": "number", "minimum": -6, "maximum": 6 },
+        "count": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "amplitude": { "type": "number", "minimum": 0, "maximum": 100 },
+        "slot": { "enum": ["actorLabel", "recipientLabel", "recipientCount", "actionSummary", "status"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "cursor-overdrive",
+  "title": "准星过载",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "rhythm-timing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "cursor-overdrive.js",
+  "sha256": "96548b5f87dd3de1efa6a1016c5a0d72105cce810cb8b86c46a35481ca54ba64",
+  "bytes": 31509,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

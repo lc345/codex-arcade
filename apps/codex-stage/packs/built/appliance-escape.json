@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "appliance-escape",
+  "title": "电器成精了",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "stealth-observation",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "appliance-escape.js",
+  "sha256": "cbe7c7bd337763a30094a3f67fb82b1beabbc30f57ea7235d686c9eb8b2b9e9e",
+  "bytes": 3092229,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "three",
+      "version": "0.180.0",
+      "license": "MIT"
+    },
+    {
+      "id": "@dimforge/rapier3d-compat",
+      "version": "0.17.3",
+      "license": "Apache-2.0"
+    }
+  ],
+  "levels": 1
+}

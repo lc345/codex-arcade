@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pocket-town",
+  "title": "口袋小镇",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "pocket-town.js",
+  "sha256": "02b4f62973d87d97b1ce57acf0148bf2a99c9b1e0a4bf7c049db88665383735c",
+  "bytes": 646777,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "three",
+      "version": "0.180.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

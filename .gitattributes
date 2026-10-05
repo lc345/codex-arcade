@@ -1,0 +1,16 @@
+* text=auto
+*.sh text eol=lf
+*.command text eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.wav binary
+*.mp3 binary
+*.glb binary
+*.blend binary
+*.wasm binary
+*.pck binary
+apps/codex-stage/packs/built/* linguist-generated=true -whitespace
+apps/codex-stage/vendor/* linguist-vendored=true -whitespace
+apps/codex-stage/godot-junk/built/* linguist-generated=true -whitespace
+apps/codex-stage/studio/assets.js linguist-generated=true

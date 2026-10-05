@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "glass-divide",
+  "title": "一刀两半",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "glass-divide.js",
+  "sha256": "09b1cb3920c2ca2d97168e29f8a033552f32eed0ce1ac514dfc460f238bb3ffd",
+  "bytes": 133995,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

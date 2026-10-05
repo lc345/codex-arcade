@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "rainline",
+  "title": "雨线快递",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "rainline.js",
+  "sha256": "6fb57c5b64b25ea3db36afe031ada29f75a0a280704b7df66b417df3c839c974",
+  "bytes": 128577,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

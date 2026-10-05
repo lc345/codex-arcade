@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "clockout-clearout",
+  "title": "下班清场",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "physics-demolition",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "clockout-clearout.js",
+  "sha256": "fd5612795764e749a4a1ae0e7bfe5c417452746a5ece3f2dc1ad2c30d2b3dcad",
+  "bytes": 731953,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    },
+    {
+      "id": "three",
+      "version": "0.180.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

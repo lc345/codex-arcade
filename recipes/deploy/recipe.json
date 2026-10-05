@@ -1,0 +1,15 @@
+{
+  "id": "deploy",
+  "label": "Production deploy",
+  "category": "system.deploy",
+  "risk": "critical",
+  "holdMs": 2500,
+  "tone": "system",
+  "card": {
+    "title": "Deploy web-api v1.18.0",
+    "summary": "Release 14 reviewed changes to production.",
+    "target": "Production / web-api",
+    "impact": "Customer traffic will receive the new release.",
+    "rollback": "Rollback is available after deployment."
+  }
+}

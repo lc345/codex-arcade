@@ -1,0 +1,24 @@
+{
+  "id": "grab-go",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Built-in image_gen; originals unchanged; runtime atlas crops from alpha bounds.",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "1382d022b5cc30273bb8d294c29813a9c0260ad510fc5a691f231f067e3c3153",
+  "files": [
+    {
+      "name": "cabinet.png",
+      "bytes": 2736060,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "b6b76a9f338f6d6a76303107abea7d6c85538c198662e3b532ca0b60e47d5b20"
+    },
+    {
+      "name": "treasures.png",
+      "bytes": 1642335,
+      "width": 1774,
+      "height": 887,
+      "sha256": "e406597a3546b44f6d958843285883eb439108ae2e91140b3e8506a5545b8e49"
+    }
+  ]
+}

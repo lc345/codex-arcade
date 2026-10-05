@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "razor-wings",
+  "title": "刃隙飞行",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "razor-wings.js",
+  "sha256": "64a97928bae07eeeec1fd33e5e3f9ea24bdbe5fd6e41843bfe1e12cc355067e8",
+  "bytes": 44535,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

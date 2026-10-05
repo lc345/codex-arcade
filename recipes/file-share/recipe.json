@@ -1,0 +1,23 @@
+{
+  "id": "file-share",
+  "label": "Share a file",
+  "category": "file.share",
+  "risk": "medium",
+  "holdMs": 1200,
+  "tone": "communication",
+  "card": {
+    "title": "Share the launch brief",
+    "summary": "Grant access to the reviewed launch brief.",
+    "target": "Product team workspace",
+    "impact": "12 teammates can open the file.",
+    "rollback": "Access can be revoked afterward."
+  },
+  "stage": {
+    "actionKind": "file.share",
+    "channel": "drive",
+    "actorLabel": "Youze",
+    "recipientLabel": "Product team workspace",
+    "recipientCount": 12,
+    "actionSummary": "Share the launch brief"
+  }
+}

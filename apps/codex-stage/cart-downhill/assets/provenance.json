@@ -1,0 +1,22 @@
+{
+  "id": "cart-downhill",
+  "date": "2026-09-30",
+  "author": "Agent Stage",
+  "license": "Apache-2.0",
+  "tool": "Blender 4.5.14 LTS",
+  "source": "tools/art/build-cart-assets.py",
+  "sourceSha256": "def3270cfed0afb8acbdb60f67f99cbde1374be948e4874c554f568338787773",
+  "method": "Original scripted Blender modelling. No external models, textures, audio, or named franchise assets.",
+  "files": [
+    {
+      "name": "seaside.glb",
+      "bytes": 1058648,
+      "sha256": "72b4c77892dac8b0f69dc93eee39a79a0b6714f34c6518ba4c160175df7472ad"
+    },
+    {
+      "name": "seaside.blend",
+      "bytes": 2880618,
+      "sha256": "16e45e8bd4bb88958e4692d214ea544a791d9d63dd20cd3e0ad7db5d7711cacf"
+    }
+  ]
+}

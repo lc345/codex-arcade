@@ -1,0 +1,5 @@
+export const CONTRAST_CATALOG = Object.freeze([
+  {id:"rainline",title:"雨线快递",english:"RAINLINE",category:"platform-runner",physics:"matter",color:"#d9797b",genre:"像素横版 · 雨夜急件",artStyle:"pixel-noir",hint:"单击或空格跳跃，可二段跳；B 冲刺。自动向右跑，左方向键可返回。收齐三封急件后抵达末班车。",levels:["23:59 最后一班车"]},
+  {id:"ink-archive",title:"墨影档案",english:"THE INK ARCHIVE",category:"stealth-observation",pointerMode:"hover-dash",color:"#a5aa94",genre:"黑白版画 · 放大镜显影",artStyle:"copperplate",hint:"移动放大镜，按住怀表、钥匙、窗图显影。集齐后点击三位编号，再揭开封条。方向键切换证物，按住空格检视；封条阶段左右选位、上下改数、Enter 解封。",levels:["017 消失的房间"]},
+  {id:"last-lift",title:"末班电梯",english:"LAST LIFT",category:"roguelite-exploration",physics:"rapier",renderer:"three",pointerMode:"click-nav",color:"#99ac89",genre:"复古第一人称 · 夜班维修",artStyle:"retro-first-person",hint:"拖动画面转头，点击地面行走，靠近物件后点击互动。WASD / 方向键移动，E / 空格互动，B 转身。取左侧保险丝，修复右侧配电箱，再呼叫电梯并走进去。",levels:["B1 夜班结束之后"]},
+].map(p=>({...p,kind:"game",edition:"studio",release:"preview",collection:"contrast",presentation:"panorama",replayLabel:"重新试玩",cover:`/apps/codex-stage/assets/studio/${p.id}.png`})));

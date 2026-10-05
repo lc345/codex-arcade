@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>借弹还弹 · Return Fire</title><link rel="icon" href="../assets/icons/sparkles.svg"><link rel="stylesheet" href="./style.css"></head>
+<body><main>
+  <header><a href="/codex-stage">AGENT STAGE <span>/ ARCADE EXPERIMENTS</span></a><span id="task">本地试玩</span></header>
+  <section class="masthead"><div><p>RETURN FIRE</p><h1>借弹还弹<span>07</span></h1></div><div class="opponent"><span>WRECKER CLASS</span><strong>废港巨像</strong></div></section>
+  <nav class="phases" aria-label="战斗阶段"><span id="phase-0">01 <b>肩炮</b></span><span id="phase-1">02 <b>激光臂</b></span><span id="phase-2">03 <b>反应堆</b></span></nav>
+  <section class="arena" aria-label="借弹还弹战场">
+    <canvas id="game" tabindex="0" aria-label="鼠标或方向键移动。按住鼠标或空格吸收金色子弹，松开发射。躲开红色激光与冲撞。" title="移动闪避 · 按住吸收 · 松手反击"></canvas>
+    <div class="boss-hud"><span id="objective">左肩弹幕炮</span><div class="boss-track"><i id="boss-hp"></i></div><span id="boss-count">18 / 18</span></div>
+    <div class="player-hud"><div><span>HULL</span><strong id="hull" aria-label="装甲 4">▰▰▰▰</strong></div><div><span>CAPACITOR</span><strong><b id="ammo">00</b><small>/ 10</small></strong></div><div class="heat"><span id="heat-label">HEAT</span><div><i id="heat"></i></div></div></div>
+    <div id="banner" role="status"></div>
+    <section class="interstitial" id="result"><p id="result-kicker">SECTOR 07 / DRYDOCK</p><h2 id="result-title">废港巨像</h2><p id="result-detail">肩炮 · 激光臂 · 反应堆</p><button id="continue">迎战</button></section>
+  </section>
+  <section class="controls" aria-label="游戏控制">
+    <div class="tools"><button id="mute" title="开关声音" aria-label="声音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button><button id="motion" title="减少震屏与闪动" aria-label="减少动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button><button id="retry" title="重试当前阶段" aria-label="重试当前阶段"><img src="../assets/icons/rotate-ccw.svg" alt=""></button><button id="expand" title="放大战场" aria-label="放大战场" aria-pressed="false"><img src="../assets/icons/maximize-2.svg" alt=""></button></div>
+    <button id="shield" title="按住吸收，松手反击；空格键也可" aria-label="按住吸收，松开反击" aria-pressed="false"><img src="./assets/shield.svg" width="20" height="20" alt=""><span id="shield-label">吸收盾</span></button>
+    <div class="task-controls"><button id="start">开始任务</button><button id="stop">结束任务</button></div>
+  </section>
+  <footer><span id="live" role="status" aria-live="polite">正在准备战场</span><span>NO AMMO. NO PROBLEM.</span></footer>
+</main><script type="module" src="./app.js"></script></body></html>

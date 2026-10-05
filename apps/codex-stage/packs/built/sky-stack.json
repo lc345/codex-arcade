@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "sky-stack",
+  "title": "叠到天上",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "sky-stack.js",
+  "sha256": "3bd9b726acec0d0aca1001cb52a1f3683585cca47ed3aa2ee915e9ac04dc5a3a",
+  "bytes": 46484,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 1
+}

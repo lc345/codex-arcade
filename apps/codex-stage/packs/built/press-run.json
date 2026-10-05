@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "press-run",
+  "title": "别被夹扁",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "press-run.js",
+  "sha256": "d5a732e211f4cf34d1d368458f3c5a366eb33330b78169fed6d6748c1a86d0c9",
+  "bytes": 46384,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 1
+}

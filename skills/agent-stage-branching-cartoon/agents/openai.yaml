@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Stage Branching Cartoon"
+  short_description: "Create privacy-safe branching shorts for Agent Stage."
+  default_prompt: "Design an original, loop-safe branching cartoon short for Agent Stage."

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lawn-rally",
+  "title": "草地网球",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "sports-precision",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "lawn-rally.js",
+  "sha256": "ef34e118d410ca49ae53c3afe535c7f91e4eb05ee4d841897da1b2a8c69110bd",
+  "bytes": 3921251,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

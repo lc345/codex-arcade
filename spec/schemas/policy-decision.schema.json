@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finalbutton.dev/schemas/0.2/policy-decision.json",
+  "title": "FinalButton PolicyDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "reason"],
+  "properties": {
+    "decision": { "enum": ["allow", "require_approval", "deny"] },
+    "reason": { "type": "string" },
+    "holdMs": { "type": "integer", "minimum": 0 }
+  }
+}

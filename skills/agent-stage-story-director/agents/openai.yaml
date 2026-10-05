@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Stage Story Director"
+  short_description: "Design safe short films and one-tap games for agent work."
+  default_prompt: "Create a privacy-safe Agent Stage story pack with a clear visual grammar, sound cues, and one-tap interaction where appropriate."

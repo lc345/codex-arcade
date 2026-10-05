@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "mine-surveyor",
+  "title": "雷区点灯人",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "mine-surveyor.js",
+  "sha256": "9d487f0135c409b53c7f62b78aa1106c78fd1e5956e6c98d9fb18877a441d5de",
+  "bytes": 32586,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

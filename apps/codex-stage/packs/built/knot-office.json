@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "knot-office",
+  "title": "解结事务所",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "knot-office.js",
+  "sha256": "caa0509a379cb1ee86318cf229169de7d07ab0414ea4d08d22c947fc5f0831cb",
+  "bytes": 35284,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

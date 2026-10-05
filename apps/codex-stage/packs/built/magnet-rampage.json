@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "magnet-rampage",
+  "title": "磁力暴走",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "physics-demolition",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "magnet-rampage.js",
+  "sha256": "1995abcb1223a8cb69e7fdd2e7346b795ed18696486b9ff08ae4bc3a6c4616e8",
+  "bytes": 755467,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    },
+    {
+      "id": "three",
+      "version": "0.180.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

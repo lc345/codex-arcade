@@ -1,0 +1,16 @@
+{
+  "id": "phone-call",
+  "label": "Phone call",
+  "category": "communication.call",
+  "risk": "high",
+  "holdMs": 2000,
+  "tone": "communication",
+  "card": {
+    "title": "Call Alex Chen",
+    "summary": "Confirm the product demo for Thursday.",
+    "target": "Alex Chen, Acme Studio",
+    "impact": "One AI-assisted phone call will be placed.",
+    "disclosure": "The caller will identify itself as an AI assistant for Youze.",
+    "rollback": "A placed call cannot be recalled."
+  }
+}

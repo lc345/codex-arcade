@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>破烂拳王 · Agent Stage</title><link rel="icon" href="../assets/icons/sparkles.svg"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header><a href="/codex-stage">AGENT STAGE <span> / ENGINE LAB</span></a><span id="task-state">本地试玩</span></header>
+    <section class="heading"><div><p>JUNK CHAMPION</p><h1>破烂拳王</h1></div><div class="opponent"><span>今晚的对手</span><strong id="opponent">锅炉重拳</strong></div></section>
+    <section id="stage" aria-label="破烂拳王游戏"><div id="loading" role="status">擂台准备中</div></section>
+    <section class="toolbar">
+      <div class="tools">
+        <button id="mute" title="开关声音" aria-label="开关声音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button>
+        <button id="reduced" title="减少镜头震动与闪光" aria-label="减少动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button>
+        <button id="retry" title="重新挑战当前对手" aria-label="重新挑战"><img src="../assets/icons/rotate-ccw.svg" alt=""></button>
+        <button id="expand" title="放大擂台" aria-label="放大擂台" aria-pressed="false"><img src="../assets/icons/maximize-2.svg" alt=""></button>
+      </div>
+      <div class="actions"><button id="start">开始任务</button><button id="stop">结束任务</button><button id="next" hidden>下一位对手</button></div>
+    </section>
+    <footer><span id="live" role="status" aria-live="polite">等待擂台就绪</span><span class="engine">GODOT / LOCAL</span></footer>
+    <p class="sr-only" id="help">按住鼠标、触屏或空格防御，松开出拳。对手出拳前的最后一刻举起防御可以完美格挡。一直防御会破防。R 重试。任务结束立即停止。</p>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

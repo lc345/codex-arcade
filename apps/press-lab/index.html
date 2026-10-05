@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101617" />
+    <title>Agent Stage Lab</title>
+    <link rel="stylesheet" href="/apps/press-lab/styles.css" />
+  </head>
+  <body>
+    <main class="lab-shell" id="top">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Agent Stage Lab home"><span class="brand-mark" aria-hidden="true"></span>Agent Stage</a>
+        <span class="product-label">Moment Director</span>
+        <span class="trusted-note">Trusted action preview</span>
+        <button class="reset-button" id="reset" type="button" title="Start a new approval request">New request</button>
+      </header>
+
+      <section class="director-shell" aria-label="Agent Stage action simulator">
+        <aside class="action-rail" aria-labelledby="work-heading">
+          <div class="rail-heading">
+            <span class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Agent work</span>
+            <h1 id="work-heading">Choose<br />the moment.</h1>
+            <p>Every action keeps its own scene shelf and confirmation grammar.</p>
+          </div>
+          <nav class="action-library" id="action-library" aria-label="Agent work type"></nav>
+          <article class="action-card" id="action-card" aria-live="polite"></article>
+        </aside>
+
+        <section class="seal-stage" aria-labelledby="stage-heading">
+          <div class="stage-canvas-wrap" aria-hidden="true"><canvas id="stage-canvas"></canvas></div>
+          <div class="stage-copy">
+            <span class="eyebrow" id="stage-heading">Live performance</span>
+            <span class="mobile-action-label" id="mobile-action-label"></span>
+            <strong id="state-label">Awaiting your consent</strong>
+            <span id="state-subtitle">Review the action, then commit it deliberately.</span>
+          </div>
+          <span class="live-status" id="live-status" aria-live="polite">Awaiting your consent</span>
+
+          <div class="scene-readout" aria-live="polite">
+            <span id="scene-pack">loading scene</span>
+            <p id="scene-copy">Preparing a sensory scene for this action.</p>
+            <small id="scene-preview" hidden>Preview only. This scene is not bound to the pending action.</small>
+            <code id="scene-proof"></code>
+          </div>
+          <p id="stage-caption" class="visually-hidden" aria-live="polite"></p>
+
+          <p class="seal-details" id="seal-details" hidden></p>
+          <div class="seal-assembly" data-tone="communication" data-status="pending" data-profile="pulse">
+            <div class="signal-ring outer-ring" aria-hidden="true"></div>
+            <div class="signal-ring inner-ring" aria-hidden="true"></div>
+            <button id="seal" class="seal" type="button" aria-describedby="seal-instruction">
+              <span class="seal-icon" aria-hidden="true"></span>
+              <span class="seal-label" id="seal-label">Hold</span>
+              <span class="seal-progress" id="seal-progress">2.0s</span>
+            </button>
+          </div>
+          <p class="visually-hidden" id="seal-instruction">Press and hold to approve this single action. Releasing early cancels the approval.</p>
+
+          <div class="dial-controls" id="dial-controls" role="group" aria-label="Dial decision" hidden>
+            <button class="dial-choice" type="button" data-dial-choice="approve_once">Approve</button>
+            <button class="dial-choice" type="button" data-dial-choice="defer">Later</button>
+            <button class="dial-choice is-deny" type="button" data-dial-choice="deny">Deny</button>
+          </div>
+          <div class="stage-actions" id="stage-actions">
+            <button class="quiet-action" id="details" type="button">Details</button>
+            <button class="quiet-action" id="defer" type="button">Later</button>
+            <button class="deny-action" id="deny" type="button">Deny</button>
+          </div>
+        </section>
+
+        <aside class="director-panel" aria-label="Scene direction and action proof">
+          <section class="director-section">
+            <div class="section-heading">
+              <span class="eyebrow">Scene library</span>
+              <strong id="scene-shelf-title">Email scenes</strong>
+            </div>
+            <div class="scene-picker" id="scene-picker" aria-label="Scene choices"></div>
+          </section>
+
+          <section class="director-section">
+            <div class="section-heading">
+              <span class="eyebrow">Confirmation</span>
+              <strong id="gesture-shelf-title">Email confirmation</strong>
+            </div>
+            <div class="gesture-picker" id="gesture-picker" aria-label="Confirmation gestures"></div>
+          </section>
+
+          <section class="director-section playback-section">
+            <div class="section-heading">
+              <span class="eyebrow">Playback</span>
+              <strong>Context controls</strong>
+            </div>
+            <div class="setting-grid">
+              <label>Stage
+                <select id="scene-mode">
+                  <option value="full-detail" selected>Full detail</option>
+                  <option value="quiet-night">Quiet night</option>
+                </select>
+              </label>
+              <label>Privacy
+                <select id="privacy-mode">
+                  <option value="summary-only" selected>Summary</option>
+                  <option value="full">Full</option>
+                </select>
+              </label>
+              <label>Time
+                <select id="time-mode">
+                  <option value="day" selected>Day</option>
+                  <option value="night">Night</option>
+                  <option value="adaptive">Auto</option>
+                </select>
+              </label>
+              <label>Preview
+                <select id="lifecycle-preview">
+                  <option value="live" selected>Live action</option>
+                  <option value="waiting">Waiting</option>
+                  <option value="holding">Holding</option>
+                  <option value="executing">Executing</option>
+                  <option value="succeeded">Succeeded</option>
+                  <option value="failed">Failed</option>
+                  <option value="denied">Denied</option>
+                  <option value="deferred">Deferred</option>
+                  <option value="expired">Expired</option>
+                  <option value="stale">Stale</option>
+                </select>
+              </label>
+              <label class="toggle-setting"><input id="sound-enabled" type="checkbox" checked /><span>Sound</span></label>
+              <label class="toggle-setting"><input id="reduced-motion" type="checkbox" /><span>Reduce motion</span></label>
+            </div>
+          </section>
+
+          <section class="proof-section" aria-labelledby="proof-heading">
+            <div class="section-heading proof-heading">
+              <span class="eyebrow" id="proof-heading">Action proof</span>
+              <span class="receipt-status" id="receipt-status">Pending</span>
+            </div>
+            <div class="signal-meter" id="signal-meter"></div>
+            <div class="signal-legend">
+              <span>Risk</span><strong id="risk-value"></strong>
+              <span>Gesture</span><strong id="gesture-value"></strong>
+            </div>
+            <div class="receipt-content" id="receipt-content"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+    <script src="/node_modules/pixi.js/dist/pixi.min.js"></script>
+    <script src="/node_modules/tone/build/Tone.js"></script>
+    <script type="module" src="/apps/press-lab/app.js"></script>
+  </body>
+</html>

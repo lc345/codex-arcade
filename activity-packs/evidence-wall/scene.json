@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "3",
+  "id": "evidence-wall",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "matches": { "families": ["shell.inspect"] },
+  "chapters": [
+    { "id": "clues-appear", "on": ["tool.started"], "timeline": { "durationMs": 2200, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "brief", "kind": "document", "anchor": "left" }, { "atMs": 90, "command": "spawn", "id": "signal", "kind": "beacon", "anchor": "center" }, { "atMs": 140, "command": "spawn", "id": "clue", "kind": "glyph", "anchor": "right" }, { "atMs": 240, "command": "orbit", "id": "signal", "anchor": "center", "radius": 0.18, "turns": 1.2, "durationMs": 1640 }, { "atMs": 610, "command": "particle", "id": "link", "anchor": "center" }] } },
+    { "id": "clues-hold", "on": ["tool.slow"], "timeline": { "durationMs": 1800, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "signal", "kind": "beacon", "anchor": "center" }, { "atMs": 120, "command": "spawn", "id": "brief", "kind": "document", "anchor": "left" }, { "atMs": 160, "command": "pulse", "id": "signal", "to": 1.45, "count": 3, "durationMs": 1320 }] } },
+    { "id": "clues-resolve", "on": ["tool.completed", "turn.completed"], "timeline": { "durationMs": 1300, "tracks": [{ "atMs": 0, "command": "spawn", "id": "brief", "kind": "document", "anchor": "center" }, { "atMs": 160, "command": "spawn", "id": "proof", "kind": "shield", "anchor": "center" }, { "atMs": 360, "command": "pulse", "id": "proof", "to": 1.28, "count": 2, "durationMs": 720 }, { "atMs": 720, "command": "particle", "id": "resolved", "anchor": "center" }] } },
+    { "id": "clues-revise", "on": ["tool.failed"], "timeline": { "durationMs": 1100, "tracks": [{ "atMs": 0, "command": "spawn", "id": "brief", "kind": "document", "anchor": "center" }, { "atMs": 160, "command": "shake", "id": "brief", "amplitude": 11, "durationMs": 550 }, { "atMs": 740, "command": "fade", "id": "brief", "to": 0.28 }] } }
+  ]
+}

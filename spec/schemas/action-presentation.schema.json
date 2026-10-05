@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finalbutton.dev/schemas/0.2/action-presentation.json",
+  "title": "FinalButton ActionPresentationRecord",
+  "description": "A replayable record of the sensory scene rendered for one action. It is descriptive only and cannot define approval controls.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "actionDigest", "scene", "contract", "transcript", "transcriptDigest", "renderedAt", "digest"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "actionDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["packId", "packVersion", "variantId"],
+      "properties": {
+        "packId": { "type": "string", "minLength": 1 },
+        "packVersion": { "type": "string", "minLength": 1 },
+        "variantId": { "type": "string", "minLength": 1 }
+      }
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["holdMs", "allowedOutcomes", "deviceProfile"],
+      "properties": {
+        "holdMs": { "type": "integer", "minimum": 0 },
+        "allowedOutcomes": {
+          "type": "array",
+          "items": { "enum": ["approve_once", "deny", "defer", "expired", "request_details"] },
+          "minItems": 1
+        },
+        "deviceProfile": { "type": "string", "minLength": 1 }
+      }
+    },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stageVersion", "packContentDigest", "assetDigest", "timelineDigest"],
+      "properties": {
+        "stageVersion": { "const": "2" },
+        "packContentDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "assetDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "timelineDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "transcript": { "type": "string" },
+    "transcriptDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "renderedAt": { "type": "string", "format": "date-time" },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}

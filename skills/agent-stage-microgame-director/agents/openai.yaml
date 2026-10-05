@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Stage Microgame Director"
+  short_description: "Design compact, safe mini games for Agent Stage."
+  default_prompt: "Design an original Agent Stage microgame with a clear tap and optional double-tap action."

@@ -1,0 +1,33 @@
+{
+  "status": "proposal",
+  "reviewedAt": "2026-09-17",
+  "targetGames": 1000,
+  "targetMechanicDirections": 100,
+  "gamesPerDirection": 10,
+  "existingGamesIncluded": true,
+  "taxonomy": "Agent Stage editorial production families, mapped to Steam genres and tags; not an official Steam taxonomy",
+  "quotaPolicy": "Quality gates take precedence over quotas. Rebalance after playtests; do not count reskins, levels or difficulty modes as separate games.",
+  "steamSource": "https://partner.steamgames.com/doc/store/tags?l=english",
+  "categories": [
+    { "id": "physics-demolition", "name": "物理解构与弹射", "directions": 8, "games": 80, "steamTagCandidates": ["Physics", "Destruction", "Puzzle"] },
+    { "id": "pinball-rebound", "name": "弹珠与反弹", "directions": 6, "games": 60, "steamTagCandidates": ["Pinball", "Arcade", "Physics"] },
+    { "id": "platform-runner", "name": "平台跳跃与跑酷", "directions": 8, "games": 80, "steamTagCandidates": ["Platformer", "Precision Platformer", "Runner"] },
+    { "id": "shooter-bullethell", "name": "街机射击与弹幕", "directions": 8, "games": 80, "steamTagCandidates": ["Shoot 'Em Up", "Bullet Hell", "Top-Down Shooter"] },
+    { "id": "combat-action", "name": "短局近战与招式动作", "directions": 4, "games": 40, "steamTagCandidates": ["Action", "Beat 'em up", "Hack and Slash"] },
+    { "id": "racing-driving", "name": "竞速、驾驶与漂移", "directions": 5, "games": 50, "steamTagCandidates": ["Racing", "Driving", "Arcade"] },
+    { "id": "sports-precision", "name": "运动技巧与精准投掷", "directions": 5, "games": 50, "steamTagCandidates": ["Sports", "Golf", "Mini Golf"] },
+    { "id": "rhythm-timing", "name": "节奏与时机", "directions": 5, "games": 50, "steamTagCandidates": ["Rhythm", "Music", "Arcade"] },
+    { "id": "logic-rules", "name": "逻辑与规则解谜", "directions": 8, "games": 80, "steamTagCandidates": ["Puzzle", "Logic", "Sokoban"] },
+    { "id": "spatial-routing", "name": "空间、路线与光学谜题", "directions": 6, "games": 60, "steamTagCandidates": ["Puzzle", "Physics", "Grid-Based Movement"] },
+    { "id": "matching-assembly", "name": "组合、消除与拼接", "directions": 5, "games": 50, "steamTagCandidates": ["Match 3", "Tile-Matching", "Puzzle"] },
+    { "id": "cards-dice", "name": "卡牌、骰子与轻桌游", "directions": 4, "games": 40, "steamTagCandidates": ["Card Game", "Deckbuilding", "Board Game"] },
+    { "id": "tactics-turns", "name": "回合策略与棋盘战术", "directions": 5, "games": 50, "steamTagCandidates": ["Turn-Based Tactics", "Strategy", "Chess"] },
+    { "id": "tower-defense", "name": "塔防与阵地布置", "directions": 4, "games": 40, "steamTagCandidates": ["Tower Defense", "Strategy", "Real Time Tactics"] },
+    { "id": "building-balance", "name": "建造、平衡与结构设计", "directions": 5, "games": 50, "steamTagCandidates": ["Building", "Physics", "Simulation"] },
+    { "id": "logistics-automation", "name": "运输、调度与自动化", "directions": 4, "games": 40, "steamTagCandidates": ["Automation", "Transportation", "Resource Management"] },
+    { "id": "management-resources", "name": "轻经营与资源管理", "directions": 3, "games": 30, "steamTagCandidates": ["Management", "Resource Management", "Time Management"] },
+    { "id": "stealth-observation", "name": "潜行、观察与搜寻", "directions": 3, "games": 30, "steamTagCandidates": ["Stealth", "Hidden Object", "Puzzle"] },
+    { "id": "roguelite-exploration", "name": "短局 Roguelite 与探索", "directions": 2, "games": 20, "steamTagCandidates": ["Roguelite", "Dungeon Crawler", "Exploration"] },
+    { "id": "experimental-sandbox", "name": "创意沙盒与实验玩法", "directions": 2, "games": 20, "steamTagCandidates": ["Sandbox", "Experimental", "Simulation"] }
+  ]
+}

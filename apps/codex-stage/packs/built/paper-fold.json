@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "paper-fold",
+  "title": "折到没脾气",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "matching-assembly",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "paper-fold.js",
+  "sha256": "ad71f0635c579cb728b4dee4eae50bf75e9b3513d64a046f7593dfd746305289",
+  "bytes": 48009,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

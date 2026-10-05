@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101112" />
+    <title>Agent Stage Gallery</title>
+    <link rel="stylesheet" href="/apps/stage-gallery/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="/">Agent Stage</a>
+        <span>Scene Pack Gallery</span>
+        <label class="sound"><input id="sound" type="checkbox" /> Preview sound</label>
+        <a class="lab-link" href="/apps/press-lab/index.html">Open Stage Lab</a>
+      </header>
+      <section class="intro">
+        <p class="eyebrow">Community expression, trusted actions</p>
+        <h1>One action. Many ways to make it felt.</h1>
+        <p>Every preview below receives the same privacy-safe Stage Event. Only the visual language changes; risk, hold duration, target access and approval remain outside the pack.</p>
+      </section>
+      <section id="gallery" class="gallery" aria-live="polite" aria-label="Agent Stage Scene Packs"></section>
+    </main>
+    <script src="/node_modules/pixi.js/dist/pixi.min.js"></script>
+    <script type="module" src="/apps/stage-gallery/app.js"></script>
+  </body>
+</html>

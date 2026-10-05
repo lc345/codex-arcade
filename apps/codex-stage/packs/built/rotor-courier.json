@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "rotor-courier",
+  "title": "转杆快递",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "spatial-routing",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "rotor-courier.js",
+  "sha256": "9fc97397fb308884f64266892848a55675d2866b5855228371b138c8c6fc6c02",
+  "bytes": 118490,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

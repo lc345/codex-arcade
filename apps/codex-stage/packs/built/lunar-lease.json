@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lunar-lease",
+  "title": "月面停车费",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "racing-driving",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "lunar-lease.js",
+  "sha256": "977382b46487171d07e93845b050f539138f203ba8c0ea9e5b5f21c0ba257ae0",
+  "bytes": 121178,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "3",
+  "id": "patchwork-studio",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "matches": { "families": ["patch.apply"] },
+  "chapters": [
+    { "id": "materials-open", "on": ["tool.started"], "timeline": { "durationMs": 2000, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "forge", "kind": "forge", "anchor": "center" }, { "atMs": 120, "command": "spawn", "id": "anvil", "kind": "anvil", "anchor": "bottom" }, { "atMs": 180, "command": "spawn", "id": "piece", "kind": "shard", "anchor": "top" }, { "atMs": 260, "command": "rotate", "id": "piece", "turns": 1.4, "durationMs": 1320 }, { "atMs": 520, "command": "particle", "id": "sparks", "anchor": "center" }] } },
+    { "id": "materials-hold", "on": ["tool.slow"], "timeline": { "durationMs": 1700, "loop": true, "tracks": [{ "atMs": 0, "command": "spawn", "id": "forge", "kind": "forge", "anchor": "center" }, { "atMs": 140, "command": "spawn", "id": "anvil", "kind": "anvil", "anchor": "bottom" }, { "atMs": 260, "command": "pulse", "id": "forge", "to": 1.22, "count": 3, "durationMs": 1120 }] } },
+    { "id": "materials-fit", "on": ["tool.completed", "turn.completed"], "timeline": { "durationMs": 1250, "tracks": [{ "atMs": 0, "command": "spawn", "id": "forge", "kind": "forge", "anchor": "center" }, { "atMs": 90, "command": "spawn", "id": "piece", "kind": "shard", "anchor": "top" }, { "atMs": 160, "command": "move", "id": "piece", "from": "top", "to": "center", "durationMs": 540 }, { "atMs": 760, "command": "particle", "id": "fit", "anchor": "center" }] } },
+    { "id": "materials-rework", "on": ["tool.failed"], "timeline": { "durationMs": 1080, "tracks": [{ "atMs": 0, "command": "spawn", "id": "anvil", "kind": "anvil", "anchor": "center" }, { "atMs": 160, "command": "shake", "id": "anvil", "amplitude": 13, "durationMs": 520 }, { "atMs": 700, "command": "fade", "id": "anvil", "to": 0.2 }] } }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "knight-fall",
+  "title": "烧桥骑士",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "knight-fall.js",
+  "sha256": "f633d2d38a348a7c7240d4f83b8354f72f70cc7167986d8716bd19bfa1bda785",
+  "bytes": 59998,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

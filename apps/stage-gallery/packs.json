@@ -1,0 +1,537 @@
+{
+  "generatedAt": "2026-07-23T04:09:25.702Z",
+  "packs": [
+    {
+      "id": "calendar-orbit",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "calendar.create"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/calendar-orbit",
+      "preview": {
+        "category": "calendar.create",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "chorus-room",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/chorus-room",
+      "preview": {
+        "category": "communication.send",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "city-dispatch",
+      "version": "0.2.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "file.share"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/city-dispatch",
+      "preview": {
+        "category": "communication.send",
+        "status": "waiting",
+        "privacyMode": "summary-only"
+      }
+    },
+    {
+      "id": "inkwell-atelier",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/inkwell-atelier",
+      "preview": {
+        "category": "communication.send",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "launch-rail",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "system.deploy"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/launch-rail",
+      "preview": {
+        "category": "system.deploy",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "mail-flight",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/mail-flight",
+      "preview": {
+        "category": "communication.send",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "mission-control",
+      "version": "0.2.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "system.deploy"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/mission-control",
+      "preview": {
+        "category": "communication.send",
+        "status": "waiting",
+        "privacyMode": "summary-only"
+      }
+    },
+    {
+      "id": "neon-run",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "file.share"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/neon-run",
+      "preview": {
+        "category": "communication.send",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "open-line",
+      "version": "0.2.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.call"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/open-line",
+      "preview": {
+        "category": "communication.call",
+        "status": "waiting",
+        "privacyMode": "summary-only"
+      }
+    },
+    {
+      "id": "paper-courier",
+      "version": "0.2.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "calendar.create",
+        "file.share"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/paper-courier",
+      "preview": {
+        "category": "communication.send",
+        "status": "waiting",
+        "privacyMode": "summary-only"
+      }
+    },
+    {
+      "id": "prism-relay",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "file.share"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/prism-relay",
+      "preview": {
+        "category": "communication.send",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "quiet-night",
+      "version": "0.2.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.send",
+        "communication.call",
+        "calendar.create",
+        "system.deploy"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/quiet-night",
+      "preview": {
+        "category": "communication.send",
+        "status": "waiting",
+        "privacyMode": "summary-only",
+        "timeOfDay": "night"
+      }
+    },
+    {
+      "id": "release-forge",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "system.deploy"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/release-forge",
+      "preview": {
+        "category": "system.deploy",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "switchboard",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.call"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/switchboard",
+      "preview": {
+        "category": "communication.call",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "time-garden",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "calendar.create"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/time-garden",
+      "preview": {
+        "category": "calendar.create",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "vault-ritual",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "file.share"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/vault-ritual",
+      "preview": {
+        "category": "file.share",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "voice-orbit",
+      "version": "1.0.0",
+      "schemaVersion": "2",
+      "categories": [
+        "communication.call"
+      ],
+      "states": [
+        "waiting",
+        "holding",
+        "executing",
+        "succeeded",
+        "failed",
+        "denied",
+        "deferred",
+        "expired",
+        "stale"
+      ],
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "license": "Apache-2.0",
+      "path": "../../scene-packs/voice-orbit",
+      "preview": {
+        "category": "communication.call",
+        "status": "succeeded",
+        "privacyMode": "summary-only",
+        "locale": "zh-CN"
+      }
+    }
+  ]
+}

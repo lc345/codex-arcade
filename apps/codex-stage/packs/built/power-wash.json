@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "power-wash",
+  "title": "高压冲冲洗",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "experimental-sandbox",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "power-wash.js",
+  "sha256": "5ce57e89697519a4e5b0d6a4dc47cf457253f75bc16456f927bfbd92d26f1d1c",
+  "bytes": 50077,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

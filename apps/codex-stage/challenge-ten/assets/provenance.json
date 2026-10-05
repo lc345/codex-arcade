@@ -1,0 +1,188 @@
+{
+  "id": "challenge-ten",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Four original imagegen backgrounds, six original SVG backgrounds rasterized locally, Canvas game objects, actual gameplay covers, locally synthesized sound.",
+  "generated": [
+    "freeze-frame",
+    "faultline-drill",
+    "blackout-bridge",
+    "copper-balance"
+  ],
+  "source": "../art.js",
+  "sourceSha256": "bce46d10deca6bed1ae27bd1dfe886a01f3f57d40bb803b34c32896fe9040dbe",
+  "documentationSha256": "0607b6cdcc1089dd8b961047af87d1f9e2e7df8771d5b3ad3baf2506efdf92c2",
+  "licenseSha256": "dcf09a39e4a8d7914b3473ca185991d129df639be2a5238b7dd544d79052546f",
+  "files": [
+    {
+      "name": "crosswalk-zero.svg",
+      "bytes": 10296,
+      "sha256": "726e3a07d97410312df0c970ffc0df6817dbfb5aacaeb74a89bb82b8ff40a66d"
+    },
+    {
+      "name": "crosswalk-zero.png",
+      "bytes": 7044,
+      "sha256": "1385a6896d6f045161295c13b086b5d37c962fd4f64383846fd6572aa9110f72",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/crosswalk-zero.png",
+      "bytes": 23727,
+      "sha256": "b301f00f28e1cf3c0daa7ab65919e8a87d3961dc8da9132b02ee88f0cd08d8fa",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "faultline-drill.png",
+      "bytes": 3492962,
+      "sha256": "474672ab58189d0b22166ece4a0ce3275e254325b8a661edd5d180bb863db88f",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/faultline-drill.png",
+      "bytes": 1128398,
+      "sha256": "6171aad79135be8c6879dfe4fe8e44c77cb64fd7aabe5d336467131ca17005e7",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "laser-limbo.svg",
+      "bytes": 3080,
+      "sha256": "279602fc149019f44857840c897ff9bd424628133985bb1ab2e3197fd234a86f"
+    },
+    {
+      "name": "laser-limbo.png",
+      "bytes": 5587,
+      "sha256": "f367d8141b88207c769831a1f414972696beb3737cbcf0ff16b55461cf80de97",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/laser-limbo.png",
+      "bytes": 21539,
+      "sha256": "7090564d3f96a6554bfc87d1a5f5bcf156976ba64e7435ade5aa0f931f936d77",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "blackout-bridge.png",
+      "bytes": 3842706,
+      "sha256": "3062bd46111ddd58a0d7ca45d2c8ec7b75ecb8e5992b98a547badaa28656bf76",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/blackout-bridge.png",
+      "bytes": 1117731,
+      "sha256": "f360f017a38418356d427c13f39c2cde9824e97e9af3b26873f57942c2184f7e",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "glass-divide.svg",
+      "bytes": 2784,
+      "sha256": "5372d3e16b5e598aa36dca4c34930f6dd5b5718a820e962b24a832d2469d84ec"
+    },
+    {
+      "name": "glass-divide.png",
+      "bytes": 20149,
+      "sha256": "f5ef2de876e17436f09346c01c37a372b2e78e324580a0776854ac6066dd7118",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/glass-divide.png",
+      "bytes": 53355,
+      "sha256": "9627546209dc2e34c46cbdf77d1c7be7ba809f2c9a2c5aabbac95764e0d1fc04",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "neon-coil.svg",
+      "bytes": 14047,
+      "sha256": "ea57b39149f6b61e0852e7d1c800d52b6a0c5c9af5295eeed2890c1292b05295"
+    },
+    {
+      "name": "neon-coil.png",
+      "bytes": 9120,
+      "sha256": "a3b3ea03d3b8e69155f71215ce63353472fd3e25e390a52d63ea6a52dadadf64",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/neon-coil.png",
+      "bytes": 24243,
+      "sha256": "8cefefda434782de7e4ce83395425637d930747dcef237ea9763ee2a62804c91",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "freeze-frame.png",
+      "bytes": 2679389,
+      "sha256": "f6bbb7969da9a715c90d94480a79dfec9dbe53809b31d604398f9ce35b747243",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/freeze-frame.png",
+      "bytes": 711304,
+      "sha256": "bbd9b4030d98de6ff61a5b695ccab097eb93b3e2f34d62ec838f43504605f76b",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "copper-balance.png",
+      "bytes": 3724602,
+      "sha256": "d979b77de652af4e33492ee6247b6e26ecb68856672e982d651e7e314555ec22",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "name": "covers/copper-balance.png",
+      "bytes": 1083172,
+      "sha256": "ebe84476075ea88bf15d81cf8da9f95a2ab70b66e5cb7a57b128876b92f201f4",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "traffic-tangle.svg",
+      "bytes": 5728,
+      "sha256": "b416d5117069f2b8f5316d7174e6eb5fbb8b73c9bf16f6977b4f19c015301679"
+    },
+    {
+      "name": "traffic-tangle.png",
+      "bytes": 7437,
+      "sha256": "26f5516c919425c9dd1ed4cec80bf62380c9a3c58b0096584bf2421c554342f5",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/traffic-tangle.png",
+      "bytes": 24158,
+      "sha256": "5905e37c66dda81879943f5ef669554da43d15512b602a7aa7a95d171037c300",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "shield-waltz.svg",
+      "bytes": 8672,
+      "sha256": "045162ed45615fa80f3a897264d738d0bf73d06c8f93597c8905b5ceebac8c81"
+    },
+    {
+      "name": "shield-waltz.png",
+      "bytes": 10754,
+      "sha256": "4b43637e21ef1500da2284919948ec4447db6315b046e24c5d2e3165b125a83d",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/shield-waltz.png",
+      "bytes": 38463,
+      "sha256": "314bb0a22ec59cbabd2302158af766389b2466dc3916a40d93396435845faf64",
+      "width": 960,
+      "height": 640
+    }
+  ]
+}

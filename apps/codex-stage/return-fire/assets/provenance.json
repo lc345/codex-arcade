@@ -1,0 +1,24 @@
+{
+  "id": "return-fire",
+  "date": "2026-10-01",
+  "tool": "Built-in image_gen",
+  "license": "Apache-2.0",
+  "prompts": "ARTWORK.md",
+  "promptsSha256": "79e58645984a0a2c13c0e67ef1e717f43a60c0b888786a47b3344dc20bcec6f7",
+  "files": [
+    {
+      "name": "drydock.png",
+      "bytes": 2884027,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ef87afbf5cef59a239465a5d3caa534226754b8210665382ed6fb79b3966f9b3"
+    },
+    {
+      "name": "machines.png",
+      "bytes": 2479842,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0419611f1078f323858879836db0da63614d14c9a2ae8d6d72ece9567b076a9f"
+    }
+  ]
+}

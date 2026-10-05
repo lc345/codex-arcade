@@ -1,0 +1,9 @@
+{
+  "name": "@finalbutton/core",
+  "version": "0.2.0",
+  "description": "Local ActionProof guard for agent actions.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": "./src/index.ts",
+  "license": "Apache-2.0"
+}

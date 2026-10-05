@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ink-rail",
+  "title": "一笔通车",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "ink-rail.js",
+  "sha256": "8f649ed06e8f26ca70e43861d1c7ffdf6fba5c9f6ca0ada997d93b3ca5d08a11",
+  "bytes": 3973620,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

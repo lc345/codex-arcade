@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "toast-hop",
+  "title": "吐司别掉",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "toast-hop.js",
+  "sha256": "1b89b94b5481d36766216b7cfcf5db1ba2e643d2fe500c13c6cf864ac0193ca8",
+  "bytes": 370677,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 1
+}

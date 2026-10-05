@@ -1,0 +1,76 @@
+{
+  "id": "junk-champion",
+  "engine": "Godot 4.5.2",
+  "threaded": false,
+  "offline": true,
+  "permissions": [],
+  "files": [
+    {
+      "name": "game.html",
+      "bytes": 2144,
+      "sha256": "9e8daefe94a5a2933dea63d3be687d8b17939d262d3becc214028c70c6c120c3"
+    },
+    {
+      "name": "game.js",
+      "bytes": 305185,
+      "sha256": "8a7c7d57f7da69bb71da9de302480b87e4c7ecb467ce643665b4a288683cd18f"
+    },
+    {
+      "name": "game.wasm",
+      "bytes": 38047590,
+      "sha256": "6ead2ac528d007fe9627aae650444f9187f89420d7603c22460d8f3279545240"
+    },
+    {
+      "name": "game.pck",
+      "bytes": 3533256,
+      "sha256": "9c570d95cecf7d6ae31149f725eea756f45fbdc52fe3facfa4c773a116057aec"
+    }
+  ],
+  "assets": [
+    {
+      "name": "arena.png",
+      "bytes": 2857835,
+      "sha256": "040b214fbb8426837ca3d1ef2c06c63165a4d80bb6006c50abbb2fdd044fb684"
+    },
+    {
+      "name": "fighters.png",
+      "bytes": 1629301,
+      "sha256": "270c7ceb9c5c491e954744e26d0baa52e2faaefe04a2039f9cb03dbed1e69a41"
+    },
+    {
+      "name": "punch.wav",
+      "bytes": 9746,
+      "sha256": "207eff2bac11531874c4e87f81b65fb0fb68fd448f4a14cc2b13a85b9004b35f"
+    },
+    {
+      "name": "parry.wav",
+      "bytes": 17684,
+      "sha256": "dae6d7013c48bc1afdd6e5b7bdca67d544e0123d74e71f880133a6f91d8e147e"
+    },
+    {
+      "name": "block.wav",
+      "bytes": 9746,
+      "sha256": "05a0414512cc48730f931f605f7b070e2dd15b47e8eb928ce1facc44b86c6017"
+    },
+    {
+      "name": "hurt.wav",
+      "bytes": 9746,
+      "sha256": "82b597ac094a389b6b68e8a3649cdc25c368799cc8827323c9e04067404c49f7"
+    },
+    {
+      "name": "break.wav",
+      "bytes": 9746,
+      "sha256": "996025dab3f0954e79a8dec36933ee2547823ce218778e9311018aaffbcf274e"
+    },
+    {
+      "name": "bell.wav",
+      "bytes": 33120,
+      "sha256": "c1b2ef7d5a1a30178ed922b9f6af417aec9c9e4eb081783f5c0573284e73eaa8"
+    },
+    {
+      "name": "swoosh.wav",
+      "bytes": 9746,
+      "sha256": "36582b18ed205ae63dab84390a8d82b47821b4fc848be07c855ad0f7948b6c16"
+    }
+  ]
+}

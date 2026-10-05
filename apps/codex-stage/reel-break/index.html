@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>收线！别断 · Agent Stage</title><link rel="icon" href="../assets/icons/sparkles.svg"><link rel="stylesheet" href="./style.css"></head>
+<body><main>
+  <header><a href="/codex-stage">AGENT STAGE <span>/ FIELD TRIP</span></a><span id="task">本地试玩</span></header>
+  <section class="heading"><div><p>REEL, DON'T BREAK</p><h1>收线！别断</h1></div><span class="edition">海湾手记 <b>01</b></span></section>
+  <ol class="chapters" aria-label="三场较量"><li id="chapter-0"><span>01</span>赤尾梭</li><li id="chapter-1"><span>02</span>金腹鲷</li><li id="chapter-2"><span>03</span>蓝绸鳍</li></ol>
+  <section class="stage" aria-label="钓鱼游戏">
+    <canvas id="game" tabindex="0" aria-label="按住鼠标或空格收线，松开泄力。观察摆尾、冲刺和下潜。" title="按住收线 · 松开泄力"></canvas>
+    <div class="fish-label"><span id="fish-type">短跑高手</span><strong id="fish-name">赤尾梭</strong><span id="fish-move">鱼已上钩</span></div>
+    <div id="banner" role="status">正在铺开海湾</div>
+    <div class="readings" aria-hidden="true"><div class="line-reading"><span id="line-label">线的张力</span><div class="tension-track"><i id="tension"></i><b></b></div></div><div class="distance"><span>距岸</span><strong id="distance">18.0<small>m</small></strong></div></div>
+    <section id="result" class="result" hidden aria-label="较量结果"><div><span id="result-kicker">LANDED</span><h2 id="result-title"></h2><p id="result-detail"></p></div><button id="continue">下一条</button></section>
+  </section>
+  <section class="dockbar" aria-label="游戏控制">
+    <div class="tools"><button id="mute" aria-label="声音" title="开关声音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button><button id="motion" aria-label="减少动效" title="减少水波与摆尾动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button><button id="retry" aria-label="重试当前对手" title="重试当前对手"><img src="../assets/icons/rotate-ccw.svg" alt=""></button><button id="expand" aria-label="放大游戏" title="放大游戏" aria-pressed="false"><img src="../assets/icons/maximize-2.svg" alt=""></button></div>
+    <button id="reel" class="reel" title="按住收线，松开泄力；也可按住空格" aria-label="按住收线，松开泄力" aria-pressed="false"><span class="spool" aria-hidden="true"></span><strong id="reel-label">收线</strong></button>
+    <div class="task-controls"><button id="start">开始任务</button><button id="stop">结束任务</button></div>
+  </section>
+  <footer><span id="live" role="status" aria-live="polite">等待上钩</span><span>THE INLET COLLECTION</span></footer>
+</main><script type="module" src="./app.js"></script></body></html>

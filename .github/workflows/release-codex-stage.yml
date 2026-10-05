@@ -1,0 +1,48 @@
+name: Release Agent Stage for Codex
+
+on:
+  push:
+    tags:
+      - "agent-stage-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Match tag and package version
+        run: node -e 'if(process.env.GITHUB_REF_NAME!=="agent-stage-v"+require("./package.json").version)process.exit(1)'
+      - name: Verify the project
+        run: |
+          npm run audit:public
+          npm run build:game-packs
+          npm test
+          npm run verify
+      - name: Build the macOS artifact
+        run: bash macos/scripts/build-agent-stage-release.sh
+      - name: Verify checksum
+        run: cd dist && shasum -a 256 -c Agent-Stage-for-Codex.dmg.sha256
+      - name: Test extracted release without a developer runtime
+        run: node tools/test-macos-release.mjs
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#agent-stage-v}"
+          FLAGS=()
+          if [[ "$VERSION" == *-* ]]; then FLAGS+=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" \
+            dist/Agent-Stage-for-Codex.dmg \
+            dist/Agent-Stage-for-Codex.zip \
+            dist/Agent-Stage-for-Codex.dmg.sha256 \
+            --title "Agent Stage for Codex ${GITHUB_REF_NAME#agent-stage-v}" \
+            --notes-file docs/RELEASE_NOTES_MAC_BETA.md "${FLAGS[@]}"

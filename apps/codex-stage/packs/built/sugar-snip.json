@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sugar-snip",
+  "title": "剪一口甜",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "physics-demolition",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "sugar-snip.js",
+  "sha256": "a842b195d928fc84aeb97f42f52004344843fb001bf5737a98761c9e2f9a1e1a",
+  "bytes": 133368,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

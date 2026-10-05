@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "domino-bridge",
+  "title": "多米诺过桥",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "domino-bridge.js",
+  "sha256": "0d7a5331bf964b381e1022c60ba9981d9cf5f78088889d4617f821ffac479ff3",
+  "bytes": 3420619,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "copper-balance",
+  "title": "偏心装货",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "copper-balance.js",
+  "sha256": "13e79c52705c3e302710e0b69d8d140c44a93e3b63d20ae75275ba72da5ef80a",
+  "bytes": 5074075,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

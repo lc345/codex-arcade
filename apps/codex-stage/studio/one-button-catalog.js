@@ -1,0 +1,5 @@
+export const ONE_BUTTON_CATALOG = Object.freeze([
+  { id: "sky-stack", title: "叠到天上", english: "TWELVE FLOORS", category: "building-balance", artStyle: "risograph-miniature", color: "#ed5e69", genre: "单击 · 越叠越窄", hint: "点击落下。偏掉的部分会被削走，十二层到顶。", replayLabel: "再盖一栋", levels: ["十二层"] },
+  { id: "press-run", title: "别被夹扁", english: "PRESS LINE", category: "platform-runner", artStyle: "industrial-cutaway", color: "#c9df43", genre: "按住 · 松手刹车", hint: "按住前进，松手刹车。八道压机，完整下班。", replayLabel: "再上一班", levels: ["夜班八道关"] },
+  { id: "swing-post", title: "松手邮局", english: "SWING POST", category: "sports-precision", artStyle: "airmail-paper-cut", physics: "matter", color: "#2865d5", genre: "松手 · 惯性投递", hint: "按住画面，找准时机松手。信会带着摆荡的惯性飞进邮筒。", replayLabel: "再送一轮", levels: ["八封航空信"] },
+].map(p => ({ ...p, kind: "game", edition: "studio", release: "preview", collection: "one-button", presentation: "panorama", soundPalette: "one-button", pointerMode: "click-nav", persistentCheckpoint: true, hideLevels: true, cover: `/apps/codex-stage/assets/studio/${p.id}.png` })));

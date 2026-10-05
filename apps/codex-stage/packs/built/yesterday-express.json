@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "yesterday-express",
+  "title": "昨天的快递员",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "logic-rules",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "yesterday-express.js",
+  "sha256": "e57d7e3155cafeced874a9f164b98655df00e2d39c97dd9bd5cfb969ebce4b75",
+  "bytes": 283227,
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "levels": 3
+}

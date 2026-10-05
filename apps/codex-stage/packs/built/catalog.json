@@ -1,0 +1,2391 @@
+{
+  "version": "0.11.1-beta.1",
+  "games": [
+    {
+      "schemaVersion": 1,
+      "id": "rainline",
+      "title": "雨线快递",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "rainline.js",
+      "sha256": "6fb57c5b64b25ea3db36afe031ada29f75a0a280704b7df66b417df3c839c974",
+      "bytes": 128577,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ink-archive",
+      "title": "墨影档案",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "ink-archive.js",
+      "sha256": "940c20a9cf491c895d638d08ac988cc2dae41bcb6db13071566fec61229ba7f6",
+      "bytes": 945570,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "last-lift",
+      "title": "末班电梯",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "roguelite-exploration",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "last-lift.js",
+      "sha256": "521b5120c44581592bc5021ec85fc1e984d03f5270b3d4e0bb7af9ce5f0e798a",
+      "bytes": 3066091,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "three",
+          "version": "0.180.0",
+          "license": "MIT"
+        },
+        {
+          "id": "@dimforge/rapier3d-compat",
+          "version": "0.17.3",
+          "license": "Apache-2.0"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "kitchen-defense",
+      "title": "厨房保卫战",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "tower-defense",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "kitchen-defense.js",
+      "sha256": "8dcf6ea509909036bb4e1a6dfccd5356dffcbf6e0fc5d66865b9a7f5b34e9888",
+      "bytes": 711125,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "yesterday-express",
+      "title": "昨天的快递员",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "yesterday-express.js",
+      "sha256": "e57d7e3155cafeced874a9f164b98655df00e2d39c97dd9bd5cfb969ebce4b75",
+      "bytes": 283227,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rule-smuggler",
+      "title": "规则走私者",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "tactics-turns",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "rule-smuggler.js",
+      "sha256": "b6d7c1df957a968634a8403f2b26204d2afb3d8cfbfbc18eb5863125169092df",
+      "bytes": 390037,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "temp-stunt",
+      "title": "临时替身",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "physics-demolition",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "temp-stunt.js",
+      "sha256": "7c747aa909a1fa88c3d345282d173876f28195f78041d0bf8ed835ca3ca285cc",
+      "bytes": 281856,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shadow-crew",
+      "title": "影子施工队",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "shadow-crew.js",
+      "sha256": "53b406ae1b749e9ac9c34385501ca94b8ca4ffe45b397f204d002e0b4606c43b",
+      "bytes": 266038,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "dice-foundry",
+      "title": "骰子改装厂",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "cards-dice",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "dice-foundry.js",
+      "sha256": "a49c2bdac86fbfbc449ae13c5e6c92c4d300a51a15ab5d5fb76d14807b0284ff",
+      "bytes": 295220,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 6
+    },
+    {
+      "schemaVersion": 1,
+      "id": "appliance-escape",
+      "title": "电器成精了",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "appliance-escape.js",
+      "sha256": "cbe7c7bd337763a30094a3f67fb82b1beabbc30f57ea7235d686c9eb8b2b9e9e",
+      "bytes": 3092229,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "three",
+          "version": "0.180.0",
+          "license": "MIT"
+        },
+        {
+          "id": "@dimforge/rapier3d-compat",
+          "version": "0.17.3",
+          "license": "Apache-2.0"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "toast-hop",
+      "title": "吐司别掉",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "toast-hop.js",
+      "sha256": "1b89b94b5481d36766216b7cfcf5db1ba2e643d2fe500c13c6cf864ac0193ca8",
+      "bytes": 370677,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "sky-stack",
+      "title": "叠到天上",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "sky-stack.js",
+      "sha256": "3bd9b726acec0d0aca1001cb52a1f3683585cca47ed3aa2ee915e9ac04dc5a3a",
+      "bytes": 46484,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "press-run",
+      "title": "别被夹扁",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "press-run.js",
+      "sha256": "d5a732e211f4cf34d1d368458f3c5a366eb33330b78169fed6d6748c1a86d0c9",
+      "bytes": 46384,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "swing-post",
+      "title": "松手邮局",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "swing-post.js",
+      "sha256": "2ec6a4d1ce3c6b050bfb443d9b11c45117c990226fda0f409eb4e5ccb0361a68",
+      "bytes": 132182,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge-span",
+      "title": "桥就这么长",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "bridge-span.js",
+      "sha256": "d1ee2e464cabf885c91f20697e9ebaec9d2f0b362027b36024cb5ea7e6a0a387",
+      "bytes": 46704,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "orbit-pins",
+      "title": "见缝插签",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "orbit-pins.js",
+      "sha256": "71d2aee7dc6e1970af6089b11d5008c627e5838a66a460461201b9c06bcda104",
+      "bytes": 45617,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "last-stop",
+      "title": "最后一厘米",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "racing-driving",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "last-stop.js",
+      "sha256": "a84ef20e21f32c51a50868b21dbf8ce2b54f32c7fabb183fa65cae07e35328d5",
+      "bytes": 129707,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gravity-shift",
+      "title": "地板辞职了",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "gravity-shift.js",
+      "sha256": "0d70ef81a1e111ae7eeddf8df013a58a710bef0e24ac867fd5ac6fc01d2b02ca",
+      "bytes": 129820,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "marble-demolition",
+      "title": "弹珠拆迁队",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "pinball-rebound",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "marble-demolition.js",
+      "sha256": "c604e6cbdf84358f13343bcd7f90b51c5c219789e64f0aea64dfd7141f7166cd",
+      "bytes": 133694,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pocket-town",
+      "title": "口袋小镇",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "pocket-town.js",
+      "sha256": "02b4f62973d87d97b1ce57acf0148bf2a99c9b1e0a4bf7c049db88665383735c",
+      "bytes": 646777,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "three",
+          "version": "0.180.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "clockout-clearout",
+      "title": "下班清场",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "physics-demolition",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "clockout-clearout.js",
+      "sha256": "fd5612795764e749a4a1ae0e7bfe5c417452746a5ece3f2dc1ad2c30d2b3dcad",
+      "bytes": 731953,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        },
+        {
+          "id": "three",
+          "version": "0.180.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "magnet-rampage",
+      "title": "磁力暴走",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "physics-demolition",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "magnet-rampage.js",
+      "sha256": "1995abcb1223a8cb69e7fdd2e7346b795ed18696486b9ff08ae4bc3a6c4616e8",
+      "bytes": 755467,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        },
+        {
+          "id": "three",
+          "version": "0.180.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pan-flip",
+      "title": "翻锅大师",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "pan-flip.js",
+      "sha256": "7d4b0a22474af6918dab8456f1e5254cee6f210cc57512c9e57b207891ee1196",
+      "bytes": 2748878,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bank-shot",
+      "title": "一杆清台",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "pinball-rebound",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "bank-shot.js",
+      "sha256": "e3b269f31f54612ff19e40a26f858a3dcb71538ad61352f6a9a96cb7b4280d9f",
+      "bytes": 3580930,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "paper-racer",
+      "title": "纸上狂飙",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "racing-driving",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "paper-racer.js",
+      "sha256": "d051bfdc299867acb7248adef35cd850dc37f6eee91450ca105062f1b6dbcc68",
+      "bytes": 3054376,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cap-cup",
+      "title": "瓶盖入杯",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "cap-cup.js",
+      "sha256": "89ffd39b3522600de39fab571797b18dcf5c6095a5d2e2ab0f5248dce993ca31",
+      "bytes": 2481966,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "paper-glider",
+      "title": "折纸穿风",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "paper-glider.js",
+      "sha256": "f3dd39c0526e9bd2c227480532a9c1417bc102daed48f924393fc4628faceea2",
+      "bytes": 4127455,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pocket-six",
+      "title": "六袋台球",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "pocket-six.js",
+      "sha256": "661f6236ca7332bda3b09d9851d4c3efbffbe91dd96bb931f0f3d0d425402953",
+      "bytes": 3100568,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "roof-hoops",
+      "title": "楼顶投篮",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "roof-hoops.js",
+      "sha256": "b2e09f0e5d2fb21aa53a050c871772d9a2d2efa9780f44384067a243be48118e",
+      "bytes": 2344973,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "curve-kick",
+      "title": "弧线任意球",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "curve-kick.js",
+      "sha256": "e32917a3eae88e551fc7b702b9f3677fba47749149a916b6db83f594c9c46b21",
+      "bytes": 5061453,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "lawn-rally",
+      "title": "草地网球",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "lawn-rally.js",
+      "sha256": "ef34e118d410ca49ae53c3afe535c7f91e4eb05ee4d841897da1b2a8c69110bd",
+      "bytes": 3921251,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "table-spin",
+      "title": "乒乓接杀",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "table-spin.js",
+      "sha256": "010158ed340d3f4d1f182f40b61084562b79483aad20be29b5877c3f594c64a7",
+      "bytes": 2648628,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pin-strike",
+      "title": "保龄球连锁",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "physics-demolition",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "pin-strike.js",
+      "sha256": "1eab220185049c54c70df25b24356a778b4acd415bcd3f22bc4013777e91c82b",
+      "bytes": 3458338,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ice-stone",
+      "title": "冰壶擦线",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "ice-stone.js",
+      "sha256": "3579a8a4f6be46809a759f4e9ccb25afef787e7b6482491e16ae31aad45c8423",
+      "bytes": 3866669,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "domino-bridge",
+      "title": "多米诺过桥",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "domino-bridge.js",
+      "sha256": "0d7a5331bf964b381e1022c60ba9981d9cf5f78088889d4617f821ffac479ff3",
+      "bytes": 3420619,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "plate-parade",
+      "title": "叠盘杂技",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "plate-parade.js",
+      "sha256": "4be15487b490429bcfd4a43111851ada70499431e50f7a395a44f07b8c677197",
+      "bytes": 3497174,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "crush-hour",
+      "title": "回收压压乐",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "crush-hour.js",
+      "sha256": "bb125e92a6c9347ac08cf83c2c86f46850f82c0e4679e6799cf3fcaffdfd0755",
+      "bytes": 4031799,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "velvet-vault",
+      "title": "咔哒金库",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "velvet-vault.js",
+      "sha256": "d6050a1fd88f6863efadb38e5f63f50a5ec368ba031c3b9ed639628987f16255",
+      "bytes": 44333,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "power-wash",
+      "title": "高压冲冲洗",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "experimental-sandbox",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "power-wash.js",
+      "sha256": "5ce57e89697519a4e5b0d6a4dc47cf457253f75bc16456f927bfbd92d26f1d1c",
+      "bytes": 50077,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "zipper-run",
+      "title": "拉链别脱轨",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "zipper-run.js",
+      "sha256": "698d5fea72f1fafca4f4f9ea0d8986b2fd5ca7166bc5151a670c56dcb8526f4d",
+      "bytes": 95992,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "alarm-alley",
+      "title": "闹钟闭嘴",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "alarm-alley.js",
+      "sha256": "f07bf0263a91faf524cc22e943d1d0097b2375691109bf6d3fd19aab95bfa365",
+      "bytes": 29817,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "lunar-lease",
+      "title": "月面停车费",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "racing-driving",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "lunar-lease.js",
+      "sha256": "977382b46487171d07e93845b050f539138f203ba8c0ea9e5b5f21c0ba257ae0",
+      "bytes": 121178,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "jelly-shift",
+      "title": "果冻挤挤",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "jelly-shift.js",
+      "sha256": "b7da18a771866b9f13457c0e640145539600d9d16a1051b215fdf3596d5f9097",
+      "bytes": 37634,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "baggage-boogie",
+      "title": "行李别乱飞",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logistics-automation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "baggage-boogie.js",
+      "sha256": "911e2b108107a4aeb566603e7d7dd71b1ef8245cfdadb62bd3637bed28b4294d",
+      "bytes": 45353,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fuse-salon",
+      "title": "引线理发师",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "combat-action",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "fuse-salon.js",
+      "sha256": "6efc42470b0287c39265cf2100bb30302979a68ebec3d6d3b2d8e4328e25209e",
+      "bytes": 28999,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tower-unplug",
+      "title": "抽薪不倒",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "tower-unplug.js",
+      "sha256": "cf804a4eecad09800d414379000645b32d2bc8252ed75d13347c41c775d701e5",
+      "bytes": 118608,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "sugar-snip",
+      "title": "剪一口甜",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "physics-demolition",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "sugar-snip.js",
+      "sha256": "a842b195d928fc84aeb97f42f52004344843fb001bf5737a98761c9e2f9a1e1a",
+      "bytes": 133368,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "crosswalk-zero",
+      "title": "零点过街",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "crosswalk-zero.js",
+      "sha256": "5dc94f8331dd773f5add129acddedc14b5e68cb0fed717b4c6ed97b5f620bf0d",
+      "bytes": 116105,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "faultline-drill",
+      "title": "断层钻头",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "racing-driving",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "faultline-drill.js",
+      "sha256": "821c53004b73826ff32d3b5c3f5d109b03ce2228afcef0256b8dfd5445b54bcb",
+      "bytes": 4680331,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "laser-limbo",
+      "title": "激光借过",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "laser-limbo.js",
+      "sha256": "086490af449d456d41967e8ba50e49ac32837990805b20b169e368acd289f8f0",
+      "bytes": 114009,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "blackout-bridge",
+      "title": "熄灯之后",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "blackout-bridge.js",
+      "sha256": "e3adeefd163614a45eb3807b2a65cbbd9f41cc10d1e511956c3cc8ff2258fe93",
+      "bytes": 5146475,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "glass-divide",
+      "title": "一刀两半",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "glass-divide.js",
+      "sha256": "09b1cb3920c2ca2d97168e29f8a033552f32eed0ce1ac514dfc460f238bb3ffd",
+      "bytes": 133995,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "neon-coil",
+      "title": "只准右转",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "neon-coil.js",
+      "sha256": "dfa390a01cb89a07180ba9abd18cf9ee5de9293073a19db3b64ab437ab53c697",
+      "bytes": 34757,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "freeze-frame",
+      "title": "暂停键逃生",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "freeze-frame.js",
+      "sha256": "7999e2e475c6b7389a23f7fe9e39d3cdeb0599f32910e811b293ca496fb4883a",
+      "bytes": 3595749,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "copper-balance",
+      "title": "偏心装货",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "copper-balance.js",
+      "sha256": "13e79c52705c3e302710e0b69d8d140c44a93e3b63d20ae75275ba72da5ef80a",
+      "bytes": 5074075,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "traffic-tangle",
+      "title": "路口别打结",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "management-resources",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "traffic-tangle.js",
+      "sha256": "0584cd85565ebf9a404c6f16f5f1f53dd2cc85bbf4c74e76362f9ddbdce157e3",
+      "bytes": 117068,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shield-waltz",
+      "title": "星环守卫",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "shooter-bullethell",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "shield-waltz.js",
+      "sha256": "ce73f8f43d11a0e475f6c5c80ac77c37be11dd081cc3e22fcbebcf5d897302b3",
+      "bytes": 37214,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "chromatic-lab",
+      "title": "色彩炼金",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "chromatic-lab.js",
+      "sha256": "b28e0ad6603aa817ff554ba4315fb6735713d5d2028dd45edc07f55d8fe68b52",
+      "bytes": 30946,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "loop-lock",
+      "title": "一圈打尽",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "experimental-sandbox",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "loop-lock.js",
+      "sha256": "928c6dabe2a11168e0293ae279d020415c3c229c50cd35c320c6c1789f95fc86",
+      "bytes": 48508,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ink-rail",
+      "title": "一笔通车",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "ink-rail.js",
+      "sha256": "8f649ed06e8f26ca70e43861d1c7ffdf6fba5c9f6ca0ada997d93b3ca5d08a11",
+      "bytes": 3973620,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "soda-strata",
+      "title": "汽水层层消",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "matching-assembly",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "soda-strata.js",
+      "sha256": "dc7e7d9da97b12cf98ac91483a2bf64d0d8ee1e722a139d4b551daaa8492f1a3",
+      "bytes": 60841,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "leak-patrol",
+      "title": "漏水别慌",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "management-resources",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "leak-patrol.js",
+      "sha256": "8e18b1a8d0159978aa6d4c3bef2bebc5842304e51098a4f01c084570ef171424",
+      "bytes": 3608838,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "quarter-turn",
+      "title": "四分之一转",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "quarter-turn.js",
+      "sha256": "583dcb8ed71016e05601f326a46c987f423d85904a3d18d3435a4fdce10b2376",
+      "bytes": 36862,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stamp-storm",
+      "title": "印章风暴",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "stamp-storm.js",
+      "sha256": "e6085c5ff28d1d803836ac87423c175a3b396f3a4c7155798b76fc090ddc3e61",
+      "bytes": 42306,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fridge-fit",
+      "title": "冰箱塞塞",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "fridge-fit.js",
+      "sha256": "ffc40a325227f1b01bce10398e666b2c39255e03415329f63546d5161967dc59",
+      "bytes": 3716370,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "knot-office",
+      "title": "解结事务所",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "knot-office.js",
+      "sha256": "caa0509a379cb1ee86318cf229169de7d07ab0414ea4d08d22c947fc5f0831cb",
+      "bytes": 35284,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shadow-tell",
+      "title": "影子露馅",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "shadow-tell.js",
+      "sha256": "9b0cb2b84c9f3a1eb602b2b3964f924eb417ed736914a05c8db5f2abac8cc5f6",
+      "bytes": 28688,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "needle-rush",
+      "title": "针尖过山车",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "needle-rush.js",
+      "sha256": "4feda6f683dda5c5f54cd7ecbc1232ab74ff61c878da28e8eceb4bde82f1396b",
+      "bytes": 42505,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tightrope-club",
+      "title": "楼顶钢丝社",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "building-balance",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "tightrope-club.js",
+      "sha256": "2a08fe3d23ba6ac040bf810a40a4ed14f652e03553db54f9abca95c357191d76",
+      "bytes": 33677,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mirror-vault",
+      "title": "偷一束月光",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "mirror-vault.js",
+      "sha256": "9a150385f0d658043364be4b13d2fdb1a4a0a99a25692c7144223c1bea59ab1a",
+      "bytes": 43372,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "crate-escape",
+      "title": "死角搬运工",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "crate-escape.js",
+      "sha256": "e64b6f76c6c0ebb3edd51e2a9537aeacabe9a9e103b6e9089e64c402cb74bc79",
+      "bytes": 29737,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "twin-tide",
+      "title": "双生潜流",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "racing-driving",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "twin-tide.js",
+      "sha256": "e9e947538e04b466f836283cb23129d24d935dd5c305ab727bb9c98d1747baea",
+      "bytes": 50531,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mine-surveyor",
+      "title": "雷区点灯人",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "mine-surveyor.js",
+      "sha256": "9d487f0135c409b53c7f62b78aa1106c78fd1e5956e6c98d9fb18877a441d5de",
+      "bytes": 32586,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "territory-cut",
+      "title": "别碰我的线",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "combat-action",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "territory-cut.js",
+      "sha256": "944c35fa3f5d460942c65d67914cf459bcf52a2e7c18321f70352737b33909f9",
+      "bytes": 36466,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "paper-fold",
+      "title": "折到没脾气",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "matching-assembly",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "paper-fold.js",
+      "sha256": "ad71f0635c579cb728b4dee4eae50bf75e9b3513d64a046f7593dfd746305289",
+      "bytes": 48009,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tempo-steps",
+      "title": "别抢拍",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "tempo-steps.js",
+      "sha256": "66fe64bf619fec4c8c404c63f3eed2267b666f2379cdfb067f7c95be5970c3cb",
+      "bytes": 53858,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "airlock-queue",
+      "title": "气压急送",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "management-resources",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "airlock-queue.js",
+      "sha256": "d307480e08a9db8c7db209a9ffdc1acb2a3894825e4a6a1ebea775985faf9aad",
+      "bytes": 32785,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ratchet-vault",
+      "title": "棘轮登塔",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "ratchet-vault.js",
+      "sha256": "7476413d5d561f2f8b0f6659215237902d89043080ed6af0140e9eb668774eed",
+      "bytes": 122693,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "hex-panic",
+      "title": "六角封锁",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "combat-action",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "hex-panic.js",
+      "sha256": "7b80e5e1f0f8f1b98e5a2e7a9737fb9446cf72a455dffc496c96997badf3ddfa",
+      "bytes": 44383,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "downshaft",
+      "title": "倒悬矿井",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "downshaft.js",
+      "sha256": "c717f0dd2f3637b5932ccd28bab8be33812e292f0c18cd1d8d9f357ef39e09f8",
+      "bytes": 116178,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "magnet-suture",
+      "title": "磁针手术",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "magnet-suture.js",
+      "sha256": "a163b7553f4382f98c923f9025a8a4e7768cd57ba4cbf7ac6c8d4b77b0d8a18b",
+      "bytes": 124412,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "flash-dojo",
+      "title": "刹那居合",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "combat-action",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "flash-dojo.js",
+      "sha256": "d4a52a4cade3bf52873f742cf51eb500b4c25f51633f0174cd8217e492e7ba6a",
+      "bytes": 50752,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rotor-courier",
+      "title": "转杆快递",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "rotor-courier.js",
+      "sha256": "9fc97397fb308884f64266892848a55675d2866b5855228371b138c8c6fc6c02",
+      "bytes": 118490,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "knight-fall",
+      "title": "烧桥骑士",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "knight-fall.js",
+      "sha256": "f633d2d38a348a7c7240d4f83b8354f72f70cc7167986d8716bd19bfa1bda785",
+      "bytes": 59998,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "polarity-lock",
+      "title": "反转熔炉",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "logic-rules",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "polarity-lock.js",
+      "sha256": "e8c74508acff02b21f34cd6d2c2605192108cdb5ffd95c11a56bc0dcaaca8bb8",
+      "bytes": 54609,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "disc-vault",
+      "title": "刀盘密室",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "shooter-bullethell",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "disc-vault.js",
+      "sha256": "825f30072f226a448146eca70a1a6ab443d5111393f4636eabf9775e1d469aab",
+      "bytes": 123992,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "echo-rewind",
+      "title": "回声倒带",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "echo-rewind.js",
+      "sha256": "a598425bfe39fe50b25b5476829a031b0067fdd09edf15ef25d6c56f629fe0d3",
+      "bytes": 31208,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "razor-wings",
+      "title": "刃隙飞行",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "razor-wings.js",
+      "sha256": "64a97928bae07eeeec1fd33e5e3f9ea24bdbe5fd6e41843bfe1e12cc355067e8",
+      "bytes": 44535,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "wall-rebound",
+      "title": "绝壁反蹬",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "platform-runner",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "wall-rebound.js",
+      "sha256": "f2c7ec4ed201639e4bd8bee788293d18c3650ed24a8d608bbe98c7d8f4f248e3",
+      "bytes": 114071,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "twin-helix",
+      "title": "双核穿刃",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "spatial-routing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "twin-helix.js",
+      "sha256": "7e11bb6aae90d63cbdff01d8a58242c5c79aaae7cc911c3daeadf8ca12e4c31e",
+      "bytes": 44938,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "dash-stitch",
+      "title": "断空连闪",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "combat-action",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "dash-stitch.js",
+      "sha256": "521d4c7858bc36d1935951735f9696e5996abad85a1775ff564367d8305e300c",
+      "bytes": 41035,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cursor-overdrive",
+      "title": "准星过载",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "rhythm-timing",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "cursor-overdrive.js",
+      "sha256": "96548b5f87dd3de1efa6a1016c5a0d72105cce810cb8b86c46a35481ca54ba64",
+      "bytes": 31509,
+      "license": "Apache-2.0",
+      "dependencies": [],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "recoil-pilot",
+      "title": "后坐力飞行",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "sports-precision",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "recoil-pilot.js",
+      "sha256": "29e8c289e094916f22cea5ea72abc19cb5eba6480afc0ad48d1f5e910ae5d25d",
+      "bytes": 113441,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "return-fire",
+      "title": "借弹还弹",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "shooter-bullethell",
+      "release": "stable",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "return-fire.js",
+      "sha256": "d2196fe73b2c39ed722ca383bfc5dda95daa57abec67934c5347dd82bc81c39e",
+      "bytes": 7260559,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "statue-act",
+      "title": "假装是雕像",
+      "version": "1.0.0",
+      "apiVersion": 1,
+      "category": "stealth-observation",
+      "release": "preview",
+      "reviewed": true,
+      "permissions": [],
+      "input": [
+        "pointer",
+        "keyboard"
+      ],
+      "offline": true,
+      "entry": "statue-act.js",
+      "sha256": "a36332a68ab2b209105dbca2288d80d64a547dba5cbcf2e915863a56ae1f9a27",
+      "bytes": 7265457,
+      "license": "Apache-2.0",
+      "dependencies": [
+        {
+          "id": "matter-js",
+          "version": "0.20.0",
+          "license": "MIT"
+        }
+      ],
+      "levels": 3
+    }
+  ]
+}

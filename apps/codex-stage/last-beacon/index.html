@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>最后信标 · Last Beacon</title><link rel="icon" href="./assets/crosshair.svg"><link rel="stylesheet" href="./style.css"></head>
+<body>
+  <main id="stage">
+    <canvas id="game" tabindex="0" aria-label="最后信标。WASD移动，鼠标瞄准，左键射击，右键精确瞄准，R换弹，E拾取，H治疗，Shift冲刺。Esc释放鼠标。"></canvas>
+    <header><a href="/codex-stage?collection=curated">AGENT STAGE</a><span class="wordmark">LAST BEACON</span><span id="task">本地场景加载中</span></header>
+    <div class="top-hud"><div><small>存活</small><b id="alive">8</b><span>/ 8</span></div><div><small>淘汰</small><b id="kills">0</b></div><div class="zone-clock"><small id="zone-label">安全区</small><b id="zone-clock">00:25</b></div></div>
+    <div id="compass" aria-hidden="true">N</div>
+    <div id="crosshair" aria-hidden="true"><img src="./assets/crosshair.svg" alt=""></div>
+    <div id="hit-mark" aria-hidden="true"></div><div id="damage" aria-hidden="true"></div>
+    <ol id="feed" aria-label="交战记录"></ol><p id="notice" role="status"></p>
+    <canvas id="minimap" width="192" height="192" aria-label="小地图，显示自己、安全区和附近刚开火的对手"></canvas>
+    <section class="loadout" aria-label="装备与状态"><div class="weapon-line"><span id="weapon">P9 手枪</span><strong id="ammo">12 <small>/ 96</small></strong></div><div class="vitals"><span>护甲</span><meter id="armor" min="0" max="100" value="0"></meter><b id="armor-value">0</b></div><div class="vitals"><span>生命</span><meter id="health" min="0" max="100" value="100"></meter><b id="hp-value">100</b></div><div class="commands"><button id="reload" title="换弹 R" aria-label="换弹"><img src="../assets/icons/rotate-ccw.svg" alt=""></button><button id="heal" title="使用医疗包 H" aria-label="使用医疗包"><img src="./assets/heart-pulse.svg" alt=""><span id="meds">1</span></button><button id="pickup" title="拾取附近物资 E" aria-label="拾取附近物资"><img src="./assets/package-open.svg" alt=""></button><progress id="action-progress" max="1" value="0" hidden></progress></div></section>
+    <div id="touch-controls"><div id="joystick" role="button" tabindex="0" aria-label="拖动摇杆移动"><i></i></div><button id="touch-fire" title="按住开火" aria-label="按住开火"><img src="./assets/crosshair.svg" alt=""></button></div>
+    <div id="curtain"><div class="title-group"><p id="result-tag">COASTAL STATION / SOLO</p><h1 id="result-title">最后信标</h1><p id="result-detail">8 名生还者 · 海岸站</p><button id="enter" disabled>准备中</button></div></div>
+    <footer><div><button id="mute" title="开关声音" aria-label="静音" aria-pressed="true"><img src="../assets/icons/volume-x.svg" alt=""></button><button id="motion" title="减少动效" aria-label="减少动效" aria-pressed="false"><img src="../assets/icons/sparkles.svg" alt=""></button><button id="expand" title="全屏" aria-label="全屏"><img src="../assets/icons/maximize-2.svg" alt=""></button></div><div><button id="retry" title="开始新的一局" aria-label="新一局"><img src="../assets/icons/rotate-ccw.svg" alt=""></button><button id="start" disabled>开始任务</button><button id="stop">结束任务</button></div></footer>
+    <p id="live" class="sr" aria-live="polite"></p>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body></html>

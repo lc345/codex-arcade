@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcade Collection · Agent Stage</title>
+  <script>if (new URLSearchParams(location.search).has("popup")) document.documentElement.classList.add("popup-mode");</script>
+  <link rel="stylesheet" href="/apps/codex-stage/styles.css">
+</head>
+<body>
+  <main class="arcade-shell">
+    <header class="masthead"><a class="brand" href="/codex-stage"><span class="brand-mark">A</span> AGENT STAGE <span class="edition">ARCADE</span></a><span id="connection">本地试玩</span></header>
+    <details class="library-drawer" id="library-drawer" open><summary>游戏库 <span>加载中</span></summary><nav class="game-library" id="game-library" aria-label="选择游戏"></nav></details>
+    <section class="game-heading"><div><p id="game-english">AGENT STAGE</p><h1 id="game-title">游戏载入中</h1></div><div class="heading-right"><label class="random-mode" title="每个新任务从 100 款保留游戏中随机选择，一轮不重复"><input id="random" type="checkbox" checked> 随机轮换</label><div class="agent-status"><span class="status-dot"></span><span id="agent-status">Agent 工作中</span></div></div></section>
+    <section class="playfield" aria-label="游戏舞台">
+      <canvas id="stage-canvas" tabindex="0" aria-label="游戏载入中"></canvas>
+      <button id="next-game" class="game-shuffle" title="换一款游戏" aria-label="换一款游戏" disabled><img src="/apps/codex-stage/assets/icons/shuffle.svg" alt=""></button>
+    </section>
+    <section class="game-bar">
+      <div class="ammo" hidden></div>
+      <div class="play-actions"><button id="expand-stage" class="icon-button expand-stage" title="放大游戏" aria-label="放大游戏" aria-pressed="false"><img src="/apps/codex-stage/assets/icons/maximize-2.svg" alt=""></button><button id="retry" class="icon-button" title="重试当前关卡" aria-label="重试当前关卡"><img src="/apps/codex-stage/assets/icons/rotate-ccw.svg" alt=""></button><button id="ability" title="游戏技能" disabled>技能</button><button id="fire" class="primary" title="开始游戏">开始</button></div>
+    </section>
+    <section class="level-strip" aria-label="关卡"><div class="strip-heading"><span id="game-genre"></span><span id="level-count"></span></div><div id="levels" class="levels"></div></section>
+    <footer class="bottom-bar"><p id="feedback" role="status">加载中</p><div class="settings"><button id="mute" class="icon-button" aria-pressed="true" aria-label="静音" title="开关声音"><img src="/apps/codex-stage/assets/icons/volume-x.svg" alt=""></button><button id="reduce" class="icon-button" aria-pressed="false" aria-label="减少动效" title="减少粒子与环境动效"><img src="/apps/codex-stage/assets/icons/sparkles.svg" alt=""></button><span class="divider"></span><button id="demo" title="重新开始一段 3 分钟的模拟任务">开始任务</button><button id="stop" title="模拟 Agent 完成，立即停止游戏">结束任务</button></div></footer>
+    <p class="sr-only" id="stage-live" aria-live="polite"></p>
+  </main>
+  <script type="module" src="/apps/codex-stage/app.js"></script>
+</body>
+</html>

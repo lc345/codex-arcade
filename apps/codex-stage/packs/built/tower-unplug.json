@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tower-unplug",
+  "title": "抽薪不倒",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "building-balance",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "tower-unplug.js",
+  "sha256": "cf804a4eecad09800d414379000645b32d2bc8252ed75d13347c41c775d701e5",
+  "bytes": 118608,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

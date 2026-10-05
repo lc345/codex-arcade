@@ -1,0 +1,16 @@
+{
+  "three": {
+    "version": "0.180.0",
+    "source": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+    "integrity": "sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w=="
+  },
+  "bundler": {
+    "version": "0.25.12",
+    "source": "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.25.12.tgz",
+    "integrity": "sha512-N3zl+lxHCifgIlcMUP5016ESkeQjLj/959RxxNYIthIg+CQHInujFuXeWbWMgnTo4cp5XVHqFPmpyu9J65C1Yg=="
+  },
+  "exports": "tools/three-entry.js",
+  "bytes": 591041,
+  "sha256": "d8a6dbb4b01529905ec3e2eec842f8e4b451c0f4a16e4d54310092eda17c51d7",
+  "license": "MIT"
+}

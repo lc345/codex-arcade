@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "return-fire",
+  "title": "借弹还弹",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "shooter-bullethell",
+  "release": "stable",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "return-fire.js",
+  "sha256": "d2196fe73b2c39ed722ca383bfc5dda95daa57abec67934c5347dd82bc81c39e",
+  "bytes": 7260559,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}

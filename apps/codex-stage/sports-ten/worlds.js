@@ -1,0 +1,11 @@
+import {createPocketWorld} from './pocket-six.js';
+import {createHoopsWorld} from './roof-hoops.js';
+import {createKickWorld} from './curve-kick.js';
+import {createTennisWorld} from './lawn-rally.js';
+import {createPingWorld} from './table-spin.js';
+import {createBowlingWorld} from './pin-strike.js';
+import {createCurlingWorld} from './ice-stone.js';
+import {createDominoWorld} from './domino-bridge.js';
+import {createPlateWorld} from './plate-parade.js';
+import {createCrushWorld} from './crush-hour.js';
+export const SPORTS_WORLDS=Object.freeze({'pocket-six':createPocketWorld,'roof-hoops':createHoopsWorld,'curve-kick':createKickWorld,'lawn-rally':createTennisWorld,'table-spin':createPingWorld,'pin-strike':createBowlingWorld,'ice-stone':createCurlingWorld,'domino-bridge':createDominoWorld,'plate-parade':createPlateWorld,'crush-hour':createCrushWorld});

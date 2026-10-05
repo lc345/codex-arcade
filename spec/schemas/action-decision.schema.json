@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finalbutton.dev/schemas/0.2/action-decision.json",
+  "title": "FinalButton ActionDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "requestId", "actionDigest", "outcome", "method", "createdAt", "signature"],
+  "properties": {
+    "id": { "type": "string" },
+    "requestId": { "type": "string" },
+    "actionDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "outcome": { "enum": ["approve_once", "deny", "defer", "expired", "request_details"] },
+    "method": { "enum": ["hold", "tap", "deny_button", "dial", "policy", "system"] },
+    "reason": { "type": "string" },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "actionDigest", "scene", "digest"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "actionDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "scene": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["packId", "packVersion", "variantId"],
+          "properties": {
+            "packId": { "type": "string", "minLength": 1 },
+            "packVersion": { "type": "string", "minLength": 1 },
+            "variantId": { "type": "string", "minLength": 1 }
+          }
+        },
+        "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "signature": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "calendar-create",
+  "label": "Calendar invite",
+  "category": "calendar.create",
+  "risk": "medium",
+  "holdMs": 1200,
+  "tone": "calendar",
+  "card": {
+    "title": "Book a 30 min demo",
+    "summary": "Create a calendar event for Thursday at 14:00.",
+    "target": "Alex Chen and Youze",
+    "impact": "A calendar invite and notifications will be sent.",
+    "rollback": "The event can be cancelled afterward."
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "id": "odd-ten",
+  "date": "2026-10-02",
+  "license": "Apache-2.0",
+  "method": "Original SVG scenery rasterized locally; original Canvas game objects; actual gameplay covers; locally synthesized audio.",
+  "source": "../art.js",
+  "sourceSha256": "2f24c395048865c0a6dacd235d8bf317ba9ca147cf25867498eb806956e4c7e3",
+  "documentationSha256": "b84dfadd5c7d25588d66c4d7571a6f62930261a0af1ee9b9050adcc62d1a85c9",
+  "licenseSha256": "dcf09a39e4a8d7914b3473ca185991d129df639be2a5238b7dd544d79052546f",
+  "files": [
+    {
+      "name": "velvet-vault.svg",
+      "bytes": 2750,
+      "sha256": "700c1a605a0edbff840ad0f39630479c1a07e8aee5e79e590b0b6d11b3233847"
+    },
+    {
+      "name": "velvet-vault.png",
+      "bytes": 16535,
+      "sha256": "e443487422285fdf84ee5c23b768d7c81dc88dc655e09bd488325c4b47f3f8c0",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/velvet-vault.png",
+      "bytes": 77469,
+      "sha256": "c68da17299e9683d368546c368074cc5d238e7300c3d8dac0d5c6e3e1541c53d",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "power-wash.svg",
+      "bytes": 8603,
+      "sha256": "c9e6ccb80acea02d2bd3b53d6c4e778f1b11b1cdbafdc0c01b47f6d35b8d5fd1"
+    },
+    {
+      "name": "power-wash.png",
+      "bytes": 20815,
+      "sha256": "6c20b34eda849b220166b2fa85cb2c38efffb18d5a4643b9a05d6495902cfcf0",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/power-wash.png",
+      "bytes": 57899,
+      "sha256": "81b8619ea960cf6744936349e159d3e826a9cb583f34a2381def62ca2ca987c1",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "zipper-run.svg",
+      "bytes": 7433,
+      "sha256": "a2d6dab8d9d1a0d3fb9ee22c83586a84ac09603d3f16717d764be4dbc6024872"
+    },
+    {
+      "name": "zipper-run.png",
+      "bytes": 55309,
+      "sha256": "fdd8354b26bf6da1601defd6f87b00440875ff755c62936ff230f87f7c5d55f1",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/zipper-run.png",
+      "bytes": 80235,
+      "sha256": "3de51a485edb6afd31e7d872a13538ba90fa198afb4552fa68a5d26c682416c7",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "alarm-alley.svg",
+      "bytes": 3241,
+      "sha256": "dc86367407ecd7fac4cc196e2b5193428abc58d659ead84dcedc572f8a58f111"
+    },
+    {
+      "name": "alarm-alley.png",
+      "bytes": 5883,
+      "sha256": "dadd01337b8779a346c1dc0cae8f2836e340e93d77c848009682f9cc5c86fc01",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/alarm-alley.png",
+      "bytes": 18439,
+      "sha256": "392a85a79715f92f6dc0ee3203bc5a4ac582d7af5970ffcfc334f057e9abf6e2",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "lunar-lease.svg",
+      "bytes": 4716,
+      "sha256": "05f9594d9524dc265fc3f7ae5e6e06deaabb719efcfcf9c26bcb59fdad16f51a"
+    },
+    {
+      "name": "lunar-lease.png",
+      "bytes": 11067,
+      "sha256": "916e68e3f86398cb090b2a6a9b63a0b6b29832f21125f78cfdda8d4ecc0a3f06",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/lunar-lease.png",
+      "bytes": 28185,
+      "sha256": "be4da63505c1f193b79fe0ec81bf9dcefa789fe0d1596409a37be8a2ad118e89",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "jelly-shift.svg",
+      "bytes": 4069,
+      "sha256": "d7722792f55fd323e4215ded001efc867b3f5e455ed8205d34c30348a9234ec2"
+    },
+    {
+      "name": "jelly-shift.png",
+      "bytes": 11448,
+      "sha256": "f38a09adb8b85f7e9f4d9d5e2e5c28a12c194fdaaab0686dabdd19a91b9eb953",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/jelly-shift.png",
+      "bytes": 23523,
+      "sha256": "f28103a4b7093e2c0a9f0e25cd12c86dcd6901d28f1fcc50bffb8b654ea55213",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "baggage-boogie.svg",
+      "bytes": 2504,
+      "sha256": "a938ac509e1e296af447670c47831ed8f9d1e32031086f89b8cacd9a0405229f"
+    },
+    {
+      "name": "baggage-boogie.png",
+      "bytes": 17192,
+      "sha256": "268368e4d1025dedf88cb22fb9711394340bbc82ebc4033d21595f60c31c3138",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/baggage-boogie.png",
+      "bytes": 31172,
+      "sha256": "33e198dcbb07ce3b4f7222a1a973055ea72aea15003dfa2834dea1159130d08c",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "fuse-salon.svg",
+      "bytes": 3532,
+      "sha256": "907fefc596e1d3f022a83e80ba245636b80829fba53126f57e8e1b68810792c7"
+    },
+    {
+      "name": "fuse-salon.png",
+      "bytes": 4947,
+      "sha256": "8815147edecacff3d2c9770314f55d9d989d33dcb8a4317bbb41d760276d527e",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/fuse-salon.png",
+      "bytes": 29226,
+      "sha256": "df263ca0f05814bb91a71d0932d61a66d50a1a3b974b0da9b65326d9d5781fb5",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "tower-unplug.svg",
+      "bytes": 2693,
+      "sha256": "c80cc75de39195b99ca96bb062caf17b68788d10d3fc57c0fdcad5bb9588850a"
+    },
+    {
+      "name": "tower-unplug.png",
+      "bytes": 8785,
+      "sha256": "04e26d1b1be6ddd98e0441f4d843921e0730e66c672d0ded5741a35613b7182e",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/tower-unplug.png",
+      "bytes": 28168,
+      "sha256": "0335216be5c7b082732d412411264cc30bcd1d58b99e23609ada54d3966435b4",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "sugar-snip.svg",
+      "bytes": 2870,
+      "sha256": "f56ee0c6ccd96dbdcaa95c36456da98b390a3c073f4b209770d036462ba72bcb"
+    },
+    {
+      "name": "sugar-snip.png",
+      "bytes": 20467,
+      "sha256": "5100de105b0281e13b8a63d37ddcba578df827c29276b63baef2b2479de23ddc",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "name": "covers/sugar-snip.png",
+      "bytes": 40970,
+      "sha256": "1afc5ca2fedd8c210ea93060eb93c03b51af84b011542d42083980b91f022b6a",
+      "width": 960,
+      "height": 640
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "2",
+  "id": "city-dispatch",
+  "version": "0.2.0",
+  "priority": 0,
+  "license": "Apache-2.0",
+  "locales": ["zh-CN", "en"],
+  "assets": [],
+  "assetDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "contentDigest": "fa9a1618acc625da236fff527bccbce69ca35af5c9336c727eea2bf88fb47996",
+  "matches": {
+    "categories": ["communication.send", "file.share"],
+    "states": ["waiting", "holding", "executing", "succeeded", "failed", "denied", "deferred", "expired", "stale"]
+  },
+  "variants": [
+    {
+      "id": "dispatch-ready",
+      "when": [{ "field": "status", "op": "eq", "value": "waiting" }],
+      "beats": [{ "phase": "cue", "commands": [{ "channel": "light", "token": "dispatch.ready", "durationMs": 920 }, { "channel": "audio", "cue": "dispatch.depart", "gain": "quiet" }, { "channel": "screen", "template": "城市调度台已接到一条消息。", "slots": [] }] }],
+      "timeline": { "durationMs": 1600, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 220, "command": "path", "id": "dispatch", "from": "actor", "to": "center", "arc": 0.22, "durationMs": 880 }, { "atMs": 980, "command": "text", "id": "caption", "slot": "actionSummary", "anchor": "center" }] }
+    },
+    {
+      "id": "dispatch-held",
+      "when": [{ "field": "status", "op": "eq", "value": "holding" }],
+      "beats": [{ "phase": "decision", "commands": [{ "channel": "light", "token": "dispatch.hold", "durationMs": 500 }, { "channel": "screen", "template": "正在盖下出发印记。", "slots": [] }] }],
+      "timeline": { "durationMs": 1200, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 0, "command": "holdProgress", "id": "hold" }, { "atMs": 480, "command": "scale", "id": "dispatch", "to": 1.12 }] }
+    },
+    {
+      "id": "dispatch-moving",
+      "when": [{ "field": "status", "op": "eq", "value": "executing" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "dispatch.route", "durationMs": 800 }, { "channel": "screen", "template": "消息正在沿城市线路前往目的地。", "slots": [] }] }],
+      "timeline": { "durationMs": 1800, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 80, "command": "path", "id": "dispatch", "from": "actor", "to": "recipient", "arc": -0.35, "durationMs": 1420 }, { "atMs": 1260, "command": "particle", "id": "route", "anchor": "center" }] }
+    },
+    {
+      "id": "dispatch-complete",
+      "when": [{ "field": "status", "op": "eq", "value": "succeeded" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "dispatch.arrive", "durationMs": 820 }, { "channel": "audio", "cue": "dispatch.arrive" }, { "channel": "speech", "template": "消息已交给投递渠道。", "slots": [] }] }],
+      "timeline": { "durationMs": 1500, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 0, "command": "path", "id": "dispatch", "from": "actor", "to": "recipient", "arc": -0.25, "durationMs": 1050 }, { "atMs": 1060, "command": "particle", "id": "arrive", "anchor": "recipient" }, { "atMs": 1100, "command": "text", "id": "recipient", "slot": "recipientLabel", "anchor": "recipient" }] }
+    },
+    {
+      "id": "dispatch-failed",
+      "when": [{ "field": "status", "op": "eq", "value": "failed" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "error.soft", "durationMs": 600 }, { "channel": "screen", "template": "消息没有送达。", "slots": [] }] }],
+      "timeline": { "durationMs": 1200, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "center" }, { "atMs": 180, "command": "path", "id": "dispatch", "from": "center", "to": "actor", "arc": 0.18, "durationMs": 720 }, { "atMs": 940, "command": "text", "id": "status", "slot": "status", "anchor": "actor" }] }
+    },
+    {
+      "id": "dispatch-denied",
+      "when": [{ "field": "status", "op": "eq", "value": "denied" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.denied", "durationMs": 420 }, { "channel": "screen", "template": "消息留在草稿中。", "slots": [] }] }],
+      "timeline": { "durationMs": 850, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 300, "command": "fade", "id": "dispatch", "to": 0.32 }, { "atMs": 440, "command": "text", "id": "status", "slot": "status", "anchor": "actor" }] }
+    },
+    {
+      "id": "dispatch-later",
+      "when": [{ "field": "status", "op": "eq", "value": "deferred" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "decision.deferred", "durationMs": 420 }, { "channel": "screen", "template": "消息已留待稍后处理。", "slots": [] }] }],
+      "timeline": { "durationMs": 900, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 260, "command": "move", "id": "dispatch", "from": "actor", "to": "center", "durationMs": 420 }, { "atMs": 680, "command": "fade", "id": "dispatch", "to": 0.5 }] }
+    },
+    {
+      "id": "dispatch-expired",
+      "when": [{ "field": "status", "op": "eq", "value": "expired" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "quiet.fade", "durationMs": 350 }, { "channel": "screen", "template": "确认已过期，消息没有发送。", "slots": [] }] }],
+      "timeline": { "durationMs": 850, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "actor" }, { "atMs": 160, "command": "fade", "id": "dispatch", "to": 0.08 }, { "atMs": 450, "command": "text", "id": "status", "slot": "status", "anchor": "center" }] }
+    },
+    {
+      "id": "dispatch-stale",
+      "when": [{ "field": "status", "op": "eq", "value": "stale" }],
+      "beats": [{ "phase": "resolution", "commands": [{ "channel": "light", "token": "warning.stale", "durationMs": 640 }, { "channel": "screen", "template": "消息内容已变化，请重新确认。", "slots": [] }] }],
+      "timeline": { "durationMs": 1000, "tracks": [{ "atMs": 0, "command": "spawn", "id": "dispatch", "kind": "envelope", "anchor": "center" }, { "atMs": 260, "command": "path", "id": "dispatch", "from": "center", "to": "actor", "arc": -0.2, "durationMs": 540 }, { "atMs": 820, "command": "particle", "id": "stale", "anchor": "actor" }] }
+    }
+  ]
+}

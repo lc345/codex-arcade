@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wall-rebound",
+  "title": "绝壁反蹬",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "category": "platform-runner",
+  "release": "preview",
+  "reviewed": true,
+  "permissions": [],
+  "input": [
+    "pointer",
+    "keyboard"
+  ],
+  "offline": true,
+  "entry": "wall-rebound.js",
+  "sha256": "f2c7ec4ed201639e4bd8bee788293d18c3650ed24a8d608bbe98c7d8f4f248e3",
+  "bytes": 114071,
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "id": "matter-js",
+      "version": "0.20.0",
+      "license": "MIT"
+    }
+  ],
+  "levels": 3
+}
