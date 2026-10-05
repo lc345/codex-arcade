@@ -38,3 +38,4 @@ File: paper-glider.png
 Source: exec-729ea978-f1fb-48b9-bbc0-c9e303007b84.png
 
 Use case: stylized-concept. Original landscape game backdrop for an origami glider. Landscape 3:2. Delicate panoramic Japanese-inspired woodblock print landscape, pale icy cyan sky with subtle washi paper grain, layered distant alpine turquoise and forest-green mountains only in bottom quarter, sparse soft white horizontal cloud strokes near upper edges, small vermilion sun at upper right edge. Huge open quiet airspace central 70 percent for animated paper airplane, wind rings and mountain gates. Original composition, sophisticated hand-carved print textures, cool crisp daylight, red accents. No airplane, birds, animals, humans, buildings, text, lettering, UI or recognizable existing artwork. No dark haze, no brown aged paper, no gradient or glowing orbs. Flat side elevation suited to scrolling game play.
+

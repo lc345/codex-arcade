@@ -14,3 +14,5 @@ apps/codex-stage/packs/built/* linguist-generated=true -whitespace
 apps/codex-stage/vendor/* linguist-vendored=true -whitespace
 apps/codex-stage/godot-junk/built/* linguist-generated=true -whitespace
 apps/codex-stage/studio/assets.js linguist-generated=true
+apps/codex-stage/arcade-five/assets/ARTWORK.md whitespace=-blank-at-eof
+apps/codex-stage/grab-go/assets/ARTWORK.md whitespace=-blank-at-eof
