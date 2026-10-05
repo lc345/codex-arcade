@@ -1,6 +1,30 @@
 // This QA planner only issues movement inputs. It never changes the world or score.
+const drivers = new WeakMap();
 export function magnetTarget(s) {
   if (s.delivered) return null;
+  const p = s.player;
+  let driver = drivers.get(s);
+  if (!driver || s.time < driver.at) {
+    driver = { at: s.time, x: p.x, y: p.y, escapes: 0, escapeUntil: 0 };
+    drivers.set(s, driver);
+  }
+  if (s.time < driver.escapeUntil) return driver.escape;
+  const target = planTarget(s);
+  if (s.time - driver.at >= 3000) {
+    const moved = Math.hypot(p.x - driver.x, p.y - driver.y);
+    if (target && moved < 40 && Math.hypot(target.x - p.x, target.y - p.y) > 25) {
+      // Reverse, then try another heading, as a human would when cargo catches a corner.
+      const turns = [Math.PI, Math.PI / 2, -Math.PI / 2];
+      const heading = Math.atan2(target.y - p.y, target.x - p.x) + turns[driver.escapes++ % turns.length];
+      driver.escape = { x: p.x + Math.cos(heading) * 240, y: p.y + Math.sin(heading) * 240 };
+      driver.escapeUntil = s.time + 2200;
+    }
+    Object.assign(driver, { at: s.time, x: p.x, y: p.y });
+  }
+  return s.time < driver.escapeUntil ? driver.escape : target;
+}
+
+function planTarget(s) {
   const p = s.player, bus = s.items.find(i => i.kind === "bus");
   let goal;
   if (bus.attached) goal = { ...s.depot };

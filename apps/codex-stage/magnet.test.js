@@ -7,6 +7,23 @@ import { MAGNET_CATALOG } from "./studio/magnet-catalog.js";
 
 const tick = (g, n = 120) => { for (let i = 0; i < n; i++) g.step(1000 / 120); };
 const aim = (g, x, y) => g.pointer("move", 480, 270, "mouse", { worldX: x, worldY: y });
+test("magnet QA: a blocked driver backs out without changing game state", () => {
+  const g = createMagnetWorld();
+  const s = structuredClone(g.scene);
+  Object.assign(s, { time: 10000, power: 428, radius: 261, mode: "return" });
+  Object.assign(s.player, { x: 2064.42, y: 731.15, angle: 3.1077, vx: -1.6, vy: 0 });
+  Object.assign(s.items.find(i => i.kind === "bus"), { attached: true, x: 2074.19, y: 921.9 });
+  const initial = magnetTarget(s);
+  let escaped = false;
+  for (let n = 0; n < 30; n++) {
+    s.time += 300;
+    const before = JSON.stringify(s), next = magnetTarget(s);
+    assert.equal(JSON.stringify(s), before);
+    if (Math.hypot(next.x - initial.x, next.y - initial.y) > 100) escaped = true;
+  }
+  assert.ok(escaped, "must not keep steering into the same blocked corner");
+  g.destroy();
+});
 test("magnet: no autoplay, invalid input rejected, one movement gives physical collection", () => {
   const g = createMagnetWorld(); tick(g, 180);
   assert.equal(g.scene.collected, 0);
