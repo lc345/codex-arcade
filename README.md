@@ -14,10 +14,10 @@ English | [简体中文](README.zh-CN.md)
 
 ## Install on Mac
 
-**[Download macOS Beta 3](https://github.com/lc345/codex-arcade/releases/tag/agent-stage-v0.11.1-beta.3)**: the 520px companion and updated Codex CLI discovery are included. Automatic appearance and task-end closure have been confirmed in a real Desktop task on the maintainer's Apple Silicon Mac; other machines still need testing.
+**[Download macOS Beta 4](https://github.com/lc345/codex-arcade/releases/tag/agent-stage-v0.11.1-beta.4)**: includes always-visible **shuffle** and **close** buttons in the upper-right corner of the 520px companion. Closing a game does not stop Codex; a new task can show a game again. Automatic appearance and task-end closure were confirmed in a real Desktop task on the maintainer's Apple Silicon Mac; other machines still need testing.
 
 1. Install, open and sign into **Codex Desktop**.
-2. Download **[Agent-Stage-for-Codex.zip](https://github.com/lc345/codex-arcade/releases/download/agent-stage-v0.11.1-beta.3/Agent-Stage-for-Codex.zip)**. Double-click to extract it.
+2. Download **[Agent-Stage-for-Codex.zip](https://github.com/lc345/codex-arcade/releases/download/agent-stage-v0.11.1-beta.4/Agent-Stage-for-Codex.zip)**. Double-click to extract it.
 3. Open the extracted folder and double-click **Install Agent Stage.command**. Wait for the installer to finish, then return to Codex and send a **new task**.
 
 That is the complete setup. **No terminal commands, npm install, game engine, Python or API key required.** The installer opens Terminal to run its four checks/install steps; leave that window open until it reports success.

@@ -1,10 +1,18 @@
-# Agent Stage for Codex 0.11.1-beta.3 · macOS Beta
+# Agent Stage for Codex 0.11.1-beta.4 · macOS Beta
 
 ## English
 
 100 local mini-games while Codex works. A small game-only window follows Codex, pauses when you switch apps, and stops when the task ends or is interrupted.
 
-### New in Beta 3
+### New in Beta 4
+
+- Always-visible shuffle and close buttons in the companion's upper-right corner, in a separate strip that does not cover the game HUD.
+- Shuffle immediately picks a different random game without interrupting the Codex task.
+- Close dismisses the game for the current task only. Later events and pending loads cannot reopen it; a new task can show a game again.
+- Mouse, touch, keyboard, narrow-window layout and task-end freeze regression coverage.
+- ZIP and DMG include the controls already merged into main. Existing users can run the new installer to update.
+
+### Retained from Beta 3
 
 - Larger 520px game window, with responsive sizing for narrow Codex windows.
 - Compatibility with the current `codex-cli/bin/codex` app layout; legacy paths remain supported.
@@ -17,7 +25,7 @@ No npm, game engine, API key or additional runtime download is required. Officia
 
 **Unsigned, unnotarized community beta; not an OpenAI product.** Verify the SHA-256 file and follow macOS first-open guidance only if you trust the download. Never disable Gatekeeper globally. Apple Silicon has been tested locally; Intel and additional macOS versions still need hardware testing. The collection includes 93 preview games and seven curated stable entries. Windows has browser-only experiment documentation, not an automatic companion installer.
 
-The release candidate's public source was freshly cloned and reinstalled on the maintainer's Apple Silicon Mac running macOS 26.5.1 and Codex 26.928.40906. Unrelated hooks/media were preserved. A real CLI task exercised the complete lifecycle; the maintainer then confirmed automatic appearance and closure in a real Desktop writing task. This is an existing-Mac reinstall, not a clean-OS or first-open Gatekeeper certification. Release CI separately tests the actual ZIP with an isolated HOME, minimal PATH and bundled Node.
+The previous Beta 3 candidate's public source was freshly cloned and reinstalled on the maintainer's Apple Silicon Mac running macOS 26.5.1 and Codex 26.928.40906. Unrelated hooks/media were preserved. A real CLI task exercised the complete lifecycle; the maintainer then confirmed automatic appearance and closure in a real Desktop writing task. This is historical existing-Mac reinstall evidence, not a fresh Beta 4 clean-OS or first-open Gatekeeper certification. Release CI separately tests the actual ZIP with an isolated HOME, minimal PATH and bundled Node.
 
 [English README](https://github.com/lc345/codex-arcade#readme) | [中文 README](https://github.com/lc345/codex-arcade/blob/main/README.zh-CN.md)
 
@@ -33,6 +41,8 @@ Codex 工作时，在右下角玩一局小游戏。任务完成或中断后自�
 
 ## 包含什么
 
+- 新增右上角常驻的随机下一款、关闭按钮，不遮挡游戏 HUD。
+- 点随机立即换另一款；点关闭只隐藏本轮游戏，不停止 Codex，下一轮任务恢复。
 - 100 款保留游戏，随机不重复轮换；长任务中可手动换游戏。
 - 520px 游戏小窗，小窗口自动缩小，默认静音；任务结束时停止输入、动画、声音。
 - 兼容新版 Codex 的 `codex-cli/bin/codex` 路径，同时保留旧路径。
@@ -47,7 +57,7 @@ Codex 工作时，在右下角玩一局小游戏。任务完成或中断后自�
 
 Apple Silicon 本机已验证；Intel 及更多 macOS 版本仍需实机反馈。100 款包含 93 款 preview，不表示全部完成正式验收。远程任务、组织禁用 hooks、所有全屏/多显示器组合不保证。
 
-已从公开 GitHub 重新克隆候选源码，在维护者的 macOS 26.5.1 / Codex 26.928.40906 上卸载后重装，保留无关 hooks 和媒体。真实 CLI 生命周期已测试；维护者也确认真实桌面写作任务开始时弹出、结束时收起。这不是全新系统或 Gatekeeper 首次下载验收。Release CI 另行检查实际 ZIP 在隔离 HOME、最小 PATH 下使用内置 Node 的运行情况。
+此前 Beta 3 曾从公开 GitHub 重新克隆候选源码，在维护者的 macOS 26.5.1 / Codex 26.928.40906 上卸载后重装，保留无关 hooks 和媒体。真实 CLI 生命周期已测试；维护者也确认真实桌面写作任务开始时弹出、结束时收起。这是历史重装验证，不代表 Beta 4 已通过全新系统或 Gatekeeper 首次下载验收。Release CI 另行检查实际 ZIP 在隔离 HOME、最小 PATH 下使用内置 Node 的运行情况。
 
 Windows 尚无一键安装版；源码 docs/WINDOWS_TESTING.zh-CN.md 提供网页试玩实验教程，不会自动关联 Windows Codex。
 

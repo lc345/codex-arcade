@@ -14,10 +14,10 @@ Codex 开始任务时，右下角出现一个小游戏；任务结束或中断�
 
 ## Mac：三步安装
 
-**[下载 macOS Beta 3](https://github.com/lc345/codex-arcade/releases/tag/agent-stage-v0.11.1-beta.3)**：包含 520px 小窗和新版 Codex CLI 路径兼容。维护者的 Apple Silicon Mac 已通过真实桌面任务的开始弹出、结束收起验证；其他设备仍需测试。
+**[下载 macOS Beta 4](https://github.com/lc345/codex-arcade/releases/tag/agent-stage-v0.11.1-beta.4)**：520px 小窗右上角新增常驻的**随机下一款**和**关闭**按钮。关闭游戏不会停止 Codex，下一次任务仍可弹出游戏。维护者此前已在 Apple Silicon Mac 确认真实桌面任务开始弹出、结束收起；其他设备仍需测试。
 
 1. 先安装、打开并登录 Codex Desktop。
-2. 下载 **[Agent-Stage-for-Codex.zip](https://github.com/lc345/codex-arcade/releases/download/agent-stage-v0.11.1-beta.3/Agent-Stage-for-Codex.zip)**，双击解压。
+2. 下载 **[Agent-Stage-for-Codex.zip](https://github.com/lc345/codex-arcade/releases/download/agent-stage-v0.11.1-beta.4/Agent-Stage-for-Codex.zip)**，双击解压。
 3. 打开解压后的文件夹，双击 **Install Agent Stage.command**。看到“安装完成”后，回到 Codex **发送一个新任务**。
 
 安装器会打开一个终端窗口并自动完成四步检查和安装。**不用输入命令，不用执行 npm install，不用下载游戏引擎或配置 API Key。** 安装期间不要关闭窗口。安装后可以删除下载文件，已安装的游戏仍可使用。
