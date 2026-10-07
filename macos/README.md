@@ -16,7 +16,7 @@ Agent 工作，你玩游戏。Your agent works. You play.
 
 - 任务开始：Codex 窗口右下角出现约 520px 的游戏画面，小窗口会自动缩小；思考和工具执行期间都可玩。
 - 任务完成/中断：立即停止并收起。切到其他 App 或最小化 Codex 会隐藏暂停。
-- 小窗右上角：鼠标悬停后可换游戏。长任务可在结算并停手后自动轮换。
+- 小窗右上角：随机图标随时换一款，关闭图标只收起本轮游戏，不影响 Codex；新任务会重新出现。按钮位于独立的窄控制栏，不遮挡游戏。长任务可在结算并停手后自动轮换。
 - 默认静音。点击游戏后按 Esc 只关闭本轮游戏，不停止 Codex。
 - 游戏库与声音设置：http://127.0.0.1:4173/codex-stage 。此处也能独立试玩，不代表真实任务触发成功。
 
@@ -51,7 +51,7 @@ Agent 工作，你玩游戏。Your agent works. You play.
 
 No terminal commands, npm install, game engines or API keys are required. Official Node runtimes for Apple Silicon and Intel are included. Installation downloads no dependencies. This unsigned, unnotarized beta may require an explicit first-open security confirmation; only proceed if you trust and have verified the artifact. Never disable Gatekeeper globally.
 
-The approximately 520px-wide game-only companion follows the foreground Codex window and shrinks to fit smaller windows. It hides and pauses when you switch apps, and stops on task completion/interruption. Hover the upper-right corner to shuffle; press Escape after focusing the game to dismiss this turn. Audio is muted by default.
+The approximately 520px-wide game companion follows the foreground Codex window and shrinks to fit smaller windows. It hides and pauses when you switch apps, and stops on task completion/interruption. The upper-right shuffle and close controls stay visible in a slim strip above the game. Closing dismisses only this turn's game, not the Codex task; the next task can show a game again. Escape still dismisses this turn. Audio is muted by default.
 
 Use Check for diagnostics, Pause/Resume to control games, and Uninstall to remove only Agent Stage's runtime, service and hooks. Existing preferences/media remain. Re-run the new Release installer to upgrade. The installed runtime is independent of the downloaded folder.
 

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "audit:public": "node tools/audit-publication.mjs",
+    "test:popup-controls": "node tools/test-popup-controls.mjs",
     "build:five-manifest": "node tools/build-five-manifest.mjs",
     "test:odd": "node --test apps/codex-stage/odd-ten/*.test.mjs",
     "test:odd-browser": "node tools/test-odd-ten-browser.mjs",
