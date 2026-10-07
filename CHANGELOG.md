@@ -1,10 +1,11 @@
 # Changelog
 
-## Unreleased
+## Agent Stage for Codex 0.11.1-beta.4
 
 - Keep random-next and close controls visible in the native companion's upper-right corner, with a separate 40px strip so game HUDs remain unobscured.
 - Closing dismisses only the current game turn, including pending loads; Codex continues working and the next task can show a game again. Escape remains available.
 - Cover mouse, keyboard, touch, iframe disposal, task-end freeze and narrow-window layout in the popup-controls browser replay.
+- Include these controls in the macOS ZIP/DMG, and point both README editions to the new download.
 
 ## Agent Stage for Codex 0.11.1-beta.3
 
