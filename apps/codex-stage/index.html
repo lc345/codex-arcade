@@ -12,8 +12,12 @@
     <details class="library-drawer" id="library-drawer" open><summary>游戏库 <span>加载中</span></summary><nav class="game-library" id="game-library" aria-label="选择游戏"></nav></details>
     <section class="game-heading"><div><p id="game-english">AGENT STAGE</p><h1 id="game-title">游戏载入中</h1></div><div class="heading-right"><label class="random-mode" title="每个新任务从 100 款保留游戏中随机选择，一轮不重复"><input id="random" type="checkbox" checked> 随机轮换</label><div class="agent-status"><span class="status-dot"></span><span id="agent-status">Agent 工作中</span></div></div></section>
     <section class="playfield" aria-label="游戏舞台">
-      <canvas id="stage-canvas" tabindex="0" aria-label="游戏载入中"></canvas>
-      <button id="next-game" class="game-shuffle" title="换一款游戏" aria-label="换一款游戏" disabled><img src="/apps/codex-stage/assets/icons/shuffle.svg" alt=""></button>
+      <div class="game-viewport"><canvas id="stage-canvas" tabindex="0" aria-label="游戏载入中"></canvas></div>
+      <div class="game-controls" role="group" aria-label="游戏窗口控制">
+        <span id="popup-game-name" aria-hidden="true"></span>
+        <button id="next-game" class="game-control" type="button" title="随机下一款游戏" aria-label="随机下一款游戏" disabled><img src="/apps/codex-stage/assets/icons/shuffle.svg" alt="" draggable="false"></button>
+        <button id="close-game" class="game-control" type="button" title="关闭本轮游戏，不影响 Codex 任务" aria-label="关闭本轮游戏" hidden disabled><img src="/apps/codex-stage/assets/icons/x.svg" alt="" draggable="false"></button>
+      </div>
     </section>
     <section class="game-bar">
       <div class="ammo" hidden></div>

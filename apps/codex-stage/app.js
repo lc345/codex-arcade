@@ -24,7 +24,7 @@ const curatedView=previewCollection==='curated';
 let settings = {};
 try { settings = JSON.parse(localStorage.getItem("agent-stage-arcade-settings") || "{}"); } catch {}
 let muted = settings.muted ?? true, reduced = settings.reduced ?? matchMedia("(prefers-reduced-motion: reduce)").matches;
-let runId = null, demoTimer = null;
+let runId = null, demoTimer = null, dismissedRunId = null;
 let controlsSignature = "";
 function setText(selector, text) { const node = $(selector); if (node.textContent !== String(text)) node.textContent = text; }
 const rotation = createGameRotation({ next: () => arcade.nextGame() });
@@ -32,9 +32,16 @@ const config = new URLSearchParams(location.hash.slice(1)), token = config.get("
 const daemon = config.get("daemon") || "http://127.0.0.1:4282";
 if (token) history.replaceState(null, "", location.pathname + location.search);
 const popup = new URLSearchParams(location.search).has("popup");
+let stageRatio = 16 / 9;
+function syncWindowRatio() {
+  // Include the control strip in the native frame, not in the game's aspect ratio.
+  document.documentElement.dataset.stageRatio = String(popup ? innerWidth / (innerWidth / stageRatio + 40) : stageRatio);
+}
+window.addEventListener("resize", syncWindowRatio);
 const frameProbe = window.__agentStageNativeWindow ? createFrameProbe() : null;
 if (frameProbe) window.__agentStagePerformance = () => ({game: arcade.program.id, at: Date.now(), ...frameProbe.read()});
 if (popup) { document.documentElement.classList.add("popup-mode"); $("#library-drawer").open = false; }
+$("#close-game").hidden = !popup;
 function save() { localStorage.setItem("agent-stage-arcade-settings", JSON.stringify({ muted, reduced, game: arcade.random ? null : arcade.program.id, mode:arcade.mode })); }
 function revealSelection() {
   const library = $("#game-library"), selected = library.querySelector('[aria-pressed="true"]');
@@ -45,8 +52,10 @@ function revealSelection() {
 }
 function showProgram(program) {
   rotation.reset();
-  $(".playfield").style.setProperty('--stage-ratio',String(960/(program.canvasHeight??540)));
-  document.documentElement.dataset.stageRatio = String(960 / (program.canvasHeight ?? 540));
+  stageRatio = 960 / (program.canvasHeight ?? 540);
+  $(".playfield").style.setProperty('--stage-ratio', String(stageRatio));
+  syncWindowRatio();
+  $("#popup-game-name").textContent = program.title;
   $("#game-title").textContent = program.title; $("#game-english").textContent = program.english; $("#game-genre").textContent = program.genre;
   $(".playfield").setAttribute("aria-label", program.title); $("#stage-canvas").setAttribute("aria-label", `${program.title}。${program.hint}`);
   $(".ammo").hidden = true; $("#random").checked = arcade.random;
@@ -72,6 +81,7 @@ function refresh() {
   if (signature === controlsSignature) return;
   controlsSignature = signature;
   $("#next-game").disabled = !arcade.active || arcade.paused;
+  $("#close-game").disabled = !arcade.active;
   $("#fire").disabled = !interactive || s.phase === "aiming" || s.phase === "flight" || (s.primaryEnabled === false && !["won", "lost"].includes(s.phase));
   $("#fire").textContent = arcade.controls.primary.label;
   $("#fire").hidden = Boolean(arcade.controls.primary.hidden) && arcade.active;
@@ -91,9 +101,9 @@ const arcade = createPackHost($("#stage-canvas"), {
   onFeedback(notice) { setText("#feedback", notice.text); setText("#stage-live", notice.text); refresh(); },
   onScore(score) { setText("#feedback", `${score} 分`); refresh(); },
   onState(notice) {
-    $("#agent-status").textContent = notice.type === "stopped" ? "Agent 已完成" : "Agent 工作中";
+    $("#agent-status").textContent = notice.type === "stopped" ? (dismissedRunId ? "游戏已关闭" : "Agent 已完成") : "Agent 工作中";
     $(".agent-status").classList.toggle("idle", notice.type === "stopped");
-    if (notice.type === "stopped") { runId = null; $("#feedback").textContent = `已停止 · ${notice.score} 分`; $("#stage-live").textContent = "任务完成，游戏已停止"; }
+    if (notice.type === "stopped") { runId = null; $("#feedback").textContent = `已停止 · ${notice.score} 分`; $("#stage-live").textContent = dismissedRunId ? "本轮游戏已关闭，Codex 任务继续执行" : "任务完成，游戏已停止"; }
     refresh();
   },
 }, loadReviewedPack);
@@ -114,7 +124,11 @@ showProgram(arcade.program);
 const libraryResize = new ResizeObserver(revealSelection); libraryResize.observe($("#game-library"));
 $("#random").addEventListener("change", () => { arcade.setMode($("#random").checked ? (curatedView?'curated':'random') : "game"); save(); });
 function present(event) {
-  if (event.type === "turn.started") { if (runId === event.runId && arcade.active) return; runId = event.runId; arcade.start(event); }
+  if (event.type === "turn.started") {
+    if (event.runId === dismissedRunId || (runId === event.runId && arcade.active)) return;
+    dismissedRunId = null; document.documentElement.classList.remove("game-dismissed");
+    runId = event.runId; arcade.start(event);
+  }
   if (event.type === "turn.completed" && (!runId || event.runId === runId)) arcade.stop();
 }
 function demo() {
@@ -127,7 +141,16 @@ $("#stop").addEventListener("click", () => { clearTimeout(demoTimer); arcade.sto
 $("#fire").addEventListener("click", () => { arcade.input("tap"); refresh(); });
 $("#ability").addEventListener("click", () => { arcade.input("doubleTap"); refresh(); });
 $("#retry").addEventListener("click", () => { arcade.retry(); refresh(); });
-$("#next-game").addEventListener("click", () => { arcade.nextGame(); refresh(); save(); });
+$("#next-game").addEventListener("click", () => { arcade.nextGame(); refresh(); save(); $("#stage-canvas").focus({ preventScroll: true }); });
+function dismissGame() {
+  if (!popup || !arcade.active) return;
+  dismissedRunId = runId;
+  const root = document.documentElement;
+  root.dataset.stageDismissSerial = String(Number(root.dataset.stageDismissSerial || 0) + 1);
+  root.classList.add("game-dismissed");
+  clearTimeout(demoTimer); rotation.clearInput(); arcade.stop();
+}
+$("#close-game").addEventListener("click", dismissGame);
 function trackInput(type, id) {
   if (type === "down") rotation.press(id);
   else if (type === "up") rotation.release(id);
@@ -154,9 +177,7 @@ document.addEventListener("keydown", e => {
   if (e.key !== "Escape" || e.repeat) return;
   if (popup && arcade.active) {
     e.preventDefault();
-    const root = document.documentElement;
-    root.dataset.stageDismissSerial = String(Number(root.dataset.stageDismissSerial || 0) + 1);
-    arcade.stop();
+    dismissGame();
   } else if ($(".playfield").classList.contains("expanded")) {
     e.preventDefault(); expandStage(false);
   }
@@ -186,4 +207,4 @@ if (token) {
   window.addEventListener("pagehide", () => stream.close(), { once: true });
 } else demo();
 document.addEventListener("visibilitychange", refresh);
-window.addEventListener("pagehide", () => { clearTimeout(demoTimer); clearInterval(rotationTimer); unbindHostVisibility(); libraryResize.disconnect(); arcade.destroy(); frameProbe?.destroy(); }, { once: true });
+window.addEventListener("pagehide", () => { clearTimeout(demoTimer); clearInterval(rotationTimer); unbindHostVisibility(); window.removeEventListener("resize", syncWindowRatio); libraryResize.disconnect(); arcade.destroy(); frameProbe?.destroy(); }, { once: true });

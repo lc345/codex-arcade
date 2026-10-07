@@ -1,0 +1,103 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { mkdir, writeFile } from "node:fs/promises";
+import { createStageServer } from "../apps/press-lab/server.js";
+import { createCodexStageDaemon } from "../packages/codex-stage/src/daemon.js";
+
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || "playwright");
+const out = new URL("../output/popup-controls-qa/", import.meta.url).pathname;
+await mkdir(out, { recursive: true });
+const server = createStageServer({ mediaDirectory: `${out}media` });
+const daemon = createCodexStageDaemon({ token: "c".repeat(48) });
+const { port } = await server.start({ port: 0 });
+const { port: daemonPort } = await daemon.start({ port: 0 });
+const origin = `http://127.0.0.1:${port}`, endpoint = `http://127.0.0.1:${daemonPort}`;
+const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: true });
+const errors = [], results = [];
+const hash = buffer => createHash("sha256").update(buffer).digest("hex");
+try {
+  for (const [index, viewport] of [{ width: 520, height: 333 }, { width: 320, height: 220 }].entries()) {
+    const page = await browser.newPage({ viewport, hasTouch: index === 1 });
+    page.setDefaultTimeout(15000);
+    page.on("pageerror", error => errors.push(error.message));
+    // Keep the UI replay deterministic while exercising the real 100-game picker.
+    await page.addInitScript(() => { Math.random = () => .9; });
+    const post = async (event, turn = "one") => {
+      const response = await fetch(`${endpoint}/v1/hooks`, { method: "POST", headers: { authorization: `Bearer ${"c".repeat(48)}`, "content-type": "application/json" }, body: JSON.stringify({ hook_event_name: event, session_id: `controls-${index}`, turn_id: turn, tool_name: "Bash", tool_input: { command: "PRIVATE" } }) });
+      assert.equal(response.status, 202);
+    };
+    const active = async () => (await (await fetch(`${endpoint}/v1/state?token=${"c".repeat(48)}`)).json()).active.length;
+    const ready = () => page.waitForFunction(() => !document.querySelector("#retry").disabled && !/加载/.test(document.querySelector("#feedback").textContent));
+    const click = locator => index === 1 ? locator.tap() : locator.click();
+    await post("UserPromptSubmit");
+    const game = index ? "cart-downhill" : "toast-hop";
+    await page.goto(`${origin}/codex-stage?popup=1&game=${game}#${new URLSearchParams({ token: "c".repeat(48), daemon: endpoint })}`);
+    await ready();
+    for (const id of ["next-game", "close-game"]) {
+      const button = page.locator(`#${id}`);
+      assert.equal(await button.count(), 1, `${id} is available`);
+      assert.ok(await button.evaluate(node => Number(getComputedStyle(node).opacity) >= .8), `${id} visible without hover`);
+      const bounds = await button.boundingBox();
+      assert.ok(bounds.width >= 32 && bounds.height >= 32 && bounds.x + bounds.width <= viewport.width && bounds.y < 12);
+      assert.ok(await button.getAttribute("title"));
+      const gameBounds = await page.locator(index ? "iframe.standalone-game" : "#stage-canvas").boundingBox();
+      assert.ok(bounds.y + bounds.height <= gameBounds.y, "controls must not cover the game's HUD");
+    }
+    await page.screenshot({ path: `${out}controls-${viewport.width}.png` });
+    const title = await page.locator("#game-title").textContent();
+    if (index) await page.evaluate(() => { window.previousGame = document.querySelector("iframe").contentWindow.cartPilot; });
+    await click(page.getByRole("button", { name: "随机下一款游戏", exact: true }));
+    await page.waitForFunction(title => document.querySelector("#game-title").textContent !== title, title);
+    await ready();
+    assert.equal(await active(), 1, "shuffle must not finish the Agent task");
+    if (index) assert.equal(await page.evaluate(() => window.previousGame.state().disposed), true, "switch disposes the iframe game");
+    await page.getByRole("button", { name: "随机下一款游戏", exact: true }).focus();
+    const first = await page.locator("#game-title").textContent();
+    await page.keyboard.press("Enter");
+    await page.waitForFunction(title => document.querySelector("#game-title").textContent !== title, first);
+    await ready();
+    await click(page.getByRole("button", { name: "关闭本轮游戏", exact: true }));
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.stageDismissSerial), "1");
+    assert.equal(await page.locator(".playfield").isHidden(), true);
+    assert.equal(await active(), 1, "closing the game must not stop Codex");
+    await post("PreToolUse"); await post("PostToolUse"); await post("UserPromptSubmit");
+    await page.waitForTimeout(400);
+    assert.equal(await page.locator(".playfield").isHidden(), true, "same-turn events cannot reopen a dismissed game");
+    await post("Stop");
+    await post("UserPromptSubmit", "two");
+    await ready();
+    assert.equal(await page.locator(".playfield").isVisible(), true, "new task restores the controls and game");
+    await post("Stop", "two");
+    await page.waitForFunction(() => document.querySelector("#next-game").disabled);
+    const canvas = page.locator("#stage-canvas"), frozen = hash(await canvas.screenshot());
+    await page.mouse.click(80, 80); await page.waitForTimeout(200);
+    assert.equal(hash(await canvas.screenshot()), frozen, "task completion still freezes play");
+    results.push({ viewport, touch: index === 1, alwaysVisible: true, shuffle: true, keyboard: true, dismissKeepsAgent: true, newTurnRestores: true, taskEndFrozen: true });
+    await page.close();
+  }
+  const loading = await browser.newPage({ viewport: { width: 520, height: 333 } });
+  loading.on("pageerror", error => errors.push(error.message));
+  let release;
+  const gate = new Promise(resolve => { release = resolve; });
+  await loading.route("**/packs/built/toast-hop.js", async route => { await gate; await route.continue(); });
+  await loading.goto(`${origin}/codex-stage?popup=1&game=toast-hop`);
+  await loading.waitForFunction(() => !document.querySelector("#close-game").disabled);
+  await loading.locator("#close-game").click();
+  assert.equal(await loading.locator(".playfield").isHidden(), true);
+  const packLoaded = loading.waitForResponse(response => response.url().endsWith("/packs/built/toast-hop.js"));
+  release(); await packLoaded; await loading.waitForTimeout(300);
+  assert.equal(await loading.locator(".playfield").isHidden(), true, "a late pack load cannot reopen a closed game");
+  assert.equal(await loading.locator("#next-game").isDisabled(), true);
+  await loading.close();
+  const lab = await browser.newPage();
+  await lab.goto(`${origin}/codex-stage?game=toast-hop`);
+  assert.equal(await lab.locator("#close-game").isHidden(), true, "only the companion gets a close-window control");
+  await lab.locator("#expand-stage").click();
+  const expanded = await lab.locator("#stage-canvas").boundingBox();
+  assert.ok(Math.abs(expanded.width / expanded.height - 16 / 9) < .01, "full lab expansion keeps its aspect ratio");
+  await lab.close();
+  assert.deepEqual(errors, []);
+  const report = { results, closeDuringLoad: true, lateLoadCannotReopen: true, fullLabPreserved: true, errors, syntheticHooks: true };
+  await writeFile(`${out}report.json`, JSON.stringify(report, null, 2));
+  console.log(JSON.stringify(report));
+} finally { await browser.close(); await daemon.stop(); await server.stop(); }

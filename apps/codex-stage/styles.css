@@ -11,19 +11,24 @@
 @media(min-width:651px) and (max-width:900px){.game-library{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:650px){.arcade-shell{padding:0 16px 16px}.masthead{height:56px}.edition{display:none}.game-library{gap:7px;padding:14px 1px 6px;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:112px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#9ab8a9 transparent}.game-choice{scroll-snap-align:start}.game-choice img{height:36px}.game-choice span{font-size:11px;padding:6px 8px}.heading-right{align-items:end;flex-direction:column;gap:8px}.game-heading{padding:20px 0 16px}.game-heading h1{font-size:24px}.game-heading h1 span{display:none}.playfield{width:calc(100% + 32px);margin-left:-16px}.game-bar{gap:8px;flex-wrap:wrap}.ammo{gap:2px}.ammo button{min-width:64px;padding:0 8px;font-size:12px}.play-actions{margin-left:auto;gap:4px}.play-actions button{padding:0 9px;min-width:36px}.levels{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.level{min-height:63px;padding:10px}.bottom-bar{align-items:start;flex-direction:column}.settings{width:100%}.settings #demo{margin-left:auto}.agent-status{font-size:11px}}
 /* Native companion is only the game; the full lab keeps its existing layout. */
+.game-viewport { position: relative; width: 100%; height: 100%; }
+.playfield.expanded .game-viewport { width: min(100vw, calc((100dvh - 52px) * var(--stage-ratio, 1.777778))); }
 html.popup-mode, .popup-mode body { overflow: hidden; background: #101215; }
 .popup-mode .arcade-shell { position: fixed; inset: 0; max-width: none; margin: 0; padding: 0; display: grid; place-items: center; }
 .popup-mode .arcade-shell > :not(.playfield):not(.sr-only) { display: none !important; }
 .popup-mode .playfield:not(.expanded) {
-  width: min(100vw, calc(100dvh * var(--stage-ratio, 1.777778)));
-  height: min(100dvh, calc(100vw / var(--stage-ratio, 1.777778)));
-  margin: 0;
+  width: min(100vw, calc((100dvh - 40px) * var(--stage-ratio, 1.777778)));
+  height: min(100dvh, calc(100vw / var(--stage-ratio, 1.777778) + 40px));
+  margin: 0; padding-top: 40px; aspect-ratio: auto;
 }
 .popup-mode #stage-live { margin: 0; }
-.game-shuffle{position:absolute;right:6px;top:6px;z-index:5;width:30px;height:30px;min-height:30px;padding:6px;border:1px solid #ffffff55;border-radius:6px;background:#171c22e8;opacity:0;pointer-events:auto;transition:opacity .15s}
-.game-shuffle img{display:block;width:16px;height:16px;filter:invert(1)}
-.game-shuffle:hover,.game-shuffle:focus-visible{opacity:1;pointer-events:auto}
-.game-shuffle:hover:not(:disabled){background:#323c47;border-color:#fff}
-.game-shuffle:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.game-shuffle:disabled{opacity:0;pointer-events:none}
-@media(hover:none){.game-shuffle:not(:disabled){opacity:.8;pointer-events:auto}}
+.game-controls{position:absolute;right:6px;top:6px;z-index:5;display:flex;gap:6px}
+#popup-game-name{display:none}
+.popup-mode .game-controls{top:0;left:0;right:0;height:40px;padding:3px 6px;align-items:center;background:#171c22;border-bottom:1px solid #ffffff22}
+.popup-mode #popup-game-name{display:block;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#e6eced;font-size:12px;font-weight:500;padding-left:4px}
+.game-control{display:grid;place-items:center;flex:none;width:34px;height:34px;min-height:34px;padding:7px;border:1px solid #ffffff66;border-radius:6px;background:#171c22ed;box-shadow:0 1px 4px #0003;opacity:.9;touch-action:manipulation}
+.game-control img{display:block;width:18px;height:18px;filter:brightness(0) invert(1);pointer-events:none}
+.game-control:hover:not(:disabled){opacity:1;background:#323c47;border-color:#fff}
+.game-control:focus-visible{opacity:1;outline:2px solid #fff;outline-offset:2px}
+.game-control:disabled{opacity:.4;pointer-events:none}
+.popup-mode.game-dismissed .playfield{visibility:hidden;pointer-events:none}

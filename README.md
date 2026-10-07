@@ -38,7 +38,8 @@ This beta is **unsigned and unnotarized**. macOS may block the first launch. Ver
 | --- | --- |
 | Send a new Codex task | A roughly 520px-wide game appears at Codex's lower-right corner |
 | Codex thinks or calls tools | Keep playing; not limited to a particular tool |
-| Hover the game's upper-right corner | A shuffle control lets you change games |
+| Click shuffle in the upper-right corner | Immediately switch to a different random game |
+| Click the upper-right close icon | Close this turn's game without stopping Codex; a new task can show a game again |
 | A task runs longer than three minutes | Random mode can rotate at a safe ready/result state after five seconds without input |
 | Switch apps or minimize Codex | The companion hides and pauses; return to resume |
 | Codex finishes or is interrupted | Input, simulation, animation and sound stop; the companion closes |
